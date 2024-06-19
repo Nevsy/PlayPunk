@@ -1,0 +1,55 @@
+{
+    "locale": {
+        "en": "🇬🇧",
+        "fr": "🇫🇷",
+        "es": "🇪🇸",
+        "nl": "🇳🇱"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "Over ons",
+        "catalogue": "Onze Spellen",
+        "press": "Pers",
+        "cs": "Klantendienst"
+    },
+    "home": {
+        "header1": "Captain flip:",
+        "header2": "uit in 2024 !",
+        "button1": "Spelpagina",
+        "bga": "Vind ons terug op Board Game Arena !"
+    },
+    "about": {
+        "header": "Wij zijn PlayPunk"
+    },
+    "catalogue": {
+        "header": "Hier zijn al onze bordspellen"
+    },
+    "press": {
+        "header": "Downloads"
+    },
+    "captainFlip": {
+        "downloadButton": "Download de regels hier !"
+    },
+    "cfDownloads": {
+        "header": "Hier kunt u de regels downloaden van",
+        "RGBcolumn": "De regels om op een scherm af te beelden (RGB).",
+        "CMYKcolumn": "De regels om uit te printen (CMYK).",
+
+        "dlInfo": "5 min lezen"
+    },
+    "cs": {
+        "title": "Klantendienst",
+
+        "Fr": "Frankrijk",
+        "Be": "België",
+        "Du": "Duitsland",
+        "Nl": "Nederland",
+        "Es": "Spanje",
+        "It": "Italië",
+        "Uk": "Verenigd Koninkrijk",
+        "Pl": "Polen",
+        "RoCz": "Roemenië & Tsjechië",
+        "Nordics": "noorse landen",
+        "Ca": "Canada"
+    }
+}

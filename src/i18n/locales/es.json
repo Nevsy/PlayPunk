@@ -1,0 +1,49 @@
+{
+    "locale": {
+        "en": "🇬🇧",
+        "fr": "🇫🇷",
+        "es": "🇪🇸",
+        "nl": "🇳🇱"
+    },
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre nosotros",
+        "catalogue": "Nuestros Juegos",
+        "press": "Prensa",
+        "cs": "Servicio postventa"
+    },
+    "home": {
+        "header1": "Captain flip:",
+        "header2": "fuera en 2024!",
+        "button1": "Página del juego",
+        "bga": "¡Únete a nosotros en Board Game Arena!"
+    },
+    "about": {
+        "header": "Somos PlayPunk"
+    },
+    "catalogue": {
+        "header": "Aquí estan todos nuestros juegos de mesa"
+    },
+    "press": {
+        "header": "Descargamentes"
+    },
+    "captainFlip": {
+        "downloadButton": "¡Descarga las reglas aquí !",
+        "dlInfo": "se lee en 2 minutos"
+    },
+    "cs": {
+        "title": "servicio posventa",
+
+        "Fr": "",
+        "Be": "",
+        "Du": "",
+        "Nl": "",
+        "Es": "",
+        "It": "",
+        "Uk": "",
+        "Pl": "",
+        "RoCz": "",
+        "Nordics": "",
+        "Ca": ""
+    }
+}

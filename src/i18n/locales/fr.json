@@ -1,0 +1,107 @@
+{
+    "locale": {
+        "en": "🇬🇧",
+        "fr": "🇫🇷",
+        "es": "🇪🇸",
+        "nl": "🇳🇱"
+    },
+    "nav": {
+        "playpunk": "Nos Jeux",
+        "home": "Accueil",
+        "about": "À propos",
+        "catalogue": "Nos Jeux",
+        "press": "Presse",
+        "cs": "SAV"
+    },
+    "home": {
+        "header1": "Captain flip:",
+        "header2": "Sortie le 9 février !",
+        "button1": "Page du jeu",
+        "bga": "Retrouvez-nous sur Board Game Arena!",
+        "kraken": "Dans la geule du kraken disponible prochainement !",
+        "krakenSub": "Téléchargez les règles en cliquant"
+    },
+    "about": {
+        "header-p1": "Antoine Bauza et Thomas Provoost,",
+        "header-p2": "deux vétérans de l’industrie du jeu de société,",
+        "header-p3": "s’associent pour créer",
+        "p1": "D’un côté, \\bThomas Provoost\\b, cofondateur et cogérant de la prestigieuse maison d’édition Repos Production, il a œuvré à la naissance d’immenses succès comme Time’s Up ! (As d’Or 2006), Concept (As d’Or 2014) et Just One (Spiel des Jahres 2019).",
+        "p2": "De l’autre, \\bAntoine Bauza\\b, auteur phare de sa génération, concepteur de plusieurs grands succès comme Hanabi (Spiel des Jahres 2013), Tokaido et Takenoko ainsi que d’autres jeux reconnus tels que Ghost Stories et Draftosaurus.",
+        "p3": "Ensemble, ils ont conçu pour l’un et édité pour l’autre 7 Wonders (Kennerspiel des Jahres 2011) et ses suites Duel et Architects (As d’Or 2022).",
+        "p4": "Fort de leur longue collaboration, ils décident de monter ensemble une nouvelle maison d’édition basée sur leurs solides expériences et leur vision commune du métier d’éditeur.",
+        "p5": "Pour eux, \\iles auteurs\\i, pièces centrales de la création, seront accompagnés - \\b\\iet challengés !\\i\\b -  afin que chaque jeu atteigne le maximum de son potentiel.",
+        "p6": "\\bPlayPunk\\b proposera donc des jeux ciselés et polis dans les moindres détails : gamedesign, narration, ergonomie, graphisme, production, rédaction…",
+        "p7": "Afin d’atteindre cet objectif, PlayPunk prendra le temps de maturer ses jeux et aura un catalogue restreint.",
+        "p8": "Deux jeux sont actuellement en cours d’édition.",
+        "p9": "Le premier, Captain Flip de Paolo Mori et Remo Conzadori, est un jeu familial et diablement malin pour 2 à 5 joueurs. Il arrivera dans les boutiques au premier trimestre 2024.",
+        "p10": "Le deuxième est un jeu initiés pour 2 ou 4 joueurs, de Gregory Grard et Mathieu Roussel. Il sortira lors du salon Spieltage Essen 2024. ",
+        "t1": "PlayPunk est une maison d’édition créée par deux vétérans de l’industrie du jeu de société Antoine Bauza et Thomas Provoost.",
+        "t2": "Une vision unique et précise !", 
+        "t3": "The future is coming !"
+    },
+    "catalogue": {
+        "header": "Voici tout nos jeux de société"
+    },
+    "press": {
+        "header": "Téléchargements",
+        "elements": "Élements du jeu",
+        "boards": "Plateaux de jeu",
+        "rules": "Règles",
+        "images": "Images générales"
+    },
+    "captainFlip" : {
+        "names": "Un jeu de Paolo Mori and Remo Conzadori",
+        "TitleH3": "Ohé Captain!",
+        "SubTitle": "Hissez votre pavillon et recrutez votre équipage pour gagner un maximum de pièces sonnantes et trébuchantes !",
+        
+        "section2": {
+            "H1": "But du jeu",
+            "SubTitle": "Les joueuses sont des capitaines pirates qui recrutent un équipage pour voguer et accumuler de l’or.",
+            "step1":"Piochez un personnage.",
+            "step2":"Il ne vous convient pas ? Flippez-le pour un autre !",
+            "step3":"Placez-le judicieusement sur votre plateau.",
+            "last": "Recrutez canonnière, perroquet, navigatrice, vigie, cuistot… Accumulez des pièces mais gare à l’explosion ! La pirate la plus riche gagnera la partie."
+        },
+        
+        
+        "downloadButton" : "Téléchargez les règles ici !",
+
+        "subSectionContent": "Contenu",
+        "subSection1": "10 plateaux Aventure (double-face)",
+        "subSection2": "72 tuiles Personnages (double-face)",
+        "subSection3": "40 Pièces (valeurs 1, 3, 5 et 10)",
+        "subSection4": "1 Grand Jeton Carte au Trésor",
+        "subSection5": "1 Sac en tissu",
+        "subSection6": "3 Aides de jeu",
+        "subSection7": "1 Règle du jeu",
+
+        "boardsSection": "Des plateaux de jeux différents pour diversifier vos parties"
+    },
+    "cfDownloads": {
+        "header": "Ici, vous pouvez télécharger les règles de",
+        "RGBcolumn": "Les règles optimisées pour le visionnage sur écran (RVB).",
+        "CMYKcolumn": "Les règles optimisées imprimante (CMJN).",
+        "krakenColumn": "Règles de dans la geule du kraken",
+
+        "dlInfo": "lu en 5 min",
+        "krakenInfo": "lu en 2 min"
+    },
+    "cs": {
+        "title": "Service après-vente",
+
+        "Fr": "France",
+        "Be": "Belgique",
+        "Du": "Alemagne",
+        "Nl": "Pays-Bas",
+        "Es": "Espagne",
+        "It": "Italie",
+        "Uk": "Royaume-Uni",
+        "Pl": "Pologne",
+        "RoCz": "Roumanie & République tchèque",
+        "Nordics": "pays nordiques",
+        "Ca": "Canada"
+    },
+    "footer": { 
+        "follow": "Suivez-nous sur:"
+    }
+}
