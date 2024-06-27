@@ -17,7 +17,6 @@
     <Nav />
 
     <!-- <div class="construction" v-if="constructionBool">This website is still under construction.<div class="construction_trigger" @click="triggerConstruction()"></div></div> -->
-
     <section class="section section1">
     
         <div class="title">
@@ -48,16 +47,26 @@
     
     <section id="section2" class="section section2">
         <div class="grid">
+            
+            <RouterLink class="card small" :to="Tr.i18nRoute({ name: 'cf-downloads' })">
+                <span>{{ $t("home.kraken") }}</span>
+                <img src="../assets/images/home/CF_Boards_Goodies_Kraken.png" alt="In the nozzle of the kraken game board" class="image kraken">
+            </RouterLink>
+
+            <a class="card small" href="https://www.spiel-des-jahres.de/spiele/captain-flip/" target="_blank">
+                <span>{{ $t("home.spieldesjahres") }}</span>
+                <img class="image" src="../assets/images/home/SpieldesJahres_nomination.webp" alt="Spiel des jahres nomination">
+            </a>
 
             <a class="card small" href="https://en.boardgamearena.com/gamepanel?game=captainflip" target="_blank">
                 <span>{{ $t("home.bga") }}</span>
                 <img class="image" src="../assets/images/home/bga.webp" alt="Board game arena logo">
             </a>
 
-            <RouterLink class="card small" :to="Tr.i18nRoute({ name: 'cf-downloads' })">
-                <span>{{ $t("home.kraken") }}</span>
-                <img src="../assets/images/home/CF_Boards_Goodies_Kraken.png" alt="In the nozzle of the kraken game board" class="image kraken">
-            </RouterLink>
+            <!-- <a class="card small" id="spieldesjahresimage" href="https://www.spiel-des-jahres.de/spiele/captain-flip/" target="_blank">
+                <span>{{ $t("home.newExtention") }}</span>
+                <img class="image" src="../assets/images/home/SpieldesJahres_nomination.webp" alt="Spiel des jahres nomination">
+            </a> -->
 
             <!-- <a class="card small" href="/src/downloads/RGB/CF-Goodies-rules-multi.pdf" download="KrakenRules.pdf">
                 <div class="textContainer">
@@ -260,6 +269,8 @@
             background-position: center;
             background-repeat: no-repeat;
 
+            padding-block-start: 10px;
+
             &:hover {
                 box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
                 
@@ -277,14 +288,16 @@
 
                 padding-left: 30px;
                 padding-right: 10px;
+                
                 font-size: 1.4rem;
 
                 .image {
                     margin-bottom: 10px;
                     margin-left: 10px;
                     width: 350px;
-                    max-height: auto;
-                    max-width: auto;
+                    max-height: 250px;
+                    max-width: 170px;
+                    aspect-ratio:initial;
 
                     display: flex;
                     align-items: center;
@@ -295,6 +308,12 @@
                     font-size: small;
                 }
             }
+    }
+
+    @container (max-height: 300px) { // working
+        .small > .image {
+            max-height: 250px;
+        }
     }
 
     .grid {

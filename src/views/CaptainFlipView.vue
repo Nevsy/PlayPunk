@@ -115,6 +115,21 @@
 
         </section>
 
+        <section class="section section7">
+
+            <div class="text">
+                <h1 class="title">{{$t('captainFlip.krakenHeader')}}</h1>
+                <span class="span">{{$t('captainFlip.krakenText')}}</span>
+                <span class="downloadLink">
+                    <RouterLink :to="Tr.i18nRoute({ name: 'cf-downloads' })">{{ $t('captainFlip.krakenDownload') }}</RouterLink>
+                </span>
+            </div>
+
+            <RouterLink class="card small" :to="Tr.i18nRoute({ name: 'cf-downloads' })">
+                <img class="board" src="../assets/images/CF/CF_Board_Éclaté.png" alt="All game elements opened up">
+            </RouterLink>
+        </section>
+
         <!-- 
             <section class="section section5">
                 
@@ -567,6 +582,31 @@
                 background-color: $white;
                 color: $plum;
             }
+        }
+    }
+
+    .section7 {
+        padding-inline: 10px;
+        margin-inline: 10px;
+        margin-block: 50px;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        width: calc(100vw - 20px);
+
+        color: $plum;
+        
+        .text {
+            max-width: 400px;
+            .title {
+                margin-bottom: 5px;
+            }
+        }
+        
+        .board {
+            max-width: 40%;
         }
     }
 

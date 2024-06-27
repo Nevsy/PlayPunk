@@ -15,11 +15,13 @@
     },
     "home": {
         "header1": "Captain flip:",
-        "header2": "Available in March!",
+        "header2": "We're nominated for the Spiel des Jahres 2024!",
         "button1": "See the game",
         "bga": "Find us on board game arena!",
-        "kraken": "In the nozzle of the kraken available soon!",
-        "krakenSub": "Download the rules by clicking!"
+        "spieldesjahres": "We're nominated for the Spiel des Jahres 2024!",
+        "kraken": "In the jaws of the kraken available in shops!",
+        "krakenSub": "Download the rules by clicking!",
+        "newExtention": "*texte pour la nouvelle extension*"
     },
     "about": {
         "header-p1": "Antoine Bauza and Thomas Provoost,",
@@ -35,7 +37,7 @@
         "p8": "Two games are currently being published. ",
         "p9": "The first, Captain Flip by Paolo Mori and Remo Conzadori, is a devilishly clever family game for 2 to 5 players. It will hit stores in the March 2024.",
         "p10": "The second is an expert game for 2 or 4 players, by Gregory Grard and Mathieu Roussel. It will be released at Spieltage Essen 2024.",
-        "t1": "PlayPunk est une maison d’édition créée par deux vétérans de l’industrie du jeu de société Antoine Bauza et Thomas Provoost.",
+        "t1": "PlayPunk is a publishing house created by two board game industry veterans, Antoine Bauza and Thomas Provoost.",
         "t2": "A unique and precise vision!", 
         "t3": "The future is coming !"
     },
@@ -78,13 +80,17 @@
 
         "boardsSection": "Different adventure plates to diversify your games",
         
-        "downloadButton": "Download the rules here!"
+        "downloadButton": "Download the rules here!",
+
+        "krakenText": "In the jaws of the kraken available in shops!",
+        "krakenHeader": "Kraken",
+        "krakenDownload": "Download the rules by clicking!"
     },
     "cfDownloads": {
         "header": "Here, you can download the gamerules of",
         "RGBcolumn": "The rules optimised for dispay on screen purposes (RGB).",
         "CMYKcolumn": "The rules optimised for printing purposes (CMYK).",
-        "krakenColumn": "Rules of in the nozzle of the kraken",
+        "krakenColumn": "Rules of in the jaws of the kraken",
 
         "dlInfo": "5 min read",
         "krakenInfo": "2 min read"

@@ -1,5 +1,5 @@
 # [PlayPunk](http://playpunk.com)
-In this repository you will be able to find the source code for the [playpunk.com](http://playpunk.com) website, a website I entirely designed and coded. This was made for two giant names of the board game industry who are starting a new company. This website was developed in [Vue](https://vuejs.org/), SCSS, Vue Router and the i18n internationalization library.
+In this repository you will be able to find the source code for the [playpunk.com](http://playpunk.com) website, a website I entirely designed and coded. This website was developed with [VueJS](https://vuejs.org/), SCSS, Vue Router and the i18n internationalization library.
 
 ### A few remarkable features:
 - Big and scalable routing system (made using Vue Router)

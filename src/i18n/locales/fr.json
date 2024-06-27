@@ -15,11 +15,13 @@
     },
     "home": {
         "header1": "Captain flip:",
-        "header2": "Sortie le 9 février !",
+        "header2": "Nous sommes nominés au Spiel des Jahres 2024!",
         "button1": "Page du jeu",
         "bga": "Retrouvez-nous sur Board Game Arena!",
-        "kraken": "Dans la geule du kraken disponible prochainement !",
-        "krakenSub": "Téléchargez les règles en cliquant"
+        "kraken": "Dans la gueule du kraken disponible dans votre boutique !",
+        "krakenSub": "Téléchargez les règles en cliquant",
+        "spieldesjahres": "Nous sommes nominés au Spiel des Jahres !",
+        "newExtention": "*texte pour la nouvelle extension*"
     },
     "about": {
         "header-p1": "Antoine Bauza et Thomas Provoost,",
@@ -75,13 +77,21 @@
         "subSection6": "3 Aides de jeu",
         "subSection7": "1 Règle du jeu",
 
-        "boardsSection": "Des plateaux de jeux différents pour diversifier vos parties"
+        "boardsSection": "Des plateaux de jeux différents pour diversifier vos parties",
+
+        "krakenHeader": "Dans la Gueule du kraken.",
+        "krakenText1": "Hoy, Capitaine !",
+        "krakenText2": "Reprenez la barre dans cette mini-extension pour Captain Flip, nommé au Spiel des Jahres 2024 !",
+        "krakenText3": "Le Kraken n’en n’a pas fini avec vous et compte bien faire de vous son repas. Réunissez votre équipage pour vous en sortir avec plus de trésors que les autres joueurs.",
+        "krakenText4": "Ce plateau propose de nombreux choix tactiques pour les pirates vétérans et débutants.",
+        "krakenText5": "Découvrez également le challenge du mode Solo !",
+        "krakenDownload": "Download the rules by clicking!"
     },
     "cfDownloads": {
         "header": "Ici, vous pouvez télécharger les règles de",
         "RGBcolumn": "Les règles optimisées pour le visionnage sur écran (RVB).",
         "CMYKcolumn": "Les règles optimisées imprimante (CMJN).",
-        "krakenColumn": "Règles de dans la geule du kraken",
+        "krakenColumn": "Règles de dans la gueule du kraken",
 
         "dlInfo": "lu en 5 min",
         "krakenInfo": "lu en 2 min"
