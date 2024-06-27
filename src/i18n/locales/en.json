@@ -82,9 +82,13 @@
         
         "downloadButton": "Download the rules here!",
 
-        "krakenText": "In the jaws of the kraken available in shops!",
-        "krakenHeader": "Kraken",
-        "krakenDownload": "Download the rules by clicking!"
+        "krakenHeader": "In the Jaws of the Kraken",
+        "krakenText1": "Ahoy, Captain!",
+        "krakenText2": "Take the helm again in this mini-expansion for Captain Flip, nominated for the Spiel des Jahres 2024!",
+        "krakenText3": "The Kraken is not finished with you and intends to make you his meal. Gather your crew to emerge with more treasure than the other players.",
+        "krakenText4": "This board offers many tactical choices for veteran and beginner pirates.",
+        "krakenText5": "Discover and challenge also the Solo mode!",
+        "krakenDownload": "Download the rules!"
     },
     "cfDownloads": {
         "header": "Here, you can download the gamerules of",

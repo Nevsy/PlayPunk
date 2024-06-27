@@ -116,18 +116,25 @@
         </section>
 
         <section class="section section7">
-
-            <div class="text">
-                <h1 class="title">{{$t('captainFlip.krakenHeader')}}</h1>
-                <span class="span">{{$t('captainFlip.krakenText')}}</span>
-                <span class="downloadLink">
-                    <RouterLink :to="Tr.i18nRoute({ name: 'cf-downloads' })">{{ $t('captainFlip.krakenDownload') }}</RouterLink>
-                </span>
-            </div>
-
-            <RouterLink class="card small" :to="Tr.i18nRoute({ name: 'cf-downloads' })">
+            <h1 class="title">{{$t('captainFlip.krakenHeader')}}</h1>
+            
+            <div class="flexBoxContainer">
+                <div class="text">
+                    <p class="p">{{$t('captainFlip.krakenText1')}}</p>
+                    <p class="p">{{$t('captainFlip.krakenText2')}}</p>
+                    <p class="p">{{$t('captainFlip.krakenText3')}}</p>
+                    <p class="p">{{$t('captainFlip.krakenText4')}}</p>
+                    <p class="p">{{$t('captainFlip.krakenText5')}}</p>
+                    <span class="downloadLink">
+                        <RouterLink :to="Tr.i18nRoute({ name: 'cf-downloads' })">{{ $t('captainFlip.krakenDownload') }}</RouterLink>
+                    </span>
+                </div>
+                    
+                <!-- <RouterLink class="boardLink" :to="Tr.i18nRoute({ name: 'cf-downloads' })">
+                    <img class="board" src="../assets/images/CF/CF_Board_Éclaté.png" alt="All game elements opened up">
+                </RouterLink> -->
                 <img class="board" src="../assets/images/CF/CF_Board_Éclaté.png" alt="All game elements opened up">
-            </RouterLink>
+            </div>
         </section>
 
         <!-- 
@@ -586,27 +593,69 @@
     }
 
     .section7 {
-        padding-inline: 10px;
-        margin-inline: 10px;
+        padding-inline-end: 10px;
+        margin-inline-end: 10px;
         margin-block: 50px;
         
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 10px;
-        width: calc(100vw - 20px);
-
         color: $plum;
         
-        .text {
-            max-width: 400px;
-            .title {
-                margin-bottom: 5px;
+        .title {
+            margin-bottom: 15px;
+            text-align: center;
+            width: 100vw;
+        }
+
+        .flexBoxContainer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            width: calc(100vw - 20px);
+
+            padding-inline-start: 10px;
+            margin-inline-start: 10px;
+            
+            .text {
+                .p {
+                    //max-width: 400px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .board {
+                max-width: 40%;
+                margin-right: 20px;
             }
         }
         
-        .board {
-            max-width: 40%;
+
+        .downloadLink > a {
+            display: flex;
+            align-items: center;
+
+            width: fit-content;
+
+            padding-inline: 16px;
+            padding-block: 10px;
+            cursor: pointer;
+
+            border-radius: 10px;
+            background-color: $plum;
+
+            font-size: larger;
+            text-decoration: none;
+            color: $white;
+            
+            transition: all .3s;
+
+            &:hover {
+                -webkit-box-shadow:inset 0px 0px 0px 2px $plum;
+                -moz-box-shadow:inset 0px 0px 0px 2px $plum;
+                box-shadow:inset 0px 0px 0px 2px $plum;
+
+                background-color: $white;
+                color: $plum;
+            }
         }
     }
 

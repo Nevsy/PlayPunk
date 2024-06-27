@@ -3,6 +3,7 @@
     import Footer from '../components/Footer.vue'
 
     import { RouterLink } from 'vue-router'
+    import { onMounted } from 'vue'
     import Tr from "@/i18n/translation"
 
     import { ref } from 'vue'
@@ -11,6 +12,18 @@
     const triggerConstruction = () => {
         constructionBool.value = false
     }
+
+    onMounted(() => {
+        setTimeout(
+            console.log("\n\
+    ____                           _____               \n\
+   / __ \\____  __  _____  _____   / ___/   _____  ____ \n\
+  / /_/ / __ \\/ / / / _ \\/ ___/   \\__ \\ | / / _ \\/ __ \\\n\
+ / _, _/ /_/ / /_/ /  __/ /      ___/ / |/ /  __/ / / /\n\
+/_/ |_|\\____/\\__, /\\___/_/      /____/|___/\\___/_/ /_/ \n\
+            /____/                                     \n\
+        "), 3000)
+    });
 </script>
 
 <template>
@@ -47,7 +60,7 @@
     
     <section id="section2" class="section section2">
         <div class="grid">
-            
+
             <RouterLink class="card small" :to="Tr.i18nRoute({ name: 'cf-downloads' })">
                 <span>{{ $t("home.kraken") }}</span>
                 <img src="../assets/images/home/CF_Boards_Goodies_Kraken.png" alt="In the nozzle of the kraken game board" class="image kraken">
