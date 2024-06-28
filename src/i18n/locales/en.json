@@ -88,7 +88,8 @@
         "krakenText3": "The Kraken is not finished with you and intends to make you his meal. Gather your crew to emerge with more treasure than the other players.",
         "krakenText4": "This board offers many tactical choices for veteran and beginner pirates.",
         "krakenText5": "Discover and challenge also the Solo mode!",
-        "krakenDownload": "Download the rules!"
+        "krakenDownload": "Download the rules!",
+        "krakenSubDownload": "Expansion: In the Jaws of the Kraken"
     },
     "cfDownloads": {
         "header": "Here, you can download the gamerules of",

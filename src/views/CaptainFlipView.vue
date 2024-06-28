@@ -128,6 +128,7 @@
                     <span class="downloadLink">
                         <RouterLink :to="Tr.i18nRoute({ name: 'cf-downloads' })">{{ $t('captainFlip.krakenDownload') }}</RouterLink>
                     </span>
+                    <span>{{$t('captainFlip.krakenSubDownload')}}</span>
                 </div>
                     
                 <!-- <RouterLink class="boardLink" :to="Tr.i18nRoute({ name: 'cf-downloads' })">
@@ -626,6 +627,11 @@
                 max-width: 40%;
                 margin-right: 20px;
             }
+
+            .span {
+                margin-left: 5px;
+                margin-top: 5px;
+            }
         }
         
 
@@ -637,6 +643,9 @@
 
             padding-inline: 16px;
             padding-block: 10px;
+            
+            margin-block-start: 30px;
+
             cursor: pointer;
 
             border-radius: 10px;
