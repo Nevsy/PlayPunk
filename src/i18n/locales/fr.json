@@ -79,14 +79,13 @@
 
         "boardsSection": "Des plateaux de jeux différents pour diversifier vos parties",
 
-        "krakenHeader": "Dans la Gueule du kraken",
+        "krakenHeader": "Extension: Dans la Gueule du Kraken",
         "krakenText1": "Hoy, Capitaine !",
         "krakenText2": "Reprenez la barre dans cette mini-extension pour Captain Flip, nommé au Spiel des Jahres 2024 !",
         "krakenText3": "Le Kraken n’en n’a pas fini avec vous et compte bien faire de vous son repas. Réunissez votre équipage pour vous en sortir avec plus de trésors que les autres joueurs.",
         "krakenText4": "Ce plateau propose de nombreux choix tactiques pour les pirates vétérans et débutants.",
         "krakenText5": "Découvrez également le challenge du mode Solo !",
-        "krakenDownload": "Téléchargez les règles !",
-        "krakenSubDownload": "Extension: Dans la Gueule du Kraken"
+        "krakenDownload": "Téléchargez les règles !"
     },
     "cfDownloads": {
         "header": "Ici, vous pouvez télécharger les règles de",

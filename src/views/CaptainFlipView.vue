@@ -4,11 +4,21 @@
 
     import { RouterLink } from 'vue-router'
     import Tr from "@/i18n/translation"
+
+    import { ref } from 'vue'
+
+    const locale = ref(Tr.currentLocale)
+
+    const reload = () => {
+        locale.value = Tr.currentLocale
+    }
+
 </script>
 
 <template>
     <div class="container">
-        <Nav/>
+        <Nav v-on:sendToMain="reload()"/>
+
         <section class="section section1">
             <div class="boxImage"><img class="boxImageImg" src="../assets/images/CF/CF_Packaging_Box_Left.png" alt=""></div>
 
@@ -80,6 +90,17 @@
             </span>
         </section>
 
+        <section class="section section5">
+
+            <!-- <div class="text">
+                <h1 class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+                <span class="span">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, sed architecto in nobis itaque quod unde nesciunt tempore aperiam mollitia? Maxime minima repellat aliquid odit dolorum quod nesciunt, similique ducimus!</span>
+            </div> -->
+
+            <iframe v-if="locale == 'fr'" width="560" height="315" src="https://www.youtube.com/embed/T0pS0G1qFvE?si=Ujcxw6pcATC3sjPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- <iframe v-else width="560" height="315" src="https://www.youtube.com/embed/NTBDTN9mqtM?si=u7TSMUUTGqYB8US1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+        </section>
+
         <section class="section section4">
             <div class="text">
                 <h1 class="title">{{ $t('captainFlip.boardsSection') }}</h1>
@@ -94,17 +115,6 @@
                     <img src="../assets/images/CF/Boards/Boards_C_resized.png" alt="These are images of the different possible boards." class="img">
                 </div>
             </div>
-        </section>
-
-        <section class="section section5">
-
-            <div class="text">
-                <h1 class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
-                <span class="span">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, sed architecto in nobis itaque quod unde nesciunt tempore aperiam mollitia? Maxime minima repellat aliquid odit dolorum quod nesciunt, similique ducimus!</span>
-            </div>
-            
-            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/2Aoi2ZhUpeI?si=-1m0wcs1Q80vSKc1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            
         </section>
 
         <section class="section section6">
@@ -128,7 +138,6 @@
                     <span class="downloadLink">
                         <RouterLink :to="Tr.i18nRoute({ name: 'cf-downloads' })">{{ $t('captainFlip.krakenDownload') }}</RouterLink>
                     </span>
-                    <span>{{$t('captainFlip.krakenSubDownload')}}</span>
                 </div>
                     
                 <!-- <RouterLink class="boardLink" :to="Tr.i18nRoute({ name: 'cf-downloads' })">
@@ -525,7 +534,9 @@
     }
 
     .section5 {
-        display: none; //* THIS IS HERE !!
+        display: flex;
+
+        margin-block-start: 50px;
 
         padding-inline: 10px;
         margin-inline: 10px;
@@ -624,7 +635,7 @@
             }
 
             .board {
-                max-width: 40%;
+                max-width: 35%;
                 margin-right: 20px;
             }
 

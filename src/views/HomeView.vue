@@ -68,7 +68,7 @@
 
             <a class="card small" href="https://www.spiel-des-jahres.de/spiele/captain-flip/" target="_blank">
                 <span>{{ $t("home.spieldesjahres") }}</span>
-                <img class="image" src="../assets/images/home/SpieldesJahres_nomination.webp" alt="Spiel des jahres nomination">
+                <img class="image" src="../assets/images/home/SpieldesJahres_nomination.png" alt="Spiel des jahres nomination">
             </a>
 
             <a class="card small" href="https://en.boardgamearena.com/gamepanel?game=captainflip" target="_blank">
