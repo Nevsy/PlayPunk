@@ -76,6 +76,11 @@
                 <img class="image" src="../assets/images/home/bga.webp" alt="Board game arena logo">
             </a>
 
+            <a class="card small" href="https://game-park.com/en/board-games/captain-flip" target="_blank">
+                <span>{{ $t("home.game-park") }}</span>
+                <img class="image game-park" src="../assets/images/home/game-park-icon.svg" alt="Board game arena logo">
+            </a>
+
             <!-- <a class="card small" id="spieldesjahresimage" href="https://www.spiel-des-jahres.de/spiele/captain-flip/" target="_blank">
                 <span>{{ $t("home.newExtention") }}</span>
                 <img class="image" src="../assets/images/home/SpieldesJahres_nomination.webp" alt="Spiel des jahres nomination">
@@ -310,12 +315,19 @@
                     width: 350px;
                     max-height: 250px;
                     max-width: 170px;
-                    aspect-ratio:initial;
+                    aspect-ratio: initial;
 
                     display: flex;
                     align-items: center;
                     justify-content: center;
                 }
+
+				.image.game-park {
+					width: 300px;
+					max-width: 200px;
+					max-height: 170px;
+				}
+
                 .sub {
                     margin-top: 5px;
                     font-size: small;

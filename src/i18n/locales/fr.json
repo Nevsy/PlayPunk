@@ -15,9 +15,10 @@
     },
     "home": {
         "header1": "Captain flip:",
-        "header2": "Nous sommes nominés au Spiel des Jahres 2024!",
+        "header2": "Nous sommes nominés au Spiel des Jahres 2024 !",
         "button1": "Page du jeu",
-        "bga": "Retrouvez-nous sur Board Game Arena!",
+        "bga": "Retrouvez-nous sur Board Game Arena !",
+		"game-park": "Retrouvez-nous également sur Game Park",
         "kraken": "Dans la gueule du kraken disponible dans votre boutique !",
         "krakenSub": "Téléchargez les règles en cliquant",
         "spieldesjahres": "Nous sommes nominés au Spiel des Jahres !",
