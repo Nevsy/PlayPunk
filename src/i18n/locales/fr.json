@@ -88,6 +88,33 @@
         "krakenText5": "Découvrez également le challenge du mode Solo !",
         "krakenDownload": "Téléchargez les règles !"
     },
+	"zenith": {
+		"section1": {
+            "header": "Bienvenue à Zenith",
+            "explanation1": "Embarquez dans un voyage pour unir les planètes et prendre le contrôle du Sénat !",
+            "explanation2": "Utilisez les compétences de vos agents pour gagner en influence, développer des technologies solaires et devenir le leader."
+        },
+        "section2": {
+            "goalGame": "But du jeu",
+            "goalDescription": "Les joueurs vont lutter pour gagner de l'influence sur les 5 planètes : Mercure, Vénus, Terre, Mars et Jupiter. Cette influence est représentée par des disques de différentes couleurs."
+        },
+        "section3": {
+            "scrollingCards": "Cartes de jeu polyvalentes",
+            "cardDescription": "Zenith propose plus de 50 cartes de jeu uniques, chacune avec ses propres capacités et stratégies spéciales."
+        },
+        "section4": {
+            "movingPlanets": "Plusieurs plateaux de technologies pour diversifier vos parties",
+            "planetDescription": "Dans un avenir lointain, le système solaire est habité par 3 races : les Humains, les Robots et les Animods. Développez des technologies solaires pour prendre le contrôle du Sénat !"
+        },
+        "section5": {
+            "videoTitle": "Présentation du jeu",
+            "videoExpanation": "Regardez la vidéo tutorielle pour apprendre à jouer à Zenith !"
+        },
+        "section6": {
+            "content": "Composants du jeu",
+            "contentDescription": "Zenith comprend une variété de pièces de jeu, notamment un plateau de jeu modulaire, des jetons de ressources et les cartes de jeu uniques."
+        }	
+	},
     "cfDownloads": {
         "header": "Ici, vous pouvez télécharger les règles de",
         "RGBcolumn": "Les règles optimisées pour le visionnage sur écran (RVB).",

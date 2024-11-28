@@ -5,6 +5,7 @@ import Catalogue from "../views/CatalogueView.vue"
 import About from "../views/AboutView.vue"
 import Press from "../views/PressView.vue"
 import CaptainFlip from "../views/CaptainFlipView.vue"
+import Zenith from "../views/ZenithView.vue"
 import CfDownloads from "../views/CfDownloadsView.vue"
 import Cs from "../views/CsView.vue"
 import NotFoundView from "../views/NotFoundView.vue"
@@ -35,6 +36,11 @@ const router = createRouter({
                     path: "captainflip/downloads",
                     name: "cf-downloads",
                     component: CfDownloads,
+                },
+				{
+                    path: "zenith",
+                    name: "zenith",
+                    component: Zenith
                 },
                 {
                     path: "about",

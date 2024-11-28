@@ -90,6 +90,33 @@
         "krakenText5": "Discover and challenge also the Solo mode!",
         "krakenDownload": "Download the rules!"
     },
+	"zenith": {
+		"section1": {
+			"header": "Zenith is a strategy game, based on a tug-of-war mechanic, for 2 players or 4 players in teams.",
+			"explanation1": "In the far-off future, the solar system is inhabited by 3 races: Humans, Robots, and Animods. Civilization runs off Of Zenithium, a clean and renewable energy source. but coexistence is a struggle. Your goal: unite the planets to gain control of the senate!",
+			"explanation2": "Use your Agents' skills to gain influence, develop solar technologies, and become the leader."
+		},
+		"section2": {
+			"goalGame": "Goal of the Game",
+			"goalDescription": "Players will struggle to gain Influence on the 5 planets: Mercury, Venus, Earth, Mars, and Jupiter. This Influence is represented by discs in different colors."
+		},
+		"section3": {
+			"scrollingCards": "Versatile Playing Cards",
+			"cardDescription": "Zenith features more than 50 unique playing cards, each with their own special abilities and strategies."
+		},
+		"section4": {
+			"movingPlanets": "Technology Board",
+			"planetDescription": "Multiple technology board are available to diversify your games."
+		},
+		"section5": {
+			"videoTitle": "Gameplay Overview",
+			"videoExpanation": "Watch the tutorial video to learn how to play Zenith, a strategy game based on a tug-of-war mechanic for 2 or 4 players."
+		},
+		"section6": {
+			"content": "Game Components",
+			"contentDescription": "Zenith includes a variety of game pieces, including a modular game board, resource tokens, and the unique playing cards."
+		}
+	},
     "cfDownloads": {
         "header": "Here, you can download the gamerules of",
         "RGBcolumn": "The rules optimised for dispay on screen purposes (RGB).",

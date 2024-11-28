@@ -120,7 +120,8 @@
         <section class="section section6">
 
             <span class="downloadLink">
-                <RouterLink :to="Tr.i18nRoute({ name: 'cf-downloads' })">{{ $t('captainFlip.downloadButton') }}</RouterLink>
+				<!-- <RouterLink :to="Tr.i18nRoute({ name: 'cf-downloads' })">{{ $t('captainFlip.downloadButton') }}</RouterLink> -->
+				<RouterLink :to="Tr.i18nRoute({ name: 'press' })">{{ $t('captainFlip.downloadButton') }}</RouterLink>
             </span>
 
         </section>
@@ -136,7 +137,7 @@
                     <p class="p">{{$t('captainFlip.krakenText4')}}</p>
                     <p class="p">{{$t('captainFlip.krakenText5')}}</p>
                     <span class="downloadLink">
-                        <RouterLink :to="Tr.i18nRoute({ name: 'cf-downloads' })">{{ $t('captainFlip.krakenDownload') }}</RouterLink>
+                        <RouterLink :to="Tr.i18nRoute({ name: 'press' })">{{ $t('captainFlip.krakenDownload') }}</RouterLink>
                     </span>
                 </div>
                     

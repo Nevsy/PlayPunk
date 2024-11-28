@@ -32,21 +32,40 @@
     <!-- <div class="construction" v-if="constructionBool">This website is still under construction.<div class="construction_trigger" @click="triggerConstruction()"></div></div> -->
     <section class="section section1">
     
-        <div class="title">
-            <!-- <RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="h1Link"><h1 class="titlePart1">{{  $t("home.header1") }}</h1></RouterLink> -->
-            <RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })">
-                <img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
-            </RouterLink >
-            <h1 class="titlePart2">{{  $t("home.header2") }}</h1>
-        </div>
+		<div class="captainflip card small">
+			<div class="title">
+				<!-- <RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="h1Link"><h1 class="titlePart1">{{  $t("home.header1") }}</h1></RouterLink> -->
+				<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })">
+					<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
+				</RouterLink >
+				<h1 class="titlePart2">{{  $t("home.header2") }}</h1>
+			</div>
+	
+			<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="banner">
+				<img class="bgImg" src="../assets/images/home/CF_Cover_Artwork.png" alt="Boxtop image for Captain Flip used as a banner image">
+			</RouterLink >
+	
+			<div class="buttons">
+				<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
+			</div>
+		</div>
 
-        <RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="banner">
-            <img class="bgImg" src="../assets/images/home/CF_Cover_Artwork.png" alt="Boxtop image for Captain Flip used as a banner image">
-        </RouterLink >
-
-        <div class="buttons">
-            <RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
-        </div>
+		<div class="zenith card small">
+			<div class="title">
+				<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })">
+					<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
+				</RouterLink >
+				<h1 class="titlePart2">{{  $t("home.header2") }}</h1>
+			</div>
+	
+			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="banner">
+				<img class="bgImg" src="../assets/images/home/CF_Cover_Artwork.png" alt="Boxtop image for Captain Flip used as a banner image">
+			</RouterLink >
+	
+			<div class="buttons">
+				<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
+			</div>
+		</div>
         
     </section>
     
@@ -105,6 +124,10 @@
     @import "@/assets/styles/scss/_variables.scss";
     @import "@/assets/styles/scss/_mixins.scss";
 
+	body {
+		overflow-x: hidden;
+	}
+
     .construction {
         width: 100vw;
         //height: 40px;
@@ -152,93 +175,109 @@
         width: calc(100vw - 20px);
         background-color: $white;
         
-        margin-inline-start: 10px;
+        //margin-inline-start: 10px;
+		margin-block-start: calc((100vh - 60px - 60vh - 10vh)/2);
         
         @include center;
-        flex-direction: column;
-        gap: 4vh;
+        flex-direction: row;
+        gap: 1vw;
 
         overflow: hidden;
 
+		.card { // see other .card class thing
+			flex-direction: column;
+			gap: 4vh;
+			background-color: $white;
+			height: 60vh;
 
-        .title {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-top: 4vh;
+			box-shadow: none;
+			transition: none;
+			&:hover{
+				box-shadow: none;
+			}
+			//box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
 
-            .h1Link {
-                text-decoration: none;
+			.title {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+				margin-top: 4vh;
+	
+				.h1Link {
+					text-decoration: none;
+	
+					.titlePart1 {
+						color: $plum;
+					}
+				}
+	
+				.logo {
+					max-width: 200px;
+					width: calc(30vw - 20px);
+					aspect-ratio: 162 / 113;
+				}
+	
+				.titlePart2 {
+						color: $ultraLightPlum;
+				}
+			}
+	
+			.banner {
+				margin-inline: 10px;
+				max-width: 800px;
+				width: calc(100vw - 20px);
+				
+				@include center;
+	
+				overflow: hidden;
+				
+				& > .bgImg {
+					object-fit: cover;
+					border-radius: 10px;
+					background-repeat: no-repeat;
+	
+					aspect-ratio: 22 / 13;
+					max-width: 100%;
+	
+					transform: translateY(0);
+				}
+			}
+	
+			.buttons {
+				margin-top: -2vh;
+	
+				display: flex;
+				gap: 25px;
+	
+				.button {
+					display: flex;
+					align-items: center;
+	
+					padding-inline: 16px;
+					padding-block: 10px;
+					cursor: pointer;
+	
+					border-radius: 10px;
+					background-color: $plum;
+	
+					text-decoration: none;
+					color: $white;
+					
+					transition: all .3s;
+	
+					&:hover {
+						-webkit-box-shadow:inset 0px 0px 0px 2px $plum;
+						-moz-box-shadow:inset 0px 0px 0px 2px $plum;
+						box-shadow:inset 0px 0px 0px 2px $plum;
+	
+						background-color: $white;
+						color: $plum;
+					}
+				}
+			}
+		}
 
-                .titlePart1 {
-                    color: $plum;
-                }
-            }
 
-            .logo {
-                max-width: 200px;
-                width: calc(30vw - 20px);
-                aspect-ratio: 162 / 113;
-            }
-
-            .titlePart2 {
-                    color: $ultraLightPlum;
-            }
-        }
-
-        .banner {
-            margin-inline: 10px;
-            max-width: 800px;
-            width: calc(100vw - 20px);
-            
-            @include center;
-
-            overflow: hidden;
-            
-            & > .bgImg {
-                object-fit: cover;
-                border-radius: 10px;
-                background-repeat: no-repeat;
-
-                aspect-ratio: 22 / 13;
-                max-width: 100%;
-
-                transform: translateY(0);
-            }
-        }
-
-        .buttons {
-            margin-top: -2vh;
-
-            display: flex;
-            gap: 25px;
-
-            .button {
-                display: flex;
-                align-items: center;
-
-                padding-inline: 16px;
-                padding-block: 10px;
-                cursor: pointer;
-
-                border-radius: 10px;
-                background-color: $plum;
-
-                text-decoration: none;
-                color: $white;
-                
-                transition: all .3s;
-
-                &:hover {
-                    -webkit-box-shadow:inset 0px 0px 0px 2px $plum;
-                    -moz-box-shadow:inset 0px 0px 0px 2px $plum;
-                    box-shadow:inset 0px 0px 0px 2px $plum;
-
-                    background-color: $white;
-                    color: $plum;
-                }
-            }
-        }
     }
 
     .chevron {
@@ -262,7 +301,8 @@
 
         display: flex;
         justify-content: center;
-        
+	}
+    
         .card {
             display: flex;
             flex-direction: column;
@@ -297,43 +337,42 @@
                 box-shadow:inset 0px 0px 0px 2px $ultraLightPlum;
             }
         }
-
+		
         .small {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
 
-                padding-left: 30px;
-                padding-right: 10px;
-                
-                font-size: 1.4rem;
+			padding-left: 30px;
+			padding-right: 10px;
+			
+			font-size: 1.4rem;
 
-                .image {
-                    margin-bottom: 10px;
-                    margin-left: 10px;
-                    width: 350px;
-                    max-height: 250px;
-                    max-width: 170px;
-                    aspect-ratio: initial;
+			.image {
+				margin-bottom: 10px;
+				margin-left: 10px;
+				width: 350px;
+				max-height: 250px;
+				max-width: 170px;
+				aspect-ratio: initial;
 
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 
-				.image.game-park {
-					width: 300px;
-					max-width: 200px;
-					max-height: 170px;
-				}
+			.image.game-park {
+				width: 300px;
+				max-width: 200px;
+				max-height: 170px;
+			}
 
-                .sub {
-                    margin-top: 5px;
-                    font-size: small;
-                }
-            }
-    }
+			.sub {
+				margin-top: 5px;
+				font-size: small;
+			}
+		}
 
     @container (max-height: 300px) { // working
         .small > .image {

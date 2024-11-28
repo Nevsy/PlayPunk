@@ -9,20 +9,20 @@
 
     // Function to italicize specific words
     function styleWords(text, wordsToItalicize) {
-      wordsToItalicize.forEach(word => {
-        const regex1 = new RegExp('\\b' + word + '\\b', 'gi');
-        text = text.replace(regex1, `<i>$&</i>`);
-      });
-      wordsToBolden.forEach(word => {
-        const regex2 = new RegExp('\\b' + word + '\\b', 'gi');
-        text = text.replace(regex2, `<span style="font-weight: 700">$&</div>`);
-      });
-      //Proposition
-    wordsToColor.forEach(word => {
-        const regex2 = new RegExp('\\b' + word + '\\b', 'gi');
-        text = text.replace(regex2, `<span style="color: #7f72b5">$&</div>`);
-    });
-      return text;
+		wordsToItalicize.forEach(word => {
+			const regex1 = new RegExp('\\b' + word + '\\b', 'gi');
+			text = text.replace(regex1, `<i>$&</i>`);
+		});
+		wordsToBolden.forEach(word => {
+			const regex2 = new RegExp('\\b' + word + '\\b', 'gi');
+			text = text.replace(regex2, `<span style="font-weight: 700">$&</div>`);
+		});
+		//Proposition
+		wordsToColor.forEach(word => {
+			const regex2 = new RegExp('\\b' + word + '\\b', 'gi');
+			text = text.replace(regex2, `<span style="color: #7f72b5">$&</div>`);
+		});
+      	return text;
     }
 
     function stylizeWordsWithMarkers(text) {
