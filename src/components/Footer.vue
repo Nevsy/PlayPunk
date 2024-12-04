@@ -52,7 +52,7 @@
         font-weight: 200;
 
         span {
-            padding-top: 4px;
+            padding-top: 10px;
         }
     }
 
@@ -60,9 +60,12 @@
         position: absolute;
         background-color: $lightPlum;
         height: 2px;
-        width: 800px;
-        margin-left: calc((100vw - 800px) / 2);
-        margin-bottom: -2px;
+        width: min(800px, 90vw);
+
+		left: 50%;
+ 		transform: translate(-50%,0);
+
+        margin-bottom: 10px;
         z-index: 100;
     }
 

@@ -31,31 +31,12 @@
 
     <!-- <div class="construction" v-if="constructionBool">This website is still under construction.<div class="construction_trigger" @click="triggerConstruction()"></div></div> -->
     <section class="section section1">
-    
-		<div class="captainflip card small">
-			<div class="title">
-				<!-- <RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="h1Link"><h1 class="titlePart1">{{  $t("home.header1") }}</h1></RouterLink> -->
-				<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })">
-					<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
-				</RouterLink >
-				<h1 class="titlePart2">{{  $t("home.header2") }}</h1>
-			</div>
-	
-			<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="banner">
-				<img class="bgImg" src="../assets/images/home/CF_Cover_Artwork.png" alt="Boxtop image for Captain Flip used as a banner image">
-			</RouterLink >
-	
-			<div class="buttons">
-				<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
-			</div>
-		</div>
-
-		<div class="zenith card small">
+		<div class="zenith card">
 			<div class="title">
 				<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })">
 					<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
 				</RouterLink >
-				<h1 class="titlePart2">{{  $t("home.header2") }}</h1>
+				<h1 class="titlePart2">{{  $t("home.header_zenith") }}</h1>
 			</div>
 	
 			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="banner">
@@ -66,7 +47,24 @@
 				<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
 			</div>
 		</div>
-        
+
+		<div class="captainflip card">
+			<div class="title">
+				<!-- <RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="h1Link"><h1 class="titlePart1">{{  $t("home.header1") }}</h1></RouterLink> -->
+				<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })">
+					<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
+				</RouterLink >
+				<h1 class="titlePart2">{{  $t("home.header_captainflip") }}</h1>
+			</div>
+	
+			<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="banner">
+				<img class="bgImg" src="../assets/images/home/CF_Cover_Artwork.png" alt="Boxtop image for Captain Flip used as a banner image">
+			</RouterLink >
+	
+			<div class="buttons">
+				<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
+			</div>
+		</div>
     </section>
     
     <a href="#section2">
@@ -171,81 +169,63 @@
         }
     }
 
-    .section1 {
-        width: calc(100vw - 20px);
-        background-color: $white;
-        
-        //margin-inline-start: 10px;
-		margin-block-start: calc((100vh - 60px - 60vh - 10vh)/2);
-        
-        @include center;
-        flex-direction: row;
-        gap: 1vw;
+	.section1 {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+		max-width: 80vw;
 
-        overflow: hidden;
+		margin-left: 10vw;
+		margin-top: 2vh;
+		padding: 2rem;
+		padding-top: 1vh;
 
-		.card { // see other .card class thing
+		.card {
+			flex: 1;
+			display: flex;
 			flex-direction: column;
-			gap: 4vh;
-			background-color: $white;
-			height: 60vh;
-
-			box-shadow: none;
-			transition: none;
-			&:hover{
-				box-shadow: none;
-			}
-			//box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-
+			align-items: center;
+			gap: 1rem;
+			
 			.title {
 				display: flex;
 				flex-direction: column;
-				gap: 4px;
-				margin-top: 4vh;
-	
-				.h1Link {
-					text-decoration: none;
-	
-					.titlePart1 {
-						color: $plum;
-					}
-				}
-	
+				align-items: center;
+				gap: 0.5rem;
+
 				.logo {
-					max-width: 200px;
-					width: calc(30vw - 20px);
-					aspect-ratio: 162 / 113;
+					max-width: 250px;
+					height: auto;
+					object-fit: contain;
 				}
-	
+
 				.titlePart2 {
-						color: $ultraLightPlum;
+					font-size: 1.5rem;
+					font-weight: 400;
+					text-align: center;
 				}
 			}
-	
+
 			.banner {
-				margin-inline: 10px;
-				max-width: 800px;
-				width: calc(100vw - 20px);
-				
-				@include center;
-	
+				width: 90%;
+				max-height: 400px;
 				overflow: hidden;
-				
-				& > .bgImg {
+				border-radius: 10px;
+
+				.bgImg {
+					width: 100%;
+					height: 100%;
 					object-fit: cover;
 					border-radius: 10px;
-					background-repeat: no-repeat;
-	
-					aspect-ratio: 22 / 13;
-					max-width: 100%;
-	
-					transform: translateY(0);
+					transition: transform 0.3s ease;
+
+					&:hover, &:active {
+						transform: scale(1.1);
+					}
 				}
 			}
-	
-			.buttons {
-				margin-top: -2vh;
-	
+
+			.buttons {	
 				display: flex;
 				gap: 25px;
 	
@@ -265,7 +245,7 @@
 					
 					transition: all .3s;
 	
-					&:hover {
+					&:hover, &:active {
 						-webkit-box-shadow:inset 0px 0px 0px 2px $plum;
 						-moz-box-shadow:inset 0px 0px 0px 2px $plum;
 						box-shadow:inset 0px 0px 0px 2px $plum;
@@ -276,9 +256,35 @@
 				}
 			}
 		}
+	}
 
+	// Responsive design
+	@media screen and (max-width: 1000px) {
+		.section1 {
+			.logo {
+				width: 200px;
+			}
+		}
+	}
 
-    }
+	@media screen and (max-width: 768px) {
+		.section1 {
+			flex-direction: column;
+			gap: 10vh;
+			max-width: 100vw;
+			margin-left: 0vw;
+			padding: 1rem;
+
+			.card {
+				width: 100%;
+
+				.banner {
+					width: 100%;
+					max-height: 200px;
+				}
+			}
+		}
+	}
 
     .chevron {
         height: 75px;
@@ -301,36 +307,35 @@
 
         display: flex;
         justify-content: center;
-	}
-    
+		
         .card {
-            display: flex;
+			display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
+			
             background: $lightPlum;
             font-size: 3rem;
             color: $white;
             text-decoration: none;
-
+			
             box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
             
             height: 250px;
             width: 100%;
             border-radius: 10px;
-
+			
             transition: all 100ms;
             overflow: hidden;
-
+			
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-
+			
             padding-block-start: 10px;
-
+			
             &:hover {
-                box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+				box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
                 
                 -webkit-box-shadow:inset 0px 0px 0px 2px $ultraLightPlum;
                 -moz-box-shadow:inset 0px 0px 0px 2px $ultraLightPlum;
@@ -343,12 +348,12 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-
+			
 			padding-left: 30px;
 			padding-right: 10px;
 			
 			font-size: 1.4rem;
-
+			
 			.image {
 				margin-bottom: 10px;
 				margin-left: 10px;
@@ -356,23 +361,24 @@
 				max-height: 250px;
 				max-width: 170px;
 				aspect-ratio: initial;
-
+				
 				display: flex;
 				align-items: center;
 				justify-content: center;
 			}
-
+			
 			.image.game-park {
 				width: 300px;
 				max-width: 200px;
 				max-height: 170px;
 			}
-
+			
 			.sub {
 				margin-top: 5px;
 				font-size: small;
 			}
 		}
+	}
 
     @container (max-height: 300px) { // working
         .small > .image {

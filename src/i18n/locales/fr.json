@@ -14,8 +14,8 @@
         "cs": "SAV"
     },
     "home": {
-        "header1": "Captain flip:",
-        "header2": "Nous sommes nominés au Spiel des Jahres 2024 !",
+        "header_captainflip": "Nous sommes nominés au Spiel des Jahres 2024 !",
+		"header_zenith": "Sors en février de 2025 !",
         "button1": "Page du jeu",
         "bga": "Retrouvez-nous sur Board Game Arena !",
 		"game-park": "Retrouvez-nous également sur Game Park",
@@ -50,7 +50,8 @@
         "elements": "Élements du jeu",
         "boards": "Plateaux de jeu",
         "rules": "Règles",
-        "images": "Images générales"
+        "images": "Images générales",
+		"rulesKraken": "\"dans la gueule du Kraken\" règles"
     },
     "captainFlip" : {
         "names": "Un jeu de Paolo Mori and Remo Conzadori",

@@ -48,10 +48,13 @@
 </template>
 
 <style scoped lang="scss">
-    
+	@import "@/assets/styles/scss/_variables.scss";
+	@import "@/assets/styles/scss/_mixins.scss";
+
     select {
         padding-left: 3px;
         font-size: 1.3rem;
+		background-color: $white;
 
         option {
             padding-left: 3px;

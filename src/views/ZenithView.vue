@@ -26,7 +26,7 @@
 	]);
 
 	// IMG EXPLICATIVES REGLES (BOXBOTTOM)
-	// SOLEIL COUPÉ + LOGO ZENITH
+	// SOLEIL COUPÉ (couleur fond: #f7f5ee) + LOGO ZENITH
 	// PLATEAUX TECHNOS (idealement coupés en 3)
 	// ÉCLATÉ (si tu as la liste des des nombres de chaque object ce serait cool, sinon je demande a Thomas)
 </script>
@@ -189,7 +189,7 @@
 			animation: scroll1 60s linear infinite;
 
 			img {
-				margin-block: 30px;
+				margin-block-end: 120px;
 				width: 200px;
 				height: auto;
 				flex-shrink: 0;

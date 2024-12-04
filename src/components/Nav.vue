@@ -131,8 +131,8 @@
     position: sticky;
     background-color: $white;
 
-    padding-block-start: 10px;
-    padding-inline: 10px;
+	padding-block-start: 10px;
+	padding-inline: 10px;
 
     width: 100vw;
     height: auto;
