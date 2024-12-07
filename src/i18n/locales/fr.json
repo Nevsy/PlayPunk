@@ -14,8 +14,8 @@
         "cs": "SAV"
     },
     "home": {
-        "header_captainflip": "Nous sommes nominés au Spiel des Jahres 2024 !",
-		"header_zenith": "Sors en février de 2025 !",
+        "header_captainflip": "Nominé au Spiel des Jahres 2024",
+		"header_zenith": "Sort en février de 2025 !",
         "button1": "Page du jeu",
         "bga": "Retrouvez-nous sur Board Game Arena !",
 		"game-park": "Retrouvez-nous également sur Game Park",
@@ -51,7 +51,10 @@
         "boards": "Plateaux de jeu",
         "rules": "Règles",
         "images": "Images générales",
-		"rulesKraken": "\"dans la gueule du Kraken\" règles"
+		"rulesKraken": "\"dans la gueule du Kraken\" règles",
+		"CF_kraken_info": "en Français, et beaucoup d'autres langues",
+		"CF_kraken_info2": "lu en 2 min",
+		"ZE_info": "lu en 15 min"
     },
     "captainFlip" : {
         "names": "Un jeu de Paolo Mori and Remo Conzadori",
@@ -114,7 +117,7 @@
         "section6": {
             "content": "Composants du jeu",
             "contentDescription": "Zenith comprend une variété de pièces de jeu, notamment un plateau de jeu modulaire, des jetons de ressources et les cartes de jeu uniques."
-        }	
+        }
 	},
     "cfDownloads": {
         "header": "Ici, vous pouvez télécharger les règles de",

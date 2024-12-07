@@ -8,12 +8,14 @@
     const generalImages = [{name: "3D_contents", infoFileSize: "11,4MB", infoSize: "4463 x 2743 px"}, {name: "Boxtop_Cover", infoFileSize: "10MB", infoSize: "3072 x 3072 px"}, {name: "Packaging_Box_Left", infoFileSize: "11,6MB", infoSize: "3043 x 3306px"}, {name: "Packaging_Box_Right", infoFileSize: "11,6MB", infoSize: "3043 x 3306px"}, {name: "Logo", infoFileSize: "7,11MB", infoSize: "3894 x 2716 px"}]
     const gameElements = ["Parrot", "Cannoner", "Capitain", "Cartograph", "Charpenter", "Cook", "Monkey", "Mousse", "Watch", "Coins_1", "Coins_3", "Coins_5", "Coins_10", "Map"]
     const dlLanguages = ["EN", "FR", "NL", "DE", "ES", "IT", "PL", "CZ", "SK"]
-	const dlLanguages_kraken = ["EN", "FR"];
 
 	const gameElements_ZE = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8"]
+	const dlLanguages_ZE = ["EN", "FR", "DE"]
 
 	const contentActive_CF = ref([false, false, false, false, false]);
 	const contentActive_ZE = ref([false, false, false, false]);
+
+	// TOUTE LA SECTION CLIQUABLE, OU RESPONSIVENESS++
 </script>
 
 <template>
@@ -38,15 +40,18 @@
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_CF[0]}">
-                            <div class="download" v-for="language in dlLanguages_kraken">
+                            <div class="download">
                                 <div class="text">
                                     <span class="docTitle">
-                                        CF-Rules_{{ language }}_RGB.pdf
+                                        CF_kraken_Rules.pdf
                                     </span>
-                                    <span class="info">17KB ● {{ $t("cfDownloads.dlInfo") }}</span>
+									<span class="docTitle">
+                                        {{ $t("press.CF_kraken_info") }}
+                                    </span>
+                                    <span class="info">5KB ● {{ $t("press.CF_kraken_info2") }}</span>
                                 </div>
             
-                                <a class="dlLogo" :href="`/src/downloads/RGB/CF_kraken_Rules_${language}.pdf`" :download="`CF_kraken_Rules_${language}_RGB.pdf`">⬇️</a>
+                                <a class="dlLogo" href="`/src/downloads/RGB/CF_kraken_Rules.pdf`" download="`CF_kraken_Rules.pdf`">⬇️</a>
                             </div>
                         </div>
                     </div>
@@ -150,15 +155,15 @@
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_ZE[0]}">
-                            <div class="download" v-for="language in dlLanguages">
+                            <div class="download" v-for="language in dlLanguages_ZE">
                                 <div class="text">
                                     <span class="docTitle">
-                                        Zenith-Rules_{{ language }}_RGB.pdf
+                                        Zenith_Rules_{{ language }}.pdf
                                     </span>
-                                    <span class="info">17KB ● {{ $t("cfDownloads.dlInfo") }}</span>
+                                    <span class="info">19MB ● {{ $t("press.ZE_info") }}</span>
                                 </div>
             
-                                <a class="dlLogo" :href="`/src/downloads/RGB/CF_Rules_${language}.pdf`" :download="`CD_Rules_${language}_RGB.pdf`">⬇️</a>
+                                <a class="dlLogo" :href="`/src/downloads/RGB/ZE_Rules_${language}.pdf`" :download="`Zenith_Rules_${language}.pdf`">⬇️</a>
                             </div>
                         </div>
                     </div>

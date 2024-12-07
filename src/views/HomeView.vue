@@ -34,13 +34,13 @@
 		<div class="zenith card">
 			<div class="title">
 				<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })">
-					<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
+					<img class="logo" src="../assets/images/Zenith/logo_orange.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
 				</RouterLink >
 				<h1 class="titlePart2">{{  $t("home.header_zenith") }}</h1>
 			</div>
 	
 			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="banner">
-				<img class="bgImg" src="../assets/images/home/CF_Cover_Artwork.png" alt="Boxtop image for Captain Flip used as a banner image">
+				<img class="bgImg" src="../assets/images/Zenith/general/sun.png" alt="Boxtop image for Captain Flip used as a banner image">
 			</RouterLink >
 	
 			<div class="buttons">
@@ -191,7 +191,9 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				justify-content: center;
 				gap: 0.5rem;
+				height: 27vh;
 
 				.logo {
 					max-width: 250px;
@@ -261,8 +263,17 @@
 	// Responsive design
 	@media screen and (max-width: 1000px) {
 		.section1 {
-			.logo {
-				width: 200px;
+			.title {
+				height: auto;
+				.logo {
+					width: 200px;
+				}
+			}
+
+			.zenith {
+				.banner {
+					min-height: 300px;
+				}
 			}
 		}
 	}

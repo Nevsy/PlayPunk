@@ -1,7 +1,6 @@
 <script setup>
 	import Nav from '../components/Nav.vue'
     import Footer from '../components/Footer.vue'
-	import CardsScrollerInner from '../components/CardsScrollerInner.vue'
 	
     import { RouterLink } from 'vue-router'
     import Tr from "@/i18n/translation"
@@ -24,20 +23,15 @@
 		"/src/assets/images/Zenith/cards/card7.jpg",
 		"/src/assets/images/Zenith/cards/card8.jpg"
 	]);
-
-	// IMG EXPLICATIVES REGLES (BOXBOTTOM)
-	// SOLEIL COUPÉ (couleur fond: #f7f5ee) + LOGO ZENITH
-	// PLATEAUX TECHNOS (idealement coupés en 3)
-	// ÉCLATÉ (si tu as la liste des des nombres de chaque object ce serait cool, sinon je demande a Thomas)
 </script>
 
 <template>
 	<Nav v-on:sendToMain="reload()"/>
 
 	<section class="section1 header">
-		<img class="sun" src="../assets/images/Zenith/sun.png" alt="background image: stylized sun">
+		<img class="sun" src="../assets/images/Zenith/general/sun.png" alt="background image: stylized sun">
 		<div class="container">
-			<img class="logo" src="../assets/images/Zenith/logo.png" alt="Zenith logo">
+			<img class="logo" src="../assets/images/Zenith/logo_white.png" alt="Zenith logo">
 			<h2>{{ $t('zenith.section1.header') }}</h2>
 			<p>{{ $t('zenith.section1.explanation1') }}</p>
 			<p>{{ $t('zenith.section1.explanation2') }}</p>
@@ -46,7 +40,8 @@
 
 	<section class="section2 board">
 		<span class="goalGame">{{ $t('zenith.section2.goalGame') }}</span>
-		<img src="../assets/images/Zenith/eclate.png" alt="image of the board, set up">
+		<img v-if="locale == 'fr'" src="../assets/images/Zenith/general/boxbottom_fr.png" alt="image of the board, set up">
+		<img v-if="locale == 'en'" src="../assets/images/Zenith/general/boxbottom_en.png" alt="image of the board, set up">
 	</section>
 
 	<section class="section3 scrollingcards">
@@ -64,9 +59,18 @@
 	<section class="section4 movingplanets">
 		<span class="title">{{ $t('zenith.section4.movingPlanets') }}</span>
 		<div class="container">
-			<img src="../assets/images/Zenith/card1.png" alt="3 different technology boards, showing versatility">
-			<img src="../assets/images/Zenith/card2.png" alt="3 different technology boards, showing versatility">
-			<img src="../assets/images/Zenith/card3.png" alt="3 different technology boards, showing versatility">
+			<div class="left">
+				<img class="board1" src="../assets/images/Zenith/board/board_1.png" alt="2 completely different technology boards, showing versatility">
+				<img class="board4" src="../assets/images/Zenith/board/board_4.png" alt="2 completely different technology boards, showing versatility">
+			</div>
+			<div class="mid">
+				<img class="board2" src="../assets/images/Zenith/board/board_2.png" alt="2 completely different technology boards, showing versatility">
+				<img class="board5" src="../assets/images/Zenith/board/board_5.png" alt="2 completely different technology boards, showing versatility">
+			</div>
+			<div class="right">
+				<img class="board3" src="../assets/images/Zenith/board/board_3.png" alt="2 completely different technology boards, showing versatility">
+				<img class="board6" src="../assets/images/Zenith/board/board_6.png" alt="2 completely different technology boards, showing versatility">
+			</div>
 		</div>
 	</section>
 
@@ -80,7 +84,10 @@
 
 	<section class="section6 content">
 		<span class="title">{{ $t('zenith.section6.content') }}</span>
-		<img src="../assets/images/Zenith/content.png" alt="image showing the game setup and contents">
+		<img src="../assets/images/Zenith/general/eclate.png" alt="image showing the game setup and contents">
+		<ul>
+			
+		</ul>
 	</section>
 
 	<section class="section7 rules">
@@ -96,9 +103,20 @@
 @import "@/assets/styles/scss/_variables.scss";
 @import "@/assets/styles/scss/_mixins.scss";
 
+// Mixin for keyframe generation
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// Variables for animation timing and control
+$transition-duration: 3s;
+$total-animation-duration: $transition-duration * 6;
+
 .section1 {
 	position: relative;
-	height: 50vh;
+	height: 70vh;
 	overflow: hidden;
 
 	.container {
@@ -109,13 +127,15 @@
 		text-align: center;
 		color: $plum;
 		display: flex;
+		gap: 20px;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		height: 100%;
 
 		.logo {
-			margin-bottom: 30px;
+			margin-block: 50px;
+			max-height: 90px;
 		}
 		
 		h2 {
@@ -132,7 +152,6 @@
 		justify-content: center;
 		width: 150vw;
 		transform: translate(-25vw, -75%);
-		background-image: url("../assets/images/Zenith/sun.png");
 		background-size: cover;
 		background-position: center;
 
@@ -140,6 +159,17 @@
 			width: 300px;
 			max-width: 80%;
 			height: auto;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.section1 {
+		.container {
+			.logo {
+				max-height: auto;
+				max-width: 90vw;
+			}
 		}
 	}
 }
@@ -160,6 +190,14 @@
 	img {
 		max-width: 80%;
 		height: auto;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.section2 {
+		img {
+			max-width: 110%;
+		}
 	}
 }
 
@@ -189,7 +227,7 @@
 			animation: scroll1 60s linear infinite;
 
 			img {
-				margin-block-end: 120px;
+				margin-block-end: 120px; // Makes the space underneath
 				width: 200px;
 				height: auto;
 				flex-shrink: 0;
@@ -263,28 +301,149 @@
 	}
 }
 
+@media screen and (max-width: 1000px) {
+	.section3 {
+		.scroller__inner img {
+			margin-block-end: 3vh;
+		}
+	}
+	.section4 {
+		margin-top: -15vh;
+	}
+}
+
 .section4 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	padding: 2rem;
+	height: 120vh;
+
+	overflow: hidden;
 
 	.title {
 		font-size: 2rem;
 		font-weight: bold;
-		margin-bottom: 2rem;
+		height: 7%;
 	}
-
+	
 	.container {
+		z-index: 10;
 		display: flex;
-
-		img {
-			width: 300px;
-			height: auto;
-			margin: 0 1rem;
-			border-radius: 10px;
+		justify-content: center;
+		align-items: center;
+		padding-top: 5vh;
+		width: 95vw;
+		height: 100%;
+		gap: 10px;
+		position: relative;
+		overflow: hidden;
+		
+		> div {
+			height: 95%;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
 		}
+		
+		.left, .right {
+			width: 25%; // Slightly larger sections
+		}
+		
+		.mid {
+			z-index: 100;
+			height: 120%;
+			width: 23%; // Slightly smaller middle section
+		}
+		
+		// Image base styles
+		img {
+			overflow: hidden;
+			position: absolute;
+			width: 90%;
+			height: auto;
+			opacity: 0;
+			animation-duration: $total-animation-duration;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+
+		.left {
+			@include keyframes(left-img-1) {
+				0%, 16.66% { opacity: 1; }
+				33.33%, 50% { opacity: 0; }
+				66.66%, 100% { opacity: 1; }
+			}
+			
+			@include keyframes(left-img-2) {
+				0%, 16.66% { opacity: 0; }
+				33.33%, 50% { opacity: 1; }
+				66.66%, 100% { opacity: 0; }
+			}
+
+			.board1 {
+				animation-name: left-img-1;
+			}
+
+			.board4 {
+				animation-name: left-img-2;
+			}
+		}
+
+		// Middle section animations
+		.mid {
+			@include keyframes(mid-img-1) {
+				0% { opacity: 1; }
+				16.66%, 66.66% { opacity: 0; }
+				83.33%, 100% { opacity: 1; }
+			}
+			
+			@include keyframes(mid-img-2) {
+				0% { opacity: 0; }
+				16.66%, 66.66% { opacity: 1; }
+				83.33%, 100% { opacity: 0; }
+			}
+
+			.board2 {
+				animation-name: mid-img-1;
+			}
+
+			.board5 {
+				animation-name: mid-img-2;
+			}
+		}
+
+		// Right section animations
+		.right {
+			@include keyframes(right-img-1) {
+				0%, 33.33% { opacity: 0; }
+				50%, 83.33% { opacity: 1; }
+				100% { opacity: 0; }
+			}
+			
+			@include keyframes(right-img-2) {
+				0%, 33.33% { opacity: 1; }
+				50%, 83.33% { opacity: 0; }
+				100% { opacity: 1; }
+			}
+
+			.board3 {
+				animation-name: right-img-1;
+			}
+
+			.board6 {
+				animation-name: right-img-2;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.section4 {
+		height: 70vh;
 	}
 }
 
@@ -293,7 +452,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 2rem;
+	padding: 0 2rem 2rem 2rem;
 
 	.title {
 		font-size: 2rem;
@@ -304,6 +463,14 @@
 	img {
 		max-width: 80%;
 		height: auto;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.section6 {
+		img {
+			max-width: 140%;
+		}
 	}
 }
 

@@ -14,7 +14,7 @@
         "cs": "Customer Service"
     },
     "home": {
-        "header_captainflip": "We're nominated for the Spiel des Jahres 2024!",
+        "header_captainflip": "Nominated for the Spiel des Jahres 2024!",
         "header_zenith": "Appears in February 2025!",
         "button1": "See the game",
         "bga": "Find us on board game arena!",
@@ -50,7 +50,10 @@
         "boards": "Game Boards",
         "rules": "Rules",
         "images": "General Images",
-		"rulesKraken": "\"In the Jaws of the Kraken\" rules"
+		"rulesKraken": "\"In the Jaws of the Kraken\" rules",
+		"CF_kraken_info": "EN, FR, CZ, DE, ES, IT, PL, SK",
+		"CF_kraken_info2": "2 min read",
+		"ZE_info": "15 min read"
     },
     "captainFlip": {
         "names": "A game by Paolo Mori and Remo Conzadori",
