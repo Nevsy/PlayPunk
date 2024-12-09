@@ -32,7 +32,8 @@
 		<img class="sun" src="../assets/images/Zenith/general/sun.png" alt="background image: stylized sun">
 		<div class="container">
 			<img class="logo" src="../assets/images/Zenith/logo_white.png" alt="Zenith logo">
-			<h2>{{ $t('zenith.section1.header') }}</h2>
+			<h2>{{ $t('zenith.section1.header1') }}</h2>
+			<h2>{{ $t('zenith.section1.header2') }}</h2>
 			<p>{{ $t('zenith.section1.explanation1') }}</p>
 			<p>{{ $t('zenith.section1.explanation2') }}</p>
 		</div>
@@ -43,9 +44,10 @@
 		<img v-if="locale == 'fr'" src="../assets/images/Zenith/general/boxbottom_fr.png" alt="image of the board, set up">
 		<img v-if="locale == 'en'" src="../assets/images/Zenith/general/boxbottom_en.png" alt="image of the board, set up">
 	</section>
-
+	
 	<section class="section3 scrollingcards">
 		<span class="title">{{ $t('zenith.section3.scrollingCards') }}</span>
+		<p>{{ $t('zenith.section3.cardDescription') }}</p>
 		<div class="scroller">
 			<div class="scroller__inner scroller__inner1">
 				<img v-for="(img, index) in images" :key="index" :src="img" alt="Playing card" />
@@ -55,7 +57,7 @@
 			</div>
 		</div>
 	</section>
-
+	
 	<section class="section4 movingplanets">
 		<span class="title">{{ $t('zenith.section4.movingPlanets') }}</span>
 		<div class="container">
@@ -212,7 +214,13 @@ $total-animation-duration: $transition-duration * 6;
 	.title {
 		font-size: 2rem;
 		font-weight: bold;
+		margin-bottom: .5rem;
+	}
+
+	p {
 		margin-bottom: 2rem;
+		font-size: 1.1rem;
+		text-align: center
 	}
 
 	.scroller {
@@ -318,7 +326,7 @@ $total-animation-duration: $transition-duration * 6;
 	align-items: center;
 	justify-content: center;
 	padding: 2rem;
-	height: 120vh;
+	height: 125vh;
 
 	overflow: hidden;
 

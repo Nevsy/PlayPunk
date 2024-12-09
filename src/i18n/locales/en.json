@@ -15,7 +15,7 @@
     },
     "home": {
         "header_captainflip": "Nominated for the Spiel des Jahres 2024!",
-        "header_zenith": "Appears in February 2025!",
+        "header_zenith": "Your goal, unite the planets to gain control of the senate !",
         "button1": "See the game",
         "bga": "Find us on board game arena!",
 		"game-park": "You can also find us on Game Park",
@@ -96,7 +96,8 @@
     },
 	"zenith": {
 		"section1": {
-			"header": "Zenith is a strategy game, based on a tug-of-war mechanic, for 2 players or 4 players in teams.",
+			"header1": "Zenith is a strategy game, based on a tug-of-war mechanic.",
+			"header2": "For 2 players or 4 players in teams.",
 			"explanation1": "In the far-off future, the solar system is inhabited by 3 races: Humans, Robots, and Animods. Civilization runs off Of Zenithium, a clean and renewable energy source. but coexistence is a struggle. Your goal: unite the planets to gain control of the senate!",
 			"explanation2": "Use your Agents' skills to gain influence, develop solar technologies, and become the leader."
 		},
@@ -105,11 +106,11 @@
 			"goalDescription": "Players will struggle to gain Influence on the 5 planets: Mercury, Venus, Earth, Mars, and Jupiter. This Influence is represented by discs in different colors."
 		},
 		"section3": {
-			"scrollingCards": "Versatile Playing Cards",
+			"scrollingCards": "Playing Cards",
 			"cardDescription": "Zenith features more than 50 unique playing cards, each with their own special abilities and strategies."
 		},
 		"section4": {
-			"movingPlanets": "Technology Board",
+			"movingPlanets": "Multiple Technology Boards to diversify your games",
 			"planetDescription": "Multiple technology board are available to diversify your games."
 		},
 		"section5": {

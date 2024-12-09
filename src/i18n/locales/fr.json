@@ -15,7 +15,7 @@
     },
     "home": {
         "header_captainflip": "Nominé au Spiel des Jahres 2024",
-		"header_zenith": "Sort en février de 2025 !",
+		"header_zenith": "Votre objectif, fédérer les planètes pour gagner le contrôle du sénat !",
         "button1": "Page du jeu",
         "bga": "Retrouvez-nous sur Board Game Arena !",
 		"game-park": "Retrouvez-nous également sur Game Park",
@@ -70,7 +70,6 @@
             "last": "Recrutez canonnière, perroquet, navigatrice, vigie, cuistot… Accumulez des pièces mais gare à l’explosion ! La pirate la plus riche gagnera la partie."
         },
         
-        
         "downloadButton" : "Téléchargez les règles ici !",
 
         "subSectionContent": "Contenu",
@@ -94,16 +93,17 @@
     },
 	"zenith": {
 		"section1": {
-            "header": "Bienvenue à Zenith",
-            "explanation1": "Embarquez dans un voyage pour unir les planètes et prendre le contrôle du Sénat !",
-            "explanation2": "Utilisez les compétences de vos agents pour gagner en influence, développer des technologies solaires et devenir le leader."
-        },
+			"header1": "Zenith est un jeu de stratégie, basé sur un mécanisme de tir à la corde.",
+			"header2": "pour 2 joueurs ou 4 joueurs en équipe",
+			"explanation1": "Dans un futur lointain, le système solaire est habité par 3 peuples : les Humains, les Robots et les Animods. La civilisation bénéficie du Zenithium, une énergie propre et renouvelable, mais peine à s’organiser. Votre objectif, fédérer les planètes pour gagner le contrôle du sénat !",
+			"explanation2": "Utilisez les compétences de vos Agents pour gagner de l'influence, développer des technologies solaires et devenir le leader."
+		},
         "section2": {
             "goalGame": "But du jeu",
             "goalDescription": "Les joueurs vont lutter pour gagner de l'influence sur les 5 planètes : Mercure, Vénus, Terre, Mars et Jupiter. Cette influence est représentée par des disques de différentes couleurs."
         },
         "section3": {
-            "scrollingCards": "Cartes de jeu polyvalentes",
+            "scrollingCards": "Cartes de jeu",
             "cardDescription": "Zenith propose plus de 50 cartes de jeu uniques, chacune avec ses propres capacités et stratégies spéciales."
         },
         "section4": {

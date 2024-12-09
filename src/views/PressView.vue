@@ -4,14 +4,20 @@
 
     import { ref } from 'vue'
 
+	// CAPTAIN FLIP
     const boardImages = ["Boards_A", "Boards_AFirst", "Boards_B", "Boards_BFirst", "Boards_C", "Boards_CFirst", "Boards_D", "Boards_DFirst"]
-    const generalImages = [{name: "3D_contents", infoFileSize: "11,4MB", infoSize: "4463 x 2743 px"}, {name: "Boxtop_Cover", infoFileSize: "10MB", infoSize: "3072 x 3072 px"}, {name: "Packaging_Box_Left", infoFileSize: "11,6MB", infoSize: "3043 x 3306px"}, {name: "Packaging_Box_Right", infoFileSize: "11,6MB", infoSize: "3043 x 3306px"}, {name: "Logo", infoFileSize: "7,11MB", infoSize: "3894 x 2716 px"}]
+    const generalImages = [{name: "3D_contents", infoFileSize: "11,4MB", infoSize: "4463 x 2743 px"}, {name: "Boxtop_Cover", infoFileSize: "10MB", infoSize: "3072 x 3072 px"}, {name: "Packaging_Box_Left", infoFileSize: "11,6MB", infoSize: "3043 x 3306px"}, {name: "Packaging_Box_Right", infoFileSize: "11,6MB", infoSize: "3043 x 3306 px"}, {name: "Logo", infoFileSize: "7,11MB", infoSize: "3894 x 2716 px"}]
     const gameElements = ["Parrot", "Cannoner", "Capitain", "Cartograph", "Charpenter", "Cook", "Monkey", "Mousse", "Watch", "Coins_1", "Coins_3", "Coins_5", "Coins_10", "Map"]
     const dlLanguages = ["EN", "FR", "NL", "DE", "ES", "IT", "PL", "CZ", "SK"]
-
+	
+	// ZENITH
+	let boardImages_extra_ZE = [{name: "Diplo_Front", size: "2413 x 1443 px", fileSize: "3,4MB"}, {name: "MainBoard", size: "4367 x 2413 px", fileSize: "5.9MB"}]
+	let techBoards_ZE = ["D", "N", "O", "P", "S", "U"]
+	let boardImages_ZE = [...boardImages_extra_ZE, ...techBoards_ZE]
 	const gameElements_ZE = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8"]
+    const generalImages_ZE = [{name: "Packaging_box_Bottom", fileSize: "6MB", size: "1600 x 1200 px"}, {name: "Packaging_box_Left", fileSize: "6MB", size: "1600 x 1200 px"}, {name: "Packaging_box_Right", size: "6MB", fileSize: "1600 x 1200 px"}, {name: "Packaging_Setup", size: "7MB", fileSize: "1823 x 1079 px"}, {name: "Packaging_InGame", size: "6MB", fileSize: "2000 x 1124 px"}, {name: "Boxbottom_Explanation_FR", size: "4MB", fileSize: "2547 x 1792 px"}, {name: "Boxbottom_Explanation_EN", size: "4MB", fileSize: "2547 x 1792 px"}, {name: "Logo_Orange", size: "273KB", fileSize: "2133 x 412 px"}, {name: "Logo_White", size: "148KB", fileSize: "2133 x 390 px"}]
 	const dlLanguages_ZE = ["EN", "FR", "DE"]
-
+	
 	const contentActive_CF = ref([false, false, false, false, false]);
 	const contentActive_ZE = ref([false, false, false, false]);
 
@@ -175,16 +181,16 @@
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_ZE[1]}">
-                            <div class="download" v-for="image in generalImages">
-                                <img class="image" :src="`/src/assets/images/Press/General/CF_${image.name}.png`"> <!-- alt="Image download preview" -->
+                            <div class="download" v-for="(image, index) in generalImages_ZE">
+                                <img class="image" :src="`/src/downloads/Press/RGB/Zenith/GeneralImages/ZE_${image.name}.png`"> <!-- alt="Image download preview" -->
                                 <div class="text">
                                     <span class="docTitle">
-                                        {{ image.name }}_RGB.png
+                                        ZE_{{ image.name }}.png
                                     </span>
-                                    <span class="info">{{ image.infoFileSize }} ● {{ image.infoSize }}</span>
+                                    <span class="info">{{ image.fileSize }} ● {{ image.size }}</span>
                                 </div>
                                 
-                                <a class="dlLogo" :href="`/src/downloads/Press/RGB/GeneralImages/CF_${image.name}.png`" :download="`CF_${image.name}_RGB.png`">⬇️</a>
+                                <a class="dlLogo" :href="`/src/downloads/Press/RGB/Zenith/GeneralImages/ZE_${image.name}.png`" :download="`ZE_${image.name}_RGB.png`">⬇️</a>
                             </div>
                         </div>
                     </div>
@@ -197,16 +203,23 @@
                         </h2>
 
                         <div class="accordion_content" :class="{active: contentActive_ZE[2]}">
-                            <div class="download" v-for="image in boardImages">
-                                <img class="image" :src="`/src/assets/images/Press/Boards/${image}_resized_resized.png`"> <!-- alt="Image download preview" -->
+                            <div class="download" v-for="(image, index) in boardImages_ZE">
+								<img class="image" v-if="index < 2" :src="`/src/downloads/Press/RGB/Zenith/Boards/ZE_${image.name}.png`"> <!-- alt="Image download preview" -->
+								<img class="image" v-else :src="`/src/downloads/Press/RGB/Zenith/Boards/ZE_Tech_Board_${ image }.png`"> <!-- alt="Image download preview" -->
                                 <div class="text">
-                                    <span class="docTitle">
-                                        CF_{{ image }}_RGB.png
+									<span class="docTitle" v-if="index < 2">
+										ZE_{{ image.name }}.png
                                     </span>
-                                    <span class="info">8MB ● 2835 x 2835 px</span>
+									<span class="docTitle" v-else>
+										ZE_Tech_Board_{{ image }}.png
+									</span>
+
+									<span class="info" v-if="index < 2">{{ image.fileSize }} ● {{ image.size }}</span>
+									<span class="info" v-else>2MB ● 853 x 2342 px</span>
                                 </div>
                                 
-                                <a class="dlLogo" :href="`/src/downloads/Press/RGB/Boards/${image}.png`" :download="`CF_${image}_RGB.png`">⬇️</a>
+                                <a class="dlLogo" v-if="index < 2" :href="`/src/downloads/Press/RGB/Zenith/Boards/ZE_${image.name}.png`" :download="`ZE_${image.name}.png`">⬇️</a>
+                                <a class="dlLogo" v-else :href="`/src/downloads/Press/RGB/Zenith/Boards/ZE_Tech_Board_${ image }.png`" :download="`ZE_Tech_board_${image}.png`">⬇️</a>
                             </div>
                         </div>
                     </div>
@@ -219,17 +232,17 @@
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_ZE[3]}">
                             <div class="download" style="width: 350px;" v-for="(image, index) in gameElements_ZE">
-                                <img class="image" :src="`/src/downloads/Press/RGB/GameElements_ZE/${image}.jpg`"> <!-- alt="Image download preview" -->
+                                <img class="image" :src="`/src/downloads/Press/RGB/Zenith/GameElements/${image}.jpg`"> <!-- alt="Image download preview" -->
                                 <div class="text">
                                     <span class="docTitle">
-                                        {{ image }}_RGB.png
+                                        {{ image }}.jpg
                                     </span>
                                     <span class="info" v-if="index < 8">300kB ● 673 x 1051 px</span>
                                     <span class="info" v-if="index == 8">1,1MB ● 799 x 978 px</span>
                                     <span class="info" v-if="index > 9 && index != 13">150kB ● 330 x 330 px</span>
                                 </div>
                                 
-                                <a class="dlLogo" :href="`/src/downloads/Press/RGB/GameElements_ZE/${image}.jpg`" :download="`${image}_RGB.jpg`">⬇️</a>
+                                <a class="dlLogo" :href="`/src/downloads/Press/RGB/Zenith/GameElements/${image}.jpg`" :download="`${image}.jpg`">⬇️</a>
                             </div>
                         </div>
                     </div>
@@ -374,6 +387,7 @@
 
 			.image {
 				height: 50px;
+				max-width: 100px;
 				//border-radius: 12px;
 			}
 
