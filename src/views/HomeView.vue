@@ -40,7 +40,7 @@
 			</div>
 	
 			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="banner">
-				<img class="bgImg" src="../assets/images/Zenith/general/sun.png" alt="Boxtop image for Captain Flip used as a banner image">
+				<img class="bgImg" src="../assets/images/home/ZE_Cover_Art.jpg" alt="Boxtop image for Captain Flip used as a banner image">
 			</RouterLink >
 	
 			<div class="buttons">
@@ -258,6 +258,12 @@
 				}
 			}
 		}
+
+		.zenith {
+				.banner {
+					box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+				}
+			}
 	}
 
 	// Responsive design
@@ -273,6 +279,7 @@
 			.zenith {
 				.banner {
 					min-height: 300px;
+					box-shadow: none;
 				}
 			}
 		}

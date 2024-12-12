@@ -32,8 +32,8 @@
 		<img class="sun" src="../assets/images/Zenith/general/sun.png" alt="background image: stylized sun">
 		<div class="container">
 			<img class="logo" src="../assets/images/Zenith/logo_white.png" alt="Zenith logo">
-			<h2>{{ $t('zenith.section1.header1') }}</h2>
-			<h2>{{ $t('zenith.section1.header2') }}</h2>
+			<h2 class="header1">{{ $t('zenith.section1.header1') }}</h2>
+			<h2 class="header2">{{ $t('zenith.section1.header2') }}</h2>
 			<p>{{ $t('zenith.section1.explanation1') }}</p>
 			<p>{{ $t('zenith.section1.explanation2') }}</p>
 		</div>
@@ -144,6 +144,10 @@ $total-animation-duration: $transition-duration * 6;
 			font-size: 1rem;
 			font-weight: bold;
 			margin-bottom: 20px;
+
+			&.header1 {
+				margin-bottom: -.7rem;
+			}
 		}
 	}
 
