@@ -330,7 +330,7 @@ $total-animation-duration: $transition-duration * 6;
 	align-items: center;
 	justify-content: center;
 	padding: 2rem;
-	height: 125vh;
+	height: 85vh;
 
 	overflow: hidden;
 
@@ -346,7 +346,7 @@ $total-animation-duration: $transition-duration * 6;
 		justify-content: center;
 		align-items: center;
 		padding-top: 5vh;
-		width: 95vw;
+		width: 75%;
 		height: 100%;
 		gap: 10px;
 		position: relative;
@@ -456,6 +456,9 @@ $total-animation-duration: $transition-duration * 6;
 @media screen and (max-width: 1000px) {
 	.section4 {
 		height: 70vh;
+		.container {
+			width: 100vw;
+		}
 	}
 }
 

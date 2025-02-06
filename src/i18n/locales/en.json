@@ -14,12 +14,13 @@
         "cs": "Customer Service"
     },
     "home": {
-        "header_captainflip": "Nominated for the Spiel des Jahres 2024!",
+        "header_captainflip": "Nominated for the Spiel des Jahres 2024 and for the \"As d'Or-Jeu de l'Année 2025\"!",
         "header_zenith": "Your goal, unite the planets to gain control of the senate !",
         "button1": "See the game",
         "bga": "Find us on board game arena!",
 		"game-park": "You can also find us on Game Park",
-        "spieldesjahres": "We're nominated for the Spiel des Jahres 2024!",
+        "spieldesjahres": "We're nominated for the Spiel des Jahres 2024",
+		"as_dor": "We're nominated for the \"As d'Or-Jeu de l'Année 2025\"",
         "kraken": "In the jaws of the kraken available in shops!",
         "krakenSub": "Download the rules by clicking!"
     },
@@ -53,7 +54,12 @@
 		"rulesKraken": "\"In the Jaws of the Kraken\" rules",
 		"CF_kraken_info": "EN, FR, CZ, DE, ES, IT, PL, SK",
 		"CF_kraken_info2": "2 min read",
-		"ZE_info": "15 min read"
+		"rulesFlipper": "\"Dolphin\" rules",
+		"CF_flipper_info": "EN, FR",
+		"CF_flipper_info2": "1 min read",
+		"ZE_info": "15 min read",
+		"ZE_helpsheet": "Helpsheet",
+		"ZE_helpsheet_info": "2 min read"
     },
     "captainFlip": {
         "names": "A game by Paolo Mori and Remo Conzadori",
@@ -146,6 +152,9 @@
         "Nordics": "Nordics",
         "Ca": "Canada"
     },
+	"flipper": {
+		"title": "The Dolphin goodie"
+	},
     "footer": { 
         "follow": "Follow us on:"
     }

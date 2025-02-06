@@ -39,8 +39,8 @@
 				<h1 class="titlePart2">{{  $t("home.header_zenith") }}</h1>
 			</div>
 	
-			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="banner">
-				<img class="bgImg" src="../assets/images/home/ZE_Cover_Art.jpg" alt="Boxtop image for Captain Flip used as a banner image">
+			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="banner ZE_Banner">
+				<img class="bgImg ZE_Cover" src="../assets/images/home/ZE_Cover_Art.jpg" alt="Boxtop image for Captain Flip used as a banner image">
 			</RouterLink >
 	
 			<div class="buttons">
@@ -52,7 +52,7 @@
 			<div class="title">
 				<!-- <RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="h1Link"><h1 class="titlePart1">{{  $t("home.header1") }}</h1></RouterLink> -->
 				<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })">
-					<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
+						<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
 				</RouterLink >
 				<h1 class="titlePart2">{{  $t("home.header_captainflip") }}</h1>
 			</div>
@@ -86,6 +86,11 @@
             <a class="card small" href="https://www.spiel-des-jahres.de/spiele/captain-flip/" target="_blank">
                 <span>{{ $t("home.spieldesjahres") }}</span>
                 <img class="image" src="../assets/images/home/SpieldesJahres_nomination.png" alt="Spiel des jahres nomination">
+            </a>
+
+			<a class="card small" href="https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee" target="_blank">
+                <span>{{ $t("home.as_dor") }}</span>
+                <img class="image" src="../assets/images/home/AS-DOR.png" alt="as-d'or nomination">
             </a>
 
             <a class="card small" href="https://en.boardgamearena.com/gamepanel?game=captainflip" target="_blank">
@@ -196,33 +201,49 @@
 				height: 27vh;
 
 				.logo {
-					max-width: 250px;
+					max-width: 30vh;
 					height: auto;
 					object-fit: contain;
+					overflow: hidden;
 				}
 
 				.titlePart2 {
 					font-size: 1.5rem;
 					font-weight: 400;
 					text-align: center;
+					overflow: hidden;
 				}
 			}
 
 			.banner {
 				width: 90%;
 				max-height: 400px;
+				height: 50vh;
 				overflow: hidden;
 				border-radius: 10px;
-
+				box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+				
 				.bgImg {
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
 					border-radius: 10px;
 					transition: transform 0.3s ease;
-
+					
 					&:hover, &:active {
 						transform: scale(1.1);
+					}
+				}
+				
+				&.ZE_Banner {
+					width: 90%;
+					box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+					background-color: #fbfaf6;
+					border-radius: 10px;
+
+					.ZE_Cover {
+						border-radius: 10px;
+						object-fit: contain; // https://css-tricks.com/on-object-fit-and-object-position/   object-fit, object-position!!
 					}
 				}
 			}
@@ -259,11 +280,11 @@
 			}
 		}
 
-		.zenith {
-				.banner {
-					box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-				}
+		.captainflip {
+			.logo {
+				max-height: 17vh;
 			}
+		}
 	}
 
 	// Responsive design
@@ -276,12 +297,20 @@
 				}
 			}
 
-			.zenith {
-				.banner {
-					min-height: 300px;
-					box-shadow: none;
-				}
+			.banner {
+				width: 100%;
+				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+				//max-height: fit-content;
 			}
+		}
+	}
+
+	@media screen and (min-width: 1250px){
+		.ZE_Banner {
+			width: 70%;
+			max-height: 500px;
+			box-shadow: none;
+			max-height: fit-content;
 		}
 	}
 
@@ -298,7 +327,18 @@
 
 				.banner {
 					width: 100%;
-					max-height: 200px;
+					max-height: 40vh;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-height: 850px) and (max-width: 1000px) {
+		.section1 {
+			.card.captainflip {
+				.logo {
+					height: auto;
+					overflow: hidden;
 				}
 			}
 		}

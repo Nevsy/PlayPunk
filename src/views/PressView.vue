@@ -17,11 +17,10 @@
 	const gameElements_ZE = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8"]
     const generalImages_ZE = [{name: "Packaging_box_Bottom", fileSize: "6MB", size: "1600 x 1200 px"}, {name: "Packaging_box_Left", fileSize: "6MB", size: "1600 x 1200 px"}, {name: "Packaging_box_Right", size: "6MB", fileSize: "1600 x 1200 px"}, {name: "Packaging_Setup", size: "7MB", fileSize: "1823 x 1079 px"}, {name: "Packaging_InGame", size: "6MB", fileSize: "2000 x 1124 px"}, {name: "Boxbottom_Explanation_FR", size: "4MB", fileSize: "2547 x 1792 px"}, {name: "Boxbottom_Explanation_EN", size: "4MB", fileSize: "2547 x 1792 px"}, {name: "Logo_Orange", size: "273KB", fileSize: "2133 x 412 px"}, {name: "Logo_White", size: "148KB", fileSize: "2133 x 390 px"}]
 	const dlLanguages_ZE = ["EN", "FR", "DE"]
+	const HelpsheetLanguage_ZE = ["EN", "FR", "DE"]
 	
-	const contentActive_CF = ref([false, false, false, false, false]);
-	const contentActive_ZE = ref([false, false, false, false]);
-
-	// TOUTE LA SECTION CLIQUABLE, OU RESPONSIVENESS++
+	const contentActive_CF = ref([false, false, false, false, false, false]);
+	const contentActive_ZE = ref([false, false, false, false, false]);
 </script>
 
 <template>
@@ -54,10 +53,32 @@
 									<span class="docTitle">
                                         {{ $t("press.CF_kraken_info") }}
                                     </span>
-                                    <span class="info">5KB ● {{ $t("press.CF_kraken_info2") }}</span>
+                                    <span class="info">5.1MB ● {{ $t("press.CF_kraken_info2") }}</span>
                                 </div>
             
-                                <a class="dlLogo" href="`/src/downloads/RGB/CF_kraken_Rules.pdf`" download="`CF_kraken_Rules.pdf`">⬇️</a>
+                                <a class="dlLogo" href="/src/downloads/RGB/CF_kraken_Rules.pdf" download="CF_kraken_Rules.pdf">⬇️</a>
+                            </div>
+                        </div>
+                    </div>
+					<div class="accordion_panel">
+                        <h2>
+                            <button class="accordion_trigger" @click="contentActive_CF[5] = !contentActive_CF[5]">
+                                {{ $t("press.rulesFlipper") }}
+                            </button>
+                        </h2>
+                        <div class="accordion_content" :class="{active: contentActive_CF[5]}">
+                            <div class="download">
+                                <div class="text">
+                                    <span class="docTitle">
+                                        CF_dolphin_Rules.pdf
+                                    </span>
+									<span class="docTitle">
+                                        {{ $t("press.CF_flipper_info") }}
+                                    </span>
+                                    <span class="info">0.4MB ● {{ $t("press.CF_flipper_info2") }}</span>
+                                </div>
+            
+                                <a class="dlLogo" href="/src/downloads/RGB/CF_dolphin_Rules.pdf" download="CF_dolphin_Rules.pdf">⬇️</a>
                             </div>
                         </div>
                     </div>
@@ -150,7 +171,7 @@
                 </div>
             </div>
             
-            <div class="accordion">
+            <div class="accordion" id="Zenith">
                 <div class="accordion_container">
                     <h1>Zenith</h1>
 					<br>
@@ -170,6 +191,26 @@
                                 </div>
             
                                 <a class="dlLogo" :href="`/src/downloads/RGB/ZE_Rules_${language}.pdf`" :download="`Zenith_Rules_${language}.pdf`">⬇️</a>
+                            </div>
+                        </div>
+                    </div>
+
+					<div class="accordion_panel">
+                        <h2>
+                            <button class="accordion_trigger" @click="contentActive_ZE[4] = !contentActive_ZE[4]">
+                                {{ $t("press.ZE_helpsheet") }}
+                            </button>
+                        </h2>
+                        <div class="accordion_content" :class="{active: contentActive_ZE[4]}">
+                            <div class="download" style="width: 350px;" v-for="(lang, index) in HelpsheetLanguage_ZE">
+                                <div class="text">
+                                    <span class="docTitle">
+										ZE_Helpsheet_{{ lang }}.pdf
+									</span>
+                                    <span class="info">4MB ● {{ $t("press.ZE_helpsheet_info") }}</span>
+                                </div>
+                                
+                                <a class="dlLogo" :href="`/src/downloads/Press/RGB/Zenith/Helpsheets/ZE_Helpsheet_${lang}.pdf`" :download="`ZE_Helpsheet_${lang}.pdf`">⬇️</a>
                             </div>
                         </div>
                     </div>
@@ -246,7 +287,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                
                 </div>
             </div>
         </section>

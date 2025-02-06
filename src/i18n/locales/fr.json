@@ -14,14 +14,15 @@
         "cs": "SAV"
     },
     "home": {
-        "header_captainflip": "Nominé au Spiel des Jahres 2024",
+        "header_captainflip": "Nominé au Spiel des Jahres 2024 et à l'As d'Or-Jeu de l'Année 2025 !",
 		"header_zenith": "Votre objectif, fédérer les planètes pour gagner le contrôle du sénat !",
         "button1": "Page du jeu",
         "bga": "Retrouvez-nous sur Board Game Arena !",
 		"game-park": "Retrouvez-nous également sur Game Park",
         "kraken": "Dans la gueule du kraken disponible dans votre boutique !",
         "krakenSub": "Téléchargez les règles en cliquant",
-        "spieldesjahres": "Nous sommes nominés au Spiel des Jahres !",
+        "spieldesjahres": "Nous sommes nominés au Spiel des Jahres",
+		"as_dor": "Nous sommes nominés pour l'As d'Or-Jeu de l'Année 2025",
         "newExtention": "*texte pour la nouvelle extension*"
     },
     "about": {
@@ -51,10 +52,15 @@
         "boards": "Plateaux de jeu",
         "rules": "Règles",
         "images": "Images générales",
-		"rulesKraken": "\"dans la gueule du Kraken\" règles",
-		"CF_kraken_info": "en Français, et beaucoup d'autres langues",
+		"rulesKraken": "\"Dans la gueule du Kraken\" règles",
+		"CF_kraken_info": "en français, et beaucoup d'autres langues",
 		"CF_kraken_info2": "lu en 2 min",
-		"ZE_info": "lu en 15 min"
+		"rulesFlipper": "Règles \"dauphin\"",
+		"CF_flipper_info": "en français et en anglais",
+		"CF_flipper_info2": "lu en 1 min",
+		"ZE_info": "lu en 15 min",
+		"ZE_helpsheet": "Fiche d'aide",
+		"ZE_helpsheet_info": "lu en 2 min"
     },
     "captainFlip" : {
         "names": "Un jeu de Paolo Mori and Remo Conzadori",
@@ -143,6 +149,9 @@
         "Nordics": "pays nordiques",
         "Ca": "Canada"
     },
+	"flipper": {
+		"title": "Le goodie Dauphin"
+	},
     "footer": { 
         "follow": "Suivez-nous sur:"
     }

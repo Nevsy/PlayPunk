@@ -8,6 +8,7 @@ import CaptainFlip from "../views/CaptainFlipView.vue"
 import Zenith from "../views/ZenithView.vue"
 import CfDownloads from "../views/CfDownloadsView.vue"
 import Cs from "../views/CsView.vue"
+import Flipper from "../views/FlipperView.vue"
 import NotFoundView from "../views/NotFoundView.vue"
 
 const router = createRouter({
@@ -57,6 +58,11 @@ const router = createRouter({
                     name: "cs",
                     component: Cs
                 },
+				{
+					path: "flipper",
+					name: "flipper",
+					component: Flipper
+				},
                 {
                     path: ":catchAll(.*)*",
                     name: "Not found",
