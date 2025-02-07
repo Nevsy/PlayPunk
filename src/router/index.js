@@ -13,7 +13,13 @@ import NotFoundView from "../views/NotFoundView.vue"
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.VITE_BASE_URL),
-    routes: [{
+    routes: [
+		{
+            path: "/flipper",
+            redirect: "/en/flipper",
+			beforeEnter: Tr.routeMiddleware
+        },
+		{
             path: "/:locale",
             component: RouterView,
             beforeEnter: Tr.routeMiddleware,
