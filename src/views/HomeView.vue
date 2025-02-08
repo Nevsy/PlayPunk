@@ -217,6 +217,7 @@
 
 			.banner {
 				width: 90%;
+				max-width: 500px;
 				max-height: 400px;
 				height: 50vh;
 				overflow: hidden;
