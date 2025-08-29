@@ -31,7 +31,7 @@
     <div>
         <div class="custom-select">
             <!-- <select @change="switchLanguage"> -->
-            <select @change="switchLanguage">
+            <select name="languageSwitcher" @change="switchLanguage">
                 <option
                     v-for="sLocale in supportedLocales"
                     :key="`locale-${sLocale}`"

@@ -17,12 +17,7 @@
         "header_captainflip": "Nominated for the Spiel des Jahres 2024 and for the \"As d'Or-Jeu de l'Année 2025\"!",
         "header_zenith": "Your goal, unite the planets to gain control of the senate !",
         "button1": "See the game",
-        "bga": "Find us on board game arena!",
-		"game-park": "You can also find us on Game Park",
-        "spieldesjahres": "We're nominated for the Spiel des Jahres 2024",
-		"as_dor": "We're nominated for the \"As d'Or-Jeu de l'Année 2025\"",
-        "kraken": "In the jaws of the kraken available in shops!",
-        "krakenSub": "Download the rules by clicking!"
+		"zenith_expansion": "Jump into new territories with the new expansion"
     },
     "about": {
         "header-p1": "Antoine Bauza and Thomas Provoost,",
@@ -98,7 +93,9 @@
         "krakenText3": "The Kraken is not finished with you and intends to make you his meal. Gather your crew to emerge with more treasure than the other players.",
         "krakenText4": "This board offers many tactical choices for veteran and beginner pirates.",
         "krakenText5": "Discover and challenge also the Solo mode!",
-        "krakenDownload": "Download the rules!"
+        "krakenDownload": "Download the rules!",
+
+		"nominations_title": "Our Nominations"
     },
 	"zenith": {
 		"section1": {

@@ -1,61 +1,61 @@
 <script setup>
-  import { RouterLink, useRoute } from 'vue-router';
-  import LanguageSwitcher from './LanguageSwitcher.vue';
-  import Tr from "@/i18n/translation"
+	import { RouterLink, useRoute } from 'vue-router';
+	import LanguageSwitcher from './LanguageSwitcher.vue';
+	import Tr from "@/i18n/translation"
 
-  import { ref, watch, defineEmits } from 'vue'
-
-
-  const emit = defineEmits([
-    'sendToMain',
-  ])
-  const emitFunction = () => {
-      emit('sendToMain')
-  }
+	import { ref, watch, defineEmits } from 'vue'
 
 
-  const burgerToggled = ref(false)
-  const route = useRoute();
+	const emit = defineEmits([
+		'sendToMain',
+	])
+	const emitFunction = () => {
+		emit('sendToMain')
+	}
 
-  function sleep (time) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  }
 
-  const burgerMenu = () => {
-    burgerToggled.value = !burgerToggled.value
+	const burgerToggled = ref(false)
+	const route = useRoute();
 
-    if(burgerToggled.value) {
-      document.body.classList.add("burgerActive")
-      
-      // making sure the fullscreen dropdown (burger dropdown) doesn't stay in the screen when screen is resized to 800+ pixels
-      // (when the burger menu button dissapears)
-      onresize = (event) => {
-        if(window.innerWidth > 800 && burgerToggled.value == true){
-          burgerMenu()
-        }
-      }
+	function sleep (time) {
+		return new Promise((resolve) => setTimeout(resolve, time));
+	}
 
-      // do a `console.log(route)` to see route attributes (fullPath, hash, params, path...)
-      // no 'watch' function is recommended on the full 'route' element (it's quite big)
+	const burgerMenu = () => {
+		burgerToggled.value = !burgerToggled.value
 
-      // making sure the burger menu button doesn't stay as a cross when a link is clicked + dropdown menu should go back up
-      watch(
-        () => route.fullPath,
-        async () => {
-          if(burgerToggled.value = true) {
-            burgerMenu()
-          }
-          console.log("rerouted")
-        }
-      );
-    }
-    else {
-      document.body.classList.remove("burgerActive")
-    }
-  }
+		if(burgerToggled.value) {
+		document.body.classList.add("burgerActive")
+		
+		// making sure the fullscreen dropdown (burger dropdown) doesn't stay in the screen when screen is resized to 800+ pixels
+		// (when the burger menu button dissapears)
+		onresize = (event) => {
+				if(window.innerWidth > 800 && burgerToggled.value == true){
+					burgerMenu()
+				}
+		}
 
-  // remove redundancy
-  const mainPages = ['about', 'press', 'cs']
+		// do a `console.log(route)` to see route attributes (fullPath, hash, params, path...)
+		// no 'watch' function is recommended on the full 'route' element (it's quite big)
+
+		// making sure the burger menu button doesn't stay as a cross when a link is clicked + dropdown menu should go back up
+			watch(
+				() => route.fullPath,
+				async () => {
+					if(burgerToggled.value = true) {
+						burgerMenu()
+					}
+					console.log("rerouted")
+				}
+		);
+		}
+		else {
+			document.body.classList.remove("burgerActive")
+		}
+	}
+
+	// remove redundancy
+	const mainPages = ['about', 'press', 'cs']
 
 </script>
 

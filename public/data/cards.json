@@ -1,0 +1,93 @@
+[
+  {
+    "id": "kraken",
+    "link": {
+      "en": "/en/captainflip/cf-downloads",
+      "fr": "/fr/captainflip/cf-downloads"
+    },
+    "text": {
+      "en": "In the jaws of the kraken available in shops!",
+      "fr": "Dans la gueule du kraken disponible dans votre boutique !"
+    },
+    "image": "/src/assets/images/home/CF_Boards_Goodies_Kraken.png",
+    "alt": {
+      "en": "Kraken board game artwork",
+      "fr": "Illustration du jeu Kraken"
+    },
+	"smaller-img": false,
+    "external": false
+  },
+  {
+    "id": "spieldesjahres",
+    "link": {
+      "en": "https://www.spiel-des-jahres.de/spiele/captain-flip/",
+      "fr": "https://www.spiel-des-jahres.de/spiele/captain-flip/"
+    },
+    "text": {
+      "en": "We're nominated for the Spiel des Jahres 2024",
+      "fr": "Nous sommes nominés au Spiel des Jahres"
+    },
+    "image": "/src/assets/images/home/SpieldesJahres_nomination.png",
+    "alt": {
+      "en": "Spiel des Jahres nomination",
+      "fr": "Nomination au Spiel des Jahres"
+    },
+	"smaller_img": false,
+    "external": true
+  },
+  {
+    "id": "as_dor",
+    "link": {
+      "en": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee",
+      "fr": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
+    },
+    "text": {
+      "en": "We're nominated for the \"As d'Or-Jeu de l'Année 2025\"",
+      "fr": "Nous sommes nominés pour l'As d'Or-Jeu de l'Année 2025"
+    },
+    "image": "/src/assets/images/home/AS-DOR.png",
+    "alt": {
+      "en": "As d'Or nomination",
+      "fr": "Nomination au As d'Or"
+    },
+	"smaller_img": false,
+    "external": true
+  },
+  {
+    "id": "bga",
+    "link": {
+      "en": "https://en.boardgamearena.com/gamepanel?game=captainflip",
+      "fr": "https://fr.boardgamearena.com/gamepanel?game=captainflip"
+    },
+    "text": {
+      "en": "Find us on board game arena!",
+      "fr": "Retrouvez-nous sur Board Game Arena !"
+    },
+    "image": "/src/assets/images/home/bga.webp",
+    "alt": {
+      "en": "Board Game Arena logo",
+      "fr": "Logo de Board Game Arena"
+    },
+	"smaller_img": false,
+    "external": true
+  },
+  {
+    "id": "game-park",
+    "link": {
+      "en": "https://game-park.com/en/board-games/captain-flip",
+      "fr": "https://game-park.com/fr/board-games/captain-flip"
+    },
+    "text": {
+      "en": "You can also find us on Game Park",
+      "fr": "Retrouvez-nous également sur Game Park"
+    },
+    "image": "/src/assets/images/home/game-park-icon.svg",
+    "alt": {
+      "en": "Game Park logo",
+      "fr": "Logo de Game Park"
+    },
+	"smaller_img": true,
+    "external": true
+  }
+]
+

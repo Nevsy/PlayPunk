@@ -3,34 +3,57 @@
     import Footer from '../components/Footer.vue'
 
     import { RouterLink } from 'vue-router'
-    import { onMounted } from 'vue'
+    import { onMounted, ref, watch } from 'vue'
     import Tr from "@/i18n/translation"
 
-    import { ref } from 'vue'
     const constructionBool = ref(true)
 
     const triggerConstruction = () => {
         constructionBool.value = false
     }
 
-    onMounted(() => {
-        setTimeout(
-            console.log("\n\
+	const cards = ref([])
+	const locale = ref(Tr.currentLocale)
+
+	// reload when language changes
+	const reload = () => {
+		locale.value = Tr.currentLocale
+	}
+
+	// fetch JSON
+	const loadCards = async () => {
+		try {
+			const res = await fetch('/data/cards.json')
+			cards.value = await res.json()
+		} catch (e) {
+			console.error("Failed to load cards.json", e)
+		}
+	}
+
+	const mounted_fun = async () => {
+		loadCards();
+		console.log("\n\
     ____                           _____               \n\
    / __ \\____  __  _____  _____   / ___/   _____  ____ \n\
   / /_/ / __ \\/ / / / _ \\/ ___/   \\__ \\ | / / _ \\/ __ \\\n\
  / _, _/ /_/ / /_/ /  __/ /      ___/ / |/ /  __/ / / /\n\
 /_/ |_|\\____/\\__, /\\___/_/      /____/|___/\\___/_/ /_/ \n\
             /____/                                     \n\
-        "), 3000)
+        ")
+	}
+
+    onMounted(() => {
+        setTimeout(
+            mounted_fun, 3000)
     });
 </script>
 
 <template>
-    <Nav />
+    <Nav v-on:sendToMain="reload()"/>
 
     <!-- <div class="construction" v-if="constructionBool">This website is still under construction.<div class="construction_trigger" @click="triggerConstruction()"></div></div> -->
     <section class="section section1">
+		<!-- main zenith presentation -->
 		<div class="zenith card">
 			<div class="title">
 				<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })">
@@ -42,12 +65,25 @@
 			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="banner ZE_Banner">
 				<img class="bgImg ZE_Cover" src="../assets/images/home/ZE_Cover_Art.jpg" alt="Boxtop image for Captain Flip used as a banner image">
 			</RouterLink >
-	
+			
+			<!-- Expansion presentation -->
+			<div class="expansion">
+				<img
+				class="expansion-image"
+				src="../assets/images/home/zenith-expansion.png"
+				alt="Expansion cover"
+				/>
+				<span class="expansion-text">
+					{{ $t("home.zenith_expansion") }}
+				</span>
+			</div>
+			
 			<div class="buttons">
 				<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
 			</div>
 		</div>
-
+		
+		<!-- main captain flip presentation -->
 		<div class="captainflip card">
 			<div class="title">
 				<!-- <RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="h1Link"><h1 class="titlePart1">{{  $t("home.header1") }}</h1></RouterLink> -->
@@ -77,31 +113,42 @@
     
     <section id="section2" class="section section2">
         <div class="grid">
+			<!-- Dynamic Cards -->
+			<template v-for="card in cards" :key="card.id">
+		
+				<!-- Internal link -->
+				<RouterLink
+					v-if="!card.external"
+					class="card small"
+					:to="card.link[locale]"
+				>
+					<span>{{ card.text[locale] }}</span>
+					<img
+					class="image"
+					:class="{ smaller_img: card.smaller_img }"
+					:src="card.image"
+					:alt="card.alt[locale]"
+					/>
+				</RouterLink>
+				
+				<!-- External link -->
+				<a
+				v-else
+				class="card small"
+				:href="card.link[locale]"
+				target="_blank"
+				rel="noopener"
+				>
+				<span>{{ card.text[locale] }}</span>
+				<img
+				class="image"
+				:class="{ smaller_img: card.smaller_img }"
+				:src="card.image"
+				:alt="card.alt[locale]"
+				/>
+				</a>
 
-            <RouterLink class="card small" :to="Tr.i18nRoute({ name: 'cf-downloads' })">
-                <span>{{ $t("home.kraken") }}</span>
-                <img src="../assets/images/home/CF_Boards_Goodies_Kraken.png" alt="In the nozzle of the kraken game board" class="image kraken">
-            </RouterLink>
-
-            <a class="card small" href="https://www.spiel-des-jahres.de/spiele/captain-flip/" target="_blank">
-                <span>{{ $t("home.spieldesjahres") }}</span>
-                <img class="image" src="../assets/images/home/SpieldesJahres_nomination.png" alt="Spiel des jahres nomination">
-            </a>
-
-			<a class="card small" href="https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee" target="_blank">
-                <span>{{ $t("home.as_dor") }}</span>
-                <img class="image" src="../assets/images/home/AS-DOR.png" alt="as-d'or nomination">
-            </a>
-
-            <a class="card small" href="https://en.boardgamearena.com/gamepanel?game=captainflip" target="_blank">
-                <span>{{ $t("home.bga") }}</span>
-                <img class="image" src="../assets/images/home/bga.webp" alt="Board game arena logo">
-            </a>
-
-            <a class="card small" href="https://game-park.com/en/board-games/captain-flip" target="_blank">
-                <span>{{ $t("home.game-park") }}</span>
-                <img class="image game-park" src="../assets/images/home/game-park-icon.svg" alt="Board game arena logo">
-            </a>
+			</template>
 
             <!-- <a class="card small" id="spieldesjahresimage" href="https://www.spiel-des-jahres.de/spiele/captain-flip/" target="_blank">
                 <span>{{ $t("home.newExtention") }}</span>
@@ -281,6 +328,30 @@
 			}
 		}
 
+		.expansion {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 1rem;
+			margin-top: 1rem;
+
+			.expansion-image {
+				width: 80px;
+				height: auto;
+				border-radius: 8px;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+				object-fit: contain;
+			}
+
+			.expansion-text {
+				font-size: 1rem;
+				font-weight: 400;
+				color: $plum;
+				text-align: left;
+			}
+		}
+
+
 		.captainflip {
 			.logo {
 				max-height: 17vh;
@@ -426,7 +497,7 @@
 				justify-content: center;
 			}
 			
-			.image.game-park {
+			.image.smaller_img {
 				width: 300px;
 				max-width: 200px;
 				max-height: 170px;

@@ -17,13 +17,7 @@
         "header_captainflip": "Nominé au Spiel des Jahres 2024 et à l'As d'Or-Jeu de l'Année 2025 !",
 		"header_zenith": "Votre objectif, fédérer les planètes pour gagner le contrôle du sénat !",
         "button1": "Page du jeu",
-        "bga": "Retrouvez-nous sur Board Game Arena !",
-		"game-park": "Retrouvez-nous également sur Game Park",
-        "kraken": "Dans la gueule du kraken disponible dans votre boutique !",
-        "krakenSub": "Téléchargez les règles en cliquant",
-        "spieldesjahres": "Nous sommes nominés au Spiel des Jahres",
-		"as_dor": "Nous sommes nominés pour l'As d'Or-Jeu de l'Année 2025",
-        "newExtention": "*texte pour la nouvelle extension*"
+		"zenith_expansion": "Explorez de nouveaux territoires avec la nouvelle extension"
     },
     "about": {
         "header-p1": "Antoine Bauza et Thomas Provoost,",
@@ -95,7 +89,9 @@
         "krakenText3": "Le Kraken n’en n’a pas fini avec vous et compte bien faire de vous son repas. Réunissez votre équipage pour vous en sortir avec plus de trésors que les autres joueurs.",
         "krakenText4": "Ce plateau propose de nombreux choix tactiques pour les pirates vétérans et débutants.",
         "krakenText5": "Découvrez également le challenge du mode Solo !",
-        "krakenDownload": "Téléchargez les règles !"
+        "krakenDownload": "Téléchargez les règles !",
+
+		"nominations_title": "Nos Nominations"
     },
 	"zenith": {
 		"section1": {

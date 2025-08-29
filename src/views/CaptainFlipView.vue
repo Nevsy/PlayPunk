@@ -13,6 +13,20 @@
         locale.value = Tr.currentLocale
     }
 
+	const nominations = [
+		{
+			id: 'spiel',
+			name: "Spiel des Jahres 2024",
+			image: "/src/assets/images/CF/nominations/SpieldesJahres.png",
+			link: "https://www.spiel-des-jahres.de/spiele/captain-flip/"
+		},
+		{
+			id: 'asdor',
+			name: "As d'Or 2025",
+			image: "/src/assets/images/CF/nominations/AS-DOR.png",
+			link: "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
+		}
+	]
 </script>
 
 <template>
@@ -22,20 +36,25 @@
         <section class="section section1">
             <div class="boxImage"><img class="boxImageImg" src="../assets/images/CF/CF_Packaging_Box_Left.png" alt=""></div>
 
-            <div class="mid">    
+            <div class="mid">
                 <img class="CFLogo" src="../assets/images/CF/CF_Logo.png" alt="Captain Flip Logo">
                 <span>{{ $t("captainFlip.names") }}</span>
-                <h1>{{ $t("captainFlip.TitleH3") }}</h1>
-                <span>{{ $t("captainFlip.SubTitle") }}</span>
-                
+                <h1 class="ohe">{{ $t("captainFlip.TitleH3") }}</h1>
+                <span class="intro">{{ $t("captainFlip.SubTitle") }}</span>
             </div>
 
-            <div class="gameDataImage coins">
+			<div class="nominations_top">
+				<img src="/src/assets/images/CF/nominations/SpieldesJahres.png" alt="nomination image for the Spiel des Jahres 2024">
+				<img src="/src/assets/images/CF/nominations/AS-DOR.png" alt="nomation image the As-d'Or 2025 prize">
+			</div>
+
+            <!-- <div class="gameDataImage coins">
                 <img src="../assets/images/CF/pieces/Pieces_1.png" alt="1 coin" class="coin1 coin">
                 <img src="../assets/images/CF/pieces/Pieces_3.png" alt="3 coin" class="coin2 coin">
                 <img src="../assets/images/CF/pieces/Pieces_5.png" alt="5 coin" class="coin3 coin">
                 <img src="../assets/images/CF/pieces/Pieces_10.png" alt="10 coin" class="coin4 coin">
-            </div>
+            </div> -->
+
             <!-- <div class="invisibleFlex"></div> The sole purpose of this div is to rightly display the other two elements -->
         </section>
 
@@ -148,6 +167,21 @@
             </div>
         </section>
 
+		<section class="section section8">
+			<h1 class="title">{{ $t('captainFlip.nominations_title') }}</h1>
+			
+			<div class="nominations_container">
+				<a
+					class="nomination"
+					v-for="nomin in nominations"
+					:key="nomin.id"
+					:href="nomin.link" target="_blank" rel="noopener">
+						<h2>{{ nomin.name }}</h2>
+						<img v-if="nomin.image != ''" :src="nomin.image" alt="nomination display image">
+				</a>
+			</div>
+		</section>
+
         <!-- 
             <section class="section section5">
                 
@@ -217,6 +251,18 @@
             }
 
         }
+
+		.nominations_top {
+			position: relative;
+            @include center;
+
+            height: 25vw;
+            width: 25vw;
+
+			img {
+				max-height: 20vw;
+			}
+		}
         
         .coins {
             position: relative;
@@ -278,10 +324,24 @@
                     height: 60vw;
                     //aspect-ratio: 339 / 486;
                 }
+
+				.ohe, .intro {
+					display: none;
+				}
             }
             .coins {
                 display: none
             }
+			
+			.nominations_top {
+				margin-top: 20px;
+				width: 100vw;
+				height: 40vw;
+				img {
+					height: 40vw;
+					max-height: none;
+				}
+			}
         }
 
         .section2 {
@@ -680,6 +740,28 @@
         }
     }
 
+	.section8 {
+		padding-inline-end: 10px;
+        margin-inline-end: 10px;
+        margin-block: 50px;
+		
+		@include center;
+		flex-direction: column;
+		gap: 20px;
+
+		.nominations_container {
+			@include center;
+			.nomination {
+				color: $plum;
+				//text-decoration: none;
+				
+				img {
+					max-height: 300px;
+				}
+			}
+		}
+	}
+
     @media screen and (max-width: 800px) {
         .section3 {
             flex-direction: column;
@@ -693,6 +775,27 @@
         .section1 {
             flex-direction: row;
         }
+
+		.section8 {
+			.nomination {
+				img {
+					object-fit: cover;
+					width: calc((100vw - 300px)/2);
+					height: 100%;
+					max-height: none;
+				}
+			}
+		}
     }
+
+	@media screen and (max-width: 600px) {
+		.section8 {
+			.nomination {
+				img {
+					width: calc((100vw - 100px)/2);
+				}
+			}
+		}
+	}
 
 </style>
