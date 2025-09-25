@@ -17,7 +17,7 @@
         "header_captainflip": "Nominé au Spiel des Jahres 2024 et à l'As d'Or-Jeu de l'Année 2025 !",
 		"header_zenith": "Votre objectif, fédérer les planètes pour gagner le contrôle du sénat !",
         "button1": "Page du jeu",
-		"zenith_expansion": "Explorez de nouveaux territoires avec la nouvelle extension"
+		"zenith_expansion": "Nouveau booster Zenith disponible !"
     },
     "about": {
         "header-p1": "Antoine Bauza et Thomas Provoost,",
@@ -119,7 +119,12 @@
         "section6": {
             "content": "Composants du jeu",
             "contentDescription": "Zenith comprend une variété de pièces de jeu, notamment un plateau de jeu modulaire, des jetons de ressources et les cartes de jeu uniques."
-        }
+        },
+		"section7": {
+			"title": "Nouveau booster disponible!",
+			"subtitle": "Découvrez de nouvelles stratégies avec ces 10 cartes de booster inédites.",
+			"downloadButton":"Téléchargez les règles du booster ici"
+		}
 	},
     "cfDownloads": {
         "header": "Ici, vous pouvez télécharger les règles de",

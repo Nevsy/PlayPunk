@@ -330,26 +330,29 @@
 
 		.expansion {
 			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 1rem;
-			margin-top: 1rem;
+			flex-direction: column;
+			align-items: left;
+			padding-top: 50px;
+			padding-inline: 120px;
+			
+			// transform: translateY(-130px);
+			margin-top: -130px;
 
 			.expansion-image {
-				width: 80px;
+				transform: translateX(-70px) rotate(-10deg) translateY(-40px);
+				width: 90px;
 				height: auto;
-				border-radius: 8px;
-				box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 				object-fit: contain;
 			}
-
+			
 			.expansion-text {
 				font-size: 1rem;
+				text-align: center;
 				font-weight: 400;
 				color: $plum;
-				text-align: left;
 			}
 		}
+
 
 
 		.captainflip {

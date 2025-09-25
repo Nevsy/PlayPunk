@@ -17,7 +17,7 @@
         "header_captainflip": "Nominated for the Spiel des Jahres 2024 and for the \"As d'Or-Jeu de l'Année 2025\"!",
         "header_zenith": "Your goal, unite the planets to gain control of the senate !",
         "button1": "See the game",
-		"zenith_expansion": "Jump into new territories with the new expansion"
+		"zenith_expansion": "New booster available for Zenith!"
     },
     "about": {
         "header-p1": "Antoine Bauza and Thomas Provoost,",
@@ -123,6 +123,11 @@
 		"section6": {
 			"content": "Game Components",
 			"contentDescription": "Zenith includes a variety of game pieces, including a modular game board, resource tokens, and the unique playing cards."
+		},
+		"section7": {
+			"title": "New booster available!",
+			"subtitle": "Discover new strategies with our 10 fresh booster cards.",
+			"downloadButton":"Download booster rules here"
 		}
 	},
     "cfDownloads": {

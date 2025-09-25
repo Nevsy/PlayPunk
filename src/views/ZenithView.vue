@@ -23,6 +23,14 @@
 		"/src/assets/images/Zenith/cards/card7.jpg",
 		"/src/assets/images/Zenith/cards/card8.jpg"
 	]);
+
+	const extensionImages = ref([
+		"/src/assets/images/Zenith/cards_extension/card_1.jpg",
+		"/src/assets/images/Zenith/cards_extension/card_2.jpg",
+		"/src/assets/images/Zenith/cards_extension/card_3.jpg",
+		"/src/assets/images/Zenith/cards_extension/card_4.jpg"
+	]);
+
 </script>
 
 <template>
@@ -92,7 +100,23 @@
 		</ul>
 	</section>
 
-	<section class="section7 rules">
+	<section class="section7 extension">
+		<span class="title">{{ $t('zenith.section7.title')}}</span>
+		<p class="subtitle">{{ $t('zenith.section7.subtitle') }}</p>
+		<span class="downloadLink">
+			<a href="/src/downloads/ZE_Booster_Rules.pdf" target="_blank" rel="noopener">
+				{{ $t('zenith.section7.downloadButton')}}
+			</a>
+		</span>
+		<div class="card-fan">
+			<div class="card" v-for="(img, index) in extensionImages" :key="index" :style="{ '--angle': `${(index - 1.5) * 15}deg` }">
+				<img :src="img" alt="Extension card" />
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section8 rules">
 		<span class="downloadLink">
 			<RouterLink :to="Tr.i18nRoute({ name: 'press' })">{{ $t('captainFlip.downloadButton') }}</RouterLink>
 		</span>
@@ -489,7 +513,94 @@ $total-animation-duration: $transition-duration * 6;
 	}
 }
 
+
 .section7 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 4rem 2rem;
+
+	.title {
+		font-size: 2rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+		color: $plum;
+		text-align: center;
+	}
+
+	.subtitle {
+		font-size: 1.1rem;
+		margin-bottom: 2.5rem;
+		text-align: center;
+		max-width: 600px;
+	}
+
+	.downloadLink {
+		margin-top: 0rem;
+		font-size: .8rem;
+
+		a {
+			display: flex;
+			align-items: center;
+			width: fit-content;
+			padding-inline: 16px;
+			padding-block: 10px;
+			cursor: pointer;
+			border-radius: 8px;
+			background-color: $plum;
+			font-size: larger;
+			text-decoration: none;
+			color: $white;
+			transition: all 0.3s;
+
+			&:hover {
+				box-shadow: inset 0px 0px 0px 2px $plum;
+				background-color: $white;
+				color: $plum;
+			}
+		}
+	}
+
+	.card-fan {
+		position: relative;
+		width: 300px;
+		height: 200px;
+		margin-bottom: 2rem;
+
+		padding: 10rem 12rem;
+
+		.card {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: rotate(var(--angle)) translate(-50%, -50%);
+			transform-origin: bottom center;
+
+			img {
+				width: 120px;
+				height: auto;
+				border-radius: 8px;
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+
+
+	@media (max-width: 600px) {
+		.card-fan {
+			width: 240px;
+			height: 160px;
+
+			.card img {
+				width: 100px;
+			}
+		}
+	}
+}
+
+
+.section8 {
 	display: flex;
 	justify-content: center;
 	padding: 2rem;
