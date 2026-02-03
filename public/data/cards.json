@@ -18,6 +18,42 @@
     "external": false
   },
   {
+    "id": "as_dor",
+    "link": {
+      "en": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee",
+      "fr": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
+    },
+    "text": {
+      "en": "We're nominated for the \"As d'Or-Jeu de l'Année 2026\" for Zenith",
+      "fr": "Nous sommes nominés à l'As d'Or-Jeu de l'Année 2026 pour Zenith"
+    },
+    "image": "/src/assets/images/home/as_dor.png",
+    "alt": {
+      "en": "As d'Or nomination",
+      "fr": "Nomination au As d'Or"
+    },
+	"smaller_img": false,
+    "external": true
+  },
+  {
+    "id": "as_dor",
+    "link": {
+      "en": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee",
+      "fr": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
+    },
+    "text": {
+      "en": "Also for Captain Flip in 2025!",
+      "fr": "Aussi pour Captain Flip en 2025!"
+    },
+    "image": "/src/assets/images/home/AS-DOR2025.png",
+    "alt": {
+      "en": "As d'Or nomination",
+      "fr": "Nomination au As d'Or"
+    },
+	"smaller_img": false,
+    "external": true
+  },
+  {
     "id": "spieldesjahres",
     "link": {
       "en": "https://www.spiel-des-jahres.de/spiele/captain-flip/",
@@ -31,24 +67,6 @@
     "alt": {
       "en": "Spiel des Jahres nomination",
       "fr": "Nomination au Spiel des Jahres"
-    },
-	"smaller_img": false,
-    "external": true
-  },
-  {
-    "id": "as_dor",
-    "link": {
-      "en": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee",
-      "fr": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
-    },
-    "text": {
-      "en": "We're nominated for the \"As d'Or-Jeu de l'Année 2025\"",
-      "fr": "Nous sommes nominés pour l'As d'Or-Jeu de l'Année 2025"
-    },
-    "image": "/src/assets/images/home/AS-DOR.png",
-    "alt": {
-      "en": "As d'Or nomination",
-      "fr": "Nomination au As d'Or"
     },
 	"smaller_img": false,
     "external": true

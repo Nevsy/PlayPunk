@@ -23,7 +23,7 @@
 		{
 			id: 'asdor',
 			name: "As d'Or 2025",
-			image: "/src/assets/images/CF/nominations/AS-DOR.png",
+			image: "/src/assets/images/CF/nominations/AS-DOR2025.png",
 			link: "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
 		}
 	]
@@ -44,8 +44,7 @@
             </div>
 
 			<div class="nominations_top">
-				<img src="/src/assets/images/CF/nominations/SpieldesJahres.png" alt="nomination image for the Spiel des Jahres 2024">
-				<img src="/src/assets/images/CF/nominations/AS-DOR.png" alt="nomation image the As-d'Or 2025 prize">
+				<img v-for="nomin in nominations" :src="nomin.image" :alt="`nomination image for the ${nomin.name}`">
 			</div>
 
             <!-- <div class="gameDataImage coins">
@@ -136,6 +135,22 @@
             </div>
         </section>
 
+		<section class="section section4">
+            <div class="text">
+                <h1 class="title">{{ $t('captainFlip.boardsSectionExpansion') }}</h1>
+            </div>
+            <div class="container">
+                <div class="part">
+                    <img src="../assets/images/CF/Boards/isla/Isla_boards-05.png" alt="These are images of the different possible boards." class="img">
+                    <img src="../assets/images/CF/Boards/isla/Isla_boards-06.png" alt="These are images of the different possible boards." class="img">
+                </div>
+                <div class="part">
+                    <img src="../assets/images/CF/Boards/isla/Isla_boards-07.png" alt="These are images of the different possible boards." class="img">
+                    <img src="../assets/images/CF/Boards/isla/Isla_boards-08.png" alt="These are images of the different possible boards." class="img">
+                </div>
+            </div>
+        </section>
+
         <section class="section section6">
 
             <span class="downloadLink">
@@ -145,7 +160,23 @@
 
         </section>
 
-        <section class="section section7">
+		<section class="section section65 expansionSection">
+            <h1 class="title">{{$t('captainFlip.islaHeader')}}</h1>
+            
+            <div class="flexBoxContainer">
+				<img class="board" src="../assets/images/CF/isla/Isla_eclate.png" alt="All Isla Bomba expansion elements opened up">
+                
+				<div class="text">
+                    <p class="p">{{$t('captainFlip.islaText1')}}</p>
+                    <p class="p">{{$t('captainFlip.islaText2')}}</p>
+                    <span class="downloadLink">
+                        <RouterLink :to="Tr.i18nRoute({ name: 'press' })">{{ $t('captainFlip.islaDownload') }}</RouterLink>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section7 expansionSection">
             <h1 class="title">{{$t('captainFlip.krakenHeader')}}</h1>
             
             <div class="flexBoxContainer">
@@ -246,7 +277,7 @@
 
             span {
                 width: 400px;
-                font-size: 1.1rem;
+                font-size: .9rem;
                 text-align: center;
             }
 
@@ -665,13 +696,17 @@
         }
     }
 
-    .section7 {
+
+    .expansionSection {
         padding-inline-end: 10px;
         margin-inline-end: 10px;
         margin-block: 50px;
         
         color: $plum;
-        
+
+		&.section65 {// isla
+			margin-block-start: 100px;
+		}
         .title {
             margin-bottom: 15px;
             text-align: center;
@@ -705,7 +740,6 @@
                 margin-top: 5px;
             }
         }
-        
 
         .downloadLink > a {
             display: flex;

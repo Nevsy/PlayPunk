@@ -96,6 +96,24 @@
 			<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="banner">
 				<img class="bgImg" src="../assets/images/home/CF_Cover_Artwork.png" alt="Boxtop image for Captain Flip used as a banner image">
 			</RouterLink >
+
+			<div class="expansion">
+				<div class="expansion-images">
+					<img
+						class="expansion-image"
+						src="../assets/images/CF/isla/isla_cover.png" 
+						alt="Captain Flip Expansion 1"
+					/>
+					<img
+						class="expansion-image second"
+						src="../assets/images/home/CF_Boards_Goodies_Kraken.png" 
+						alt="Captain Flip Expansion 2"
+					/>
+				</div>
+				<span class="expansion-text">
+					{{ $t("home.captainflip_expansions") }}
+				</span>
+			</div>
 	
 			<div class="buttons">
 				<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
@@ -150,6 +168,7 @@
 
 			</template>
 
+			<!-- depricated cards, new ones are in pure js loaded from a json file -->
             <!-- <a class="card small" id="spieldesjahresimage" href="https://www.spiel-des-jahres.de/spiele/captain-flip/" target="_blank">
                 <span>{{ $t("home.newExtention") }}</span>
                 <img class="image" src="../assets/images/home/SpieldesJahres_nomination.webp" alt="Spiel des jahres nomination">
@@ -328,21 +347,61 @@
 			}
 		}
 
+		// .expansion {
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	align-items: left;
+		// 	padding-top: 50px;
+		// 	padding-inline: 120px;
+			
+		// 	// transform: translateY(-130px);
+		// 	margin-top: -130px;
+
+		// 	.expansion-image {
+		// 		transform: translateX(-70px) rotate(-10deg) translateY(-40px);
+		// 		width: 90px;
+		// 		height: auto;
+		// 		object-fit: contain;
+		// 	}
+			
+		// 	.expansion-text {
+		// 		font-size: 1rem;
+		// 		text-align: center;
+		// 		font-weight: 400;
+		// 		color: $plum;
+		// 	}
+		// }
+
 		.expansion {
 			display: flex;
 			flex-direction: column;
-			align-items: left;
+			align-items: flex-start; // Changed from 'left' (invalid) to 'flex-start'
 			padding-top: 50px;
 			padding-inline: 120px;
-			
-			// transform: translateY(-130px);
 			margin-top: -130px;
+			position: relative;
+			z-index: 2; // Ensures it stays above the banner link
+
+			.expansion-images {
+				display: flex;
+				position: relative;
+				height: 60px; // Keeps the text from jumping too far down
+			}
 
 			.expansion-image {
 				transform: translateX(-70px) rotate(-10deg) translateY(-40px);
 				width: 90px;
 				height: auto;
 				object-fit: contain;
+				position: relative;
+				transition: transform 0.3s ease;
+
+				&.second {
+					// This offsets the second image to create a "fanned" look
+					margin-left: -65px; 
+					transform: translateX(-70px) rotate(5deg) translateY(-35px);
+					z-index: -1; // Places it slightly behind the first expansion
+				}
 			}
 			
 			.expansion-text {
@@ -350,6 +409,8 @@
 				text-align: center;
 				font-weight: 400;
 				color: $plum;
+				// Adjust translation to keep text aligned under the "fanned" images
+				transform: translateX(-30px); 
 			}
 		}
 

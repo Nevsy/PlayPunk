@@ -17,7 +17,8 @@
         "header_captainflip": "Nominé au Spiel des Jahres 2024 et à l'As d'Or-Jeu de l'Année 2025 !",
 		"header_zenith": "Votre objectif, fédérer les planètes pour gagner le contrôle du sénat !",
         "button1": "Page du jeu",
-		"zenith_expansion": "Nouveau booster Zenith disponible !"
+		"zenith_expansion": "Nouveau booster Zenith disponible !",
+		"CF_expansion": "Deux extensions disponibles pour un jeu plus diverse!"
     },
     "about": {
         "header-p1": "Antoine Bauza et Thomas Provoost,",
@@ -70,7 +71,7 @@
             "last": "Recrutez canonnière, perroquet, navigatrice, vigie, cuistot… Accumulez des pièces mais gare à l’explosion ! La pirate la plus riche gagnera la partie."
         },
         
-        "downloadButton" : "Téléchargez les règles ici !",
+        "downloadButton" : "Téléchargez toutes les règles ici !",
 
         "subSectionContent": "Contenu",
         "subSection1": "10 plateaux Aventure (double-face)",
@@ -82,6 +83,12 @@
         "subSection7": "1 Règle du jeu",
 
         "boardsSection": "Des plateaux de jeux différents pour diversifier vos parties",
+		"boardsSectionExpansion": "4 nouveaux plateaux Aventure et 5 nouvelles Cartes au Trésor pour des parties encore plus explosives !",
+
+		"islaHeader": "Extension: Partez à la recherche d’Isla Bomba !",
+		"islaText1": "Embarquez dans votre sous-marin, libérez vos compagnons de prison, fouillez l’observatoire et trouvez l’île mythique !",
+		"islaText2": "Cette extension pour Captain Flip ajoute 4 nouveaux plateaux Aventure et 5 nouvelles Cartes au Trésor pour des parties encore plus explosives !",
+		"islaDownload": "Téléchargez les règles !",
 
         "krakenHeader": "Extension: Dans la Gueule du Kraken",
         "krakenText1": "Hoy, Capitaine !",

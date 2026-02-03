@@ -17,7 +17,8 @@
         "header_captainflip": "Nominated for the Spiel des Jahres 2024 and for the \"As d'Or-Jeu de l'Année 2025\"!",
         "header_zenith": "Your goal, unite the planets to gain control of the senate !",
         "button1": "See the game",
-		"zenith_expansion": "New booster available for Zenith!"
+		"zenith_expansion": "New booster available for Zenith!",
+		"CF_expansion": "Two expansions for more diverse gameplay"
     },
     "about": {
         "header-p1": "Antoine Bauza and Thomas Provoost,",
@@ -84,8 +85,14 @@
         "point3": "kinda just point 3",
 
         "boardsSection": "Different adventure plates to diversify your games",
+		"boardsSectionExpansion": "4 new Adventure boards and 5 new Treasure Maps for even more explosive games!",
         
-        "downloadButton": "Download the rules here!",
+        "downloadButton": "Download all rules here!",
+
+		"islaHeader": "Expansion: Set sail to find Isla Bomba!",
+		"islaText1": "Embark in your submarine, free your crew from prison, raid the observatory, and find the mythical island!",
+		"islaText2": "This expansion for Captain Flip adds 4 new Adventure boards and 5 new Treasure Maps for even more explosive games!",
+        "islaDownload": "Download the rules!",
 
         "krakenHeader": "Expansion: In the Jaws of the Kraken",
         "krakenText1": "Ahoy, Captain!",
