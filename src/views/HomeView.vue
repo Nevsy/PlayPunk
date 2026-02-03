@@ -55,70 +55,57 @@
     <section class="section section1">
 		<!-- main zenith presentation -->
 		<div class="zenith card">
-			<div class="title">
-				<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })">
-					<img class="logo" src="../assets/images/Zenith/logo_orange.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
-				</RouterLink >
-				<h1 class="titlePart2">{{  $t("home.header_zenith") }}</h1>
-			</div>
-	
+		<div class="title">
+			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })">
+				<img class="logo" src="../assets/images/Zenith/logo_orange.png" alt="Zenith Logo">
+			</RouterLink >
+			<h1 class="titlePart2">{{ $t("home.header_zenith") }}</h1>
+		</div>
+
+		<div class="banner-wrapper">
 			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="banner ZE_Banner">
-				<img class="bgImg ZE_Cover" src="../assets/images/home/ZE_Cover_Art.jpg" alt="Boxtop image for Captain Flip used as a banner image">
+				<img class="bgImg ZE_Cover" src="../assets/images/home/ZE_Cover_Art.png" alt="Zenith Cover">
 			</RouterLink >
 			
-			<!-- Expansion presentation -->
-			<div class="expansion">
-				<img
-				class="expansion-image"
-				src="../assets/images/home/zenith-expansion.png"
-				alt="Expansion cover"
-				/>
-				<span class="expansion-text">
-					{{ $t("home.zenith_expansion") }}
-				</span>
+			<div class="expansion-badge">
+				<div class="expansion-images">
+					<img class="exp-img" src="../assets/images/home/zenith-expansion.png" alt="Expansion">
+				</div>
 			</div>
-			
-			<div class="buttons">
-				<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
-			</div>
+			<span class="expansion-text">{{ $t("home.zenith_expansion") }}</span>
 		</div>
 		
-		<!-- main captain flip presentation -->
-		<div class="captainflip card">
-			<div class="title">
-				<!-- <RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="h1Link"><h1 class="titlePart1">{{  $t("home.header1") }}</h1></RouterLink> -->
-				<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })">
-						<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip 'logo' (captain written on a banner, flip written right under)">
-				</RouterLink >
-				<h1 class="titlePart2">{{  $t("home.header_captainflip") }}</h1>
-			</div>
-	
+		<div class="buttons">
+			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
+		</div>
+	</div>
+
+	<div class="captainflip card">
+		<div class="title">
+			<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })">
+					<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip Logo">
+			</RouterLink >
+			<h1 class="titlePart2">{{ $t("home.header_captainflip") }}</h1>
+		</div>
+
+		<div class="banner-wrapper">
 			<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="banner">
-				<img class="bgImg" src="../assets/images/home/CF_Cover_Artwork.png" alt="Boxtop image for Captain Flip used as a banner image">
+				<img class="bgImg" src="../assets/images/home/CF_Cover_Artwork.png" alt="Captain Flip Cover">
 			</RouterLink >
 
-			<div class="expansion">
-				<div class="expansion-images">
-					<img
-						class="expansion-image"
-						src="../assets/images/CF/isla/isla_cover.png" 
-						alt="Captain Flip Expansion 1"
-					/>
-					<img
-						class="expansion-image second"
-						src="../assets/images/home/CF_Boards_Goodies_Kraken.png" 
-						alt="Captain Flip Expansion 2"
-					/>
+			<div class="expansion-badge CFexpbadge">
+				<div class="expansion-images fanned">
+					<img class="exp-img CFexpimg back" src="../assets/images/home/CF_Boards_Goodies_Kraken.png" alt="Expansion 1">
+					<img class="exp-img CFexpimg front" src="../assets/images/CF/isla/isla_cover.png" alt="Expansion 2">
 				</div>
-				<span class="expansion-text">
-					{{ $t("home.captainflip_expansions") }}
-				</span>
 			</div>
-	
-			<div class="buttons">
-				<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
-			</div>
+			<span class="expansion-text">{{ $t("home.CF_expansions") }}</span>
 		</div>
+
+		<div class="buttons">
+			<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })" class="button button1">{{ $t("home.button1") }}</RouterLink>
+		</div>
+	</div>
     </section>
     
     <a href="#section2">
@@ -347,74 +334,103 @@
 			}
 		}
 
-		// .expansion {
-		// 	display: flex;
-		// 	flex-direction: column;
-		// 	align-items: left;
-		// 	padding-top: 50px;
-		// 	padding-inline: 120px;
-			
-		// 	// transform: translateY(-130px);
-		// 	margin-top: -130px;
-
-		// 	.expansion-image {
-		// 		transform: translateX(-70px) rotate(-10deg) translateY(-40px);
-		// 		width: 90px;
-		// 		height: auto;
-		// 		object-fit: contain;
-		// 	}
-			
-		// 	.expansion-text {
-		// 		font-size: 1rem;
-		// 		text-align: center;
-		// 		font-weight: 400;
-		// 		color: $plum;
-		// 	}
-		// }
-
-		.expansion {
+		.banner-wrapper {
+			position: relative; // The anchor for the expansion badge
+			overflow: visible;
+			width: 90%;
+			max-width: 500px;
 			display: flex;
-			flex-direction: column;
-			align-items: flex-start; // Changed from 'left' (invalid) to 'flex-start'
-			padding-top: 50px;
-			padding-inline: 120px;
-			margin-top: -130px;
-			position: relative;
-			z-index: 2; // Ensures it stays above the banner link
+			justify-content: center;
+			margin: 50px;
 
-			.expansion-images {
-				display: flex;
-				position: relative;
-				height: 60px; // Keeps the text from jumping too far down
-			}
+			// Maintain the existing banner styles
+			.banner {
+				width: 100%;
+				height: 50vh;
+				max-height: 400px;
+				overflow: hidden; // Keeps the zoom effect contained
+				border-radius: 10px;
+				box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
 
-			.expansion-image {
-				transform: translateX(-70px) rotate(-10deg) translateY(-40px);
-				width: 90px;
-				height: auto;
-				object-fit: contain;
-				position: relative;
-				transition: transform 0.3s ease;
-
-				&.second {
-					// This offsets the second image to create a "fanned" look
-					margin-left: -65px; 
-					transform: translateX(-70px) rotate(5deg) translateY(-35px);
-					z-index: -1; // Places it slightly behind the first expansion
+				.bgImg {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					transition: transform 0.3s ease;
+					&:hover { transform: scale(1.05); }
 				}
-			}
-			
-			.expansion-text {
-				font-size: 1rem;
-				text-align: center;
-				font-weight: 400;
-				color: $plum;
-				// Adjust translation to keep text aligned under the "fanned" images
-				transform: translateX(-30px); 
 			}
 		}
 
+		.expansion-badge {
+			position: absolute;
+			bottom: -30px; // Overlaps the bottom edge slightly for a 3D look
+			left: -10px;   // Overlaps the left edge
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			pointer-events: none; // Allows clicks to pass through to the banner link
+			z-index: 10;
+			// height: calc(fit-content + 20px);
 
+			&.CFexpbadge {
+				left: -40px;
+			}
+			
+			.expansion-images {
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				height: calc(fit-content + 20px);
+				padding: 20px;
+				overflow: hidden;
+				
+				.exp-img {
+					object-fit: contain;
+					transform: rotate(-10deg);
+					width: 85px;
+					height: auto;
+					filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+
+					&.CFexpimg {
+						width: 115px;
+					}
+				}
+
+				&.fanned {
+					.exp-img.back {
+						transform: translateX(15px) rotate(-20deg) scale(0.9);
+						opacity: 0.9;
+					}
+					.exp-img.front {
+						transform: translateX(-15px) rotate(-5deg);
+					}
+				}
+			}
+
+		}
+
+		.expansion-text {
+			position: absolute;
+			bottom: -45px;
+			font-size: 1rem;
+			font-weight: 600;
+			color: $plum;
+			padding: 2px 8px;
+			border-radius: 4px;
+			backdrop-filter: blur(4px);
+			margin-top: 5px;
+		}
+		
+		// Mobile Adjustments
+		@media screen and (max-width: 768px) {
+			.expansion-badge {
+				bottom: -10px;
+				left: 5px;
+				.exp-img { width: 60px; }
+				.expansion-text { font-size: 0.75rem; }
+			}
+		}
 
 		.captainflip {
 			.logo {

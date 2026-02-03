@@ -18,7 +18,7 @@
 		"header_zenith": "Votre objectif, fédérer les planètes pour gagner le contrôle du sénat !",
         "button1": "Page du jeu",
 		"zenith_expansion": "Nouveau booster Zenith disponible !",
-		"CF_expansion": "Deux extensions disponibles pour un jeu plus diverse!"
+		"CF_expansions": "Deux extensions disponibles pour un jeu plus diverse!"
     },
     "about": {
         "header-p1": "Antoine Bauza et Thomas Provoost,",
@@ -47,10 +47,11 @@
         "boards": "Plateaux de jeu",
         "rules": "Règles",
         "images": "Images générales",
-		"rulesKraken": "\"Dans la gueule du Kraken\" règles",
+		"rulesKraken": "Règles \"Dans la gueule du Kraken\"",
+		"rulesIsla": "Règles \"Isla Bomba\"",
 		"CF_kraken_info": "en français, et beaucoup d'autres langues",
 		"CF_kraken_info2": "lu en 2 min",
-		"rulesFlipper": "Règles \"dauphin\"",
+		"rulesFlipper": "Règles \"Flipper\"",
 		"CF_flipper_info": "en français et en anglais",
 		"CF_flipper_info2": "lu en 1 min",
 		"ZE_info": "lu en 15 min",

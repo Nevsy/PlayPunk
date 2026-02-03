@@ -19,7 +19,7 @@
 	const dlLanguages_ZE = ["EN", "FR", "DE"]
 	const HelpsheetLanguage_ZE = ["EN", "FR", "DE"]
 	
-	const contentActive_CF = ref([false, false, false, false, false, false]);
+	const contentActive_CF = ref([false, false, false, false, false, false, false]); // careful, isla uses last one
 	const contentActive_ZE = ref([false, false, false, false, false]);
 </script>
 
@@ -33,87 +33,112 @@
         </section>
 
         <section class="section section2">
-
+			<!-- MARK: CF -->
             <div class="accordion">
-                <div class="accordion_container">
-                    <h1>Captain Flip</h1>
+				<div class="accordion_container">
+					<h1>Captain Flip</h1>
 					<br>
+					<!-- MARK: NOT DONE -->
+					<!-- TODO: NOT DONE -->
 					<div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_CF[0] = !contentActive_CF[0]">
-                                {{ $t("press.rulesKraken") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_CF[6] = !contentActive_CF[6]">
+								{{ $t("press.rulesIsla") }}
                             </button>
                         </h2>
-                        <div class="accordion_content" :class="{active: contentActive_CF[0]}">
-                            <div class="download">
-                                <div class="text">
-                                    <span class="docTitle">
-                                        CF_kraken_Rules.pdf
+                        <div class="accordion_content" :class="{active: contentActive_CF[6]}">
+							<div class="download">
+								<div class="text">
+									<span class="docTitle">
+										CF_Isla_Bomba_Rules.pdf
                                     </span>
 									<span class="docTitle">
-                                        {{ $t("press.CF_kraken_info") }}
+										{{ $t("press.CF_kraken_info") }}
                                     </span>
                                     <span class="info">5.1MB ● {{ $t("press.CF_kraken_info2") }}</span>
                                 </div>
-            
-                                <a class="dlLogo" href="/src/downloads/RGB/CF_kraken_Rules.pdf" download="CF_kraken_Rules.pdf">⬇️</a>
+								
+                                <a class="dlLogo" href="/src/downloads/CF/Isla/CF_Isla_Bomba_Rules.pdf" download="CF_Isla_Bomba_Rules.pdf">⬇️</a>
                             </div>
                         </div>
-                    </div>
+					</div>
+					<!-- until here -->
 					<div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_CF[5] = !contentActive_CF[5]">
-                                {{ $t("press.rulesFlipper") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_CF[0] = !contentActive_CF[0]">
+								{{ $t("press.rulesKraken") }}
+                            </button>
+                        </h2>
+						<div class="accordion_content" :class="{active: contentActive_CF[0]}">
+							<div class="download">
+								<div class="text">
+									<span class="docTitle">
+										CF_kraken_Rules.pdf
+									</span>
+									<span class="docTitle">
+										{{ $t("press.CF_kraken_info") }}
+									</span>
+									<span class="info">5.1MB ● {{ $t("press.CF_kraken_info2") }}</span>
+								</div>
+								
+								<a class="dlLogo" href="/src/downloads/RGB/CF_kraken_Rules.pdf" download="CF_kraken_Rules.pdf">⬇️</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion_panel">
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_CF[5] = !contentActive_CF[5]">
+								{{ $t("press.rulesFlipper") }}
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_CF[5]}">
-                            <div class="download">
-                                <div class="text">
-                                    <span class="docTitle">
-                                        CF_dolphin_Rules.pdf
+							<div class="download">
+								<div class="text">
+									<span class="docTitle">
+										CF_dolphin_Rules.pdf
                                     </span>
 									<span class="docTitle">
-                                        {{ $t("press.CF_flipper_info") }}
+										{{ $t("press.CF_flipper_info") }}
                                     </span>
                                     <span class="info">0.4MB ● {{ $t("press.CF_flipper_info2") }}</span>
                                 </div>
-            
+								
                                 <a class="dlLogo" href="/src/downloads/RGB/CF_dolphin_Rules.pdf" download="CF_dolphin_Rules.pdf">⬇️</a>
                             </div>
                         </div>
                     </div>
                     <div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_CF[1] = !contentActive_CF[1]">
-                                {{ $t("press.rules") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_CF[1] = !contentActive_CF[1]">
+								{{ $t("press.rules") }}
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_CF[1]}">
-                            <div class="download" v-for="language in dlLanguages">
-                                <div class="text">
-                                    <span class="docTitle">
-                                        CF-Rules_{{ language }}_RGB.pdf
+							<div class="download" v-for="language in dlLanguages">
+								<div class="text">
+									<span class="docTitle">
+										CF-Rules_{{ language }}_RGB.pdf
                                     </span>
                                     <span class="info">17KB ● {{ $t("cfDownloads.dlInfo") }}</span>
                                 </div>
-            
+								
                                 <a class="dlLogo" :href="`/src/downloads/RGB/CF_Rules_${language}.pdf`" :download="`CD_Rules_${language}_RGB.pdf`">⬇️</a>
                             </div>
                         </div>
                     </div>
-
+					
                     <div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_CF[2] = !contentActive_CF[2]">
-                                {{ $t("press.images") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_CF[2] = !contentActive_CF[2]">
+								{{ $t("press.images") }}
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_CF[2]}">
-                            <div class="download" v-for="image in generalImages">
-                                <img class="image" :src="`/src/assets/images/Press/General/CF_${image.name}.png`"> <!-- alt="Image download preview" -->
+							<div class="download" v-for="image in generalImages">
+								<img class="image" :src="`/src/assets/images/Press/General/CF_${image.name}.png`"> <!-- alt="Image download preview" -->
                                 <div class="text">
-                                    <span class="docTitle">
-                                        {{ image.name }}_RGB.png
+									<span class="docTitle">
+										{{ image.name }}_RGB.png
                                     </span>
                                     <span class="info">{{ image.infoFileSize }} ● {{ image.infoSize }}</span>
                                 </div>
@@ -122,20 +147,20 @@
                             </div>
                         </div>
                     </div>
-
+					
                     <div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_CF[3] = !contentActive_CF[3]">
-                                {{ $t("press.boards") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_CF[3] = !contentActive_CF[3]">
+								{{ $t("press.boards") }}
                             </button>
                         </h2>
-
+						
                         <div class="accordion_content" :class="{active: contentActive_CF[3]}">
-                            <div class="download" v-for="image in boardImages">
-                                <img class="image" :src="`/src/assets/images/Press/Boards/${image}_resized_resized.png`"> <!-- alt="Image download preview" -->
+							<div class="download" v-for="image in boardImages">
+								<img class="image" :src="`/src/assets/images/Press/Boards/${image}_resized_resized.png`"> <!-- alt="Image download preview" -->
                                 <div class="text">
-                                    <span class="docTitle">
-                                        CF_{{ image }}_RGB.png
+									<span class="docTitle">
+										CF_{{ image }}_RGB.png
                                     </span>
                                     <span class="info">8MB ● 2835 x 2835 px</span>
                                 </div>
@@ -144,19 +169,19 @@
                             </div>
                         </div>
                     </div>
-
+					
                     <div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_CF[4] = !contentActive_CF[4]">
-                                {{ $t("press.elements") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_CF[4] = !contentActive_CF[4]">
+								{{ $t("press.elements") }}
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_CF[4]}">
-                            <div class="download" style="width: 350px;" v-for="(image, index) in gameElements">
-                                <img class="image" :src="`/src/downloads/Press/RGB/GameElements/${image}.png`"> <!-- alt="Image download preview" -->
+							<div class="download" style="width: 350px;" v-for="(image, index) in gameElements">
+								<img class="image" :src="`/src/downloads/Press/RGB/GameElements/${image}.png`"> <!-- alt="Image download preview" -->
                                 <div class="text">
-                                    <span class="docTitle">
-                                        {{ image }}_RGB.png
+									<span class="docTitle">
+										{{ image }}_RGB.png
                                     </span>
                                     <span class="info" v-if="index < 9">300kB ● 448 x 448 px</span>
                                     <span class="info" v-if="index == 13">1,1MB ● 799 x 978 px</span>
@@ -171,40 +196,41 @@
                 </div>
             </div>
             
+			<!-- MARK: Zenith -->
             <div class="accordion" id="Zenith">
-                <div class="accordion_container">
-                    <h1>Zenith</h1>
+				<div class="accordion_container">
+					<h1>Zenith</h1>
 					<br>
                     <div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_ZE[0] = !contentActive_ZE[0]">
-                                {{ $t("press.rules") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_ZE[0] = !contentActive_ZE[0]">
+								{{ $t("press.rules") }}
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_ZE[0]}">
-                            <div class="download" v-for="language in dlLanguages_ZE">
-                                <div class="text">
-                                    <span class="docTitle">
-                                        Zenith_Rules_{{ language }}.pdf
+							<div class="download" v-for="language in dlLanguages_ZE">
+								<div class="text">
+									<span class="docTitle">
+										Zenith_Rules_{{ language }}.pdf
                                     </span>
                                     <span class="info">19MB ● {{ $t("press.ZE_info") }}</span>
                                 </div>
-            
+								
                                 <a class="dlLogo" :href="`/src/downloads/RGB/ZE_Rules_${language}.pdf`" :download="`Zenith_Rules_${language}.pdf`">⬇️</a>
                             </div>
                         </div>
                     </div>
-
+					
 					<div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_ZE[4] = !contentActive_ZE[4]">
-                                {{ $t("press.ZE_helpsheet") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_ZE[4] = !contentActive_ZE[4]">
+								{{ $t("press.ZE_helpsheet") }}
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_ZE[4]}">
-                            <div class="download" style="width: 350px;" v-for="(lang, index) in HelpsheetLanguage_ZE">
-                                <div class="text">
-                                    <span class="docTitle">
+							<div class="download" style="width: 350px;" v-for="(lang, index) in HelpsheetLanguage_ZE">
+								<div class="text">
+									<span class="docTitle">
 										ZE_Helpsheet_{{ lang }}.pdf
 									</span>
                                     <span class="info">4MB ● {{ $t("press.ZE_helpsheet_info") }}</span>
@@ -214,19 +240,19 @@
                             </div>
                         </div>
                     </div>
-
+					
                     <div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_ZE[1] = !contentActive_ZE[1]">
-                                {{ $t("press.images") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_ZE[1] = !contentActive_ZE[1]">
+								{{ $t("press.images") }}
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_ZE[1]}">
-                            <div class="download" v-for="(image, index) in generalImages_ZE">
-                                <img class="image" :src="`/src/downloads/Press/RGB/Zenith/GeneralImages/ZE_${image.name}.png`"> <!-- alt="Image download preview" -->
+							<div class="download" v-for="(image, index) in generalImages_ZE">
+								<img class="image" :src="`/src/downloads/Press/RGB/Zenith/GeneralImages/ZE_${image.name}.png`"> <!-- alt="Image download preview" -->
                                 <div class="text">
-                                    <span class="docTitle">
-                                        ZE_{{ image.name }}.png
+									<span class="docTitle">
+										ZE_{{ image.name }}.png
                                     </span>
                                     <span class="info">{{ image.fileSize }} ● {{ image.size }}</span>
                                 </div>
@@ -235,16 +261,16 @@
                             </div>
                         </div>
                     </div>
-
+					
                     <div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_ZE[2] = !contentActive_ZE[2]">
-                                {{ $t("press.boards") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_ZE[2] = !contentActive_ZE[2]">
+								{{ $t("press.boards") }}
                             </button>
                         </h2>
-
+						
                         <div class="accordion_content" :class="{active: contentActive_ZE[2]}">
-                            <div class="download" v-for="(image, index) in boardImages_ZE">
+							<div class="download" v-for="(image, index) in boardImages_ZE">
 								<img class="image" v-if="index < 2" :src="`/src/downloads/Press/RGB/Zenith/Boards/ZE_${image.name}.png`"> <!-- alt="Image download preview" -->
 								<img class="image" v-else :src="`/src/downloads/Press/RGB/Zenith/Boards/ZE_Tech_Board_${ image }.png`"> <!-- alt="Image download preview" -->
                                 <div class="text">
@@ -254,7 +280,7 @@
 									<span class="docTitle" v-else>
 										ZE_Tech_Board_{{ image }}.png
 									</span>
-
+									
 									<span class="info" v-if="index < 2">{{ image.fileSize }} ● {{ image.size }}</span>
 									<span class="info" v-else>2MB ● 853 x 2342 px</span>
                                 </div>
@@ -264,19 +290,19 @@
                             </div>
                         </div>
                     </div>
-
+					
                     <div class="accordion_panel">
-                        <h2>
-                            <button class="accordion_trigger" @click="contentActive_ZE[3] = !contentActive_ZE[3]">
-                                {{ $t("press.elements") }}
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_ZE[3] = !contentActive_ZE[3]">
+								{{ $t("press.elements") }}
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_ZE[3]}">
-                            <div class="download" style="width: 350px;" v-for="(image, index) in gameElements_ZE">
-                                <img class="image" :src="`/src/downloads/Press/RGB/Zenith/GameElements/${image}.jpg`"> <!-- alt="Image download preview" -->
+							<div class="download" style="width: 350px;" v-for="(image, index) in gameElements_ZE">
+								<img class="image" :src="`/src/downloads/Press/RGB/Zenith/GameElements/${image}.jpg`"> <!-- alt="Image download preview" -->
                                 <div class="text">
-                                    <span class="docTitle">
-                                        {{ image }}.jpg
+									<span class="docTitle">
+										{{ image }}.jpg
                                     </span>
                                     <span class="info" v-if="index < 8">300kB ● 673 x 1051 px</span>
                                     <span class="info" v-if="index == 8">1,1MB ● 799 x 978 px</span>
@@ -287,21 +313,22 @@
                             </div>
                         </div>
                     </div>
-                
+					
                 </div>
             </div>
         </section>
-
+		
         <!-- <div class="dlAllContainer">
-            <a class="dlAll" :href="`/src/downloads/Press/all.zip`" download="all.zip">Download all images here.</a>
+			<a class="dlAll" :href="`/src/downloads/Press/all.zip`" download="all.zip">Download all images here.</a>
         </div> -->
     </div>
-
+	
     <div class="filler" style="margin-bottom: 50px"></div>
-
+	
 	<Footer/>
 </template>
 
+<!-- MARK: SCSS -->
 <style scoped lang="scss">
     @import "@/assets/styles/scss/_variables.scss";
     @import "@/assets/styles/scss/_mixins.scss";

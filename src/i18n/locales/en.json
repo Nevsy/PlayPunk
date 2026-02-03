@@ -18,7 +18,7 @@
         "header_zenith": "Your goal, unite the planets to gain control of the senate !",
         "button1": "See the game",
 		"zenith_expansion": "New booster available for Zenith!",
-		"CF_expansion": "Two expansions for more diverse gameplay"
+		"CF_expansions": "Two expansions for more diverse gameplay"
     },
     "about": {
         "header-p1": "Antoine Bauza and Thomas Provoost,",
@@ -48,9 +48,10 @@
         "rules": "Rules",
         "images": "General Images",
 		"rulesKraken": "\"In the Jaws of the Kraken\" rules",
+		"rulesIsla": "\"Isla Bomba\" rules",
 		"CF_kraken_info": "EN, FR, CZ, DE, ES, IT, PL, SK",
 		"CF_kraken_info2": "2 min read",
-		"rulesFlipper": "\"Dolphin\" rules",
+		"rulesFlipper": "\"Flipper\" rules",
 		"CF_flipper_info": "EN, FR",
 		"CF_flipper_info2": "1 min read",
 		"ZE_info": "15 min read",

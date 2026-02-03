@@ -776,8 +776,8 @@
 
 	.section8 {
 		padding-inline-end: 10px;
-        margin-inline-end: 10px;
-        margin-block: 50px;
+		margin-inline-end: 10px;
+		margin-block: 50px;
 		
 		@include center;
 		flex-direction: column;

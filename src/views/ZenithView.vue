@@ -31,6 +31,14 @@
 		"/src/assets/images/Zenith/cards_extension/card_4.jpg"
 	]);
 
+	const nominations = [
+		{
+			id: 'asdor',
+			name: "As d'Or 2026",
+			image: "/src/assets/images/Zenith/nominations/as_dor.png",
+			link: "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
+		}
+	]
 </script>
 
 <template>
@@ -121,6 +129,21 @@
 			<RouterLink :to="Tr.i18nRoute({ name: 'press' })">{{ $t('captainFlip.downloadButton') }}</RouterLink>
 		</span>
 	</section>
+
+	<section class="section section9">
+			<h1 class="title">{{ $t('captainFlip.nominations_title') }}</h1>
+			
+			<div class="nominations_container">
+				<a
+					class="nomination"
+					v-for="nomin in nominations"
+					:key="nomin.id"
+					:href="nomin.link" target="_blank" rel="noopener">
+						<h2>{{ nomin.name }}</h2>
+						<img v-if="nomin.image != ''" :src="nomin.image" alt="nomination display image">
+				</a>
+			</div>
+		</section>
 
 	<Footer />
 </template>
@@ -586,7 +609,6 @@ $total-animation-duration: $transition-duration * 6;
 		}
 	}
 
-
 	@media (max-width: 600px) {
 		.card-fan {
 			width: 240px;
@@ -625,6 +647,28 @@ $total-animation-duration: $transition-duration * 6;
 			box-shadow: inset 0px 0px 0px 2px $plum;
 			background-color: $white;
 			color: $plum;
+		}
+	}
+}
+
+.section9 {
+	padding-inline-end: 10px;
+	margin-inline-end: 10px;
+	margin-block: 50px;
+	
+	@include center;
+	flex-direction: column;
+	gap: 20px;
+
+	.nominations_container {
+		@include center;
+		.nomination {
+			color: $plum;
+			//text-decoration: none;
+			
+			img {
+				max-height: 300px;
+			}
 		}
 	}
 }
