@@ -18,13 +18,13 @@
                     <li><a href="https://be.asmodee.com/fr-be/contact-us">Asmodee {{ $t("cs.Be") }}</a></li>
                     <li><a href="https://kundenservice.asmodee.de/">Asmodee {{ $t("cs.Du") }}</a></li>
                     <li><a href="https://webshopnl.asmodee.com/en-us/contact">Asmodee {{ $t("cs.Nl") }}</a></li>
-                    <li><a href="https://b2b.asmodee.es/service">Asmodee {{ $t("cs.Es") }}</a></li>
+                    <li><a href="https://zacatrus.es/contact">Zacatrus {{ $t("cs.Es") }}</a></li>
                     <li><a href="https://www.asmodee.it/contatti/">Asmodee {{ $t("cs.It") }}</a></li>
                 </ul>
             </div>
             <div class="column">
                 <ul>
-                    <li><a href="https://www.asmodee.co.uk/pages/contact-us">Asmodee {{ $t("cs.Uk") }}</a></li>
+                    <li><a href="https://www.hachetteboardgames.co.uk/contactus">Hachette Boardgames {{ $t("cs.Uk") }}</a></li>
                     <li><a href="https://www.rebelstudio.eu/pages/contact-us-375.html">Rebel {{ $t("cs.Pl") }}</a></li>
                     <li><a href="https://hraj.cz/kontakty">Blackfire {{ $t("cs.RoCz") }}</a></li>
                     <li><a href="https://www.asmodeenordics.com/contact-us/">Asmodee {{ $t("cs.Nordics") }}</a></li>

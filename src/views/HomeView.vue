@@ -59,7 +59,10 @@
 			<RouterLink :to="Tr.i18nRoute({ name: 'zenith' })">
 				<img class="logo" src="../assets/images/Zenith/logo_orange.png" alt="Zenith Logo">
 			</RouterLink >
-			<h1 class="titlePart2">{{ $t("home.header_zenith") }}</h1>
+			<div class="titlePart2 titleZenith">
+				<h1 class="titlePart2">{{ $t("home.header_zenith") }}</h1>
+				<i><h1 class="titlePart2">{{ $t("home.headerNomin_zenith") }}</h1></i>
+			</div>
 		</div>
 
 		<div class="banner-wrapper">
@@ -85,7 +88,10 @@
 			<RouterLink :to="Tr.i18nRoute({ name: 'captainflip' })">
 					<img class="logo" src="../assets/images/home/CF_Logo.png" alt="Captain Flip Logo">
 			</RouterLink >
-			<h1 class="titlePart2">{{ $t("home.header_captainflip") }}</h1>
+			<div class="titlePart2">
+				<h1 class="titlePart2">{{ $t("home.header_captainflip") }}</h1>
+				<i><h1 class="titlePart2">{{ $t("home.headerNomin_captainflip") }}</h1></i>
+			</div>
 		</div>
 
 		<div class="banner-wrapper">
@@ -253,6 +259,9 @@
 				gap: 0.5rem;
 				height: 27vh;
 
+				a { // remove overflow on routerlink
+					overflow: hidden;
+				}
 				.logo {
 					max-width: 30vh;
 					height: auto;
@@ -265,6 +274,11 @@
 					font-weight: 400;
 					text-align: center;
 					overflow: hidden;
+					padding-bottom: 5px;
+
+					&.titleZenith {
+						padding-top: 20px;
+					}
 				}
 			}
 
@@ -342,6 +356,7 @@
 			display: flex;
 			justify-content: center;
 			margin: 50px;
+			margin-top: 20px;
 
 			// Maintain the existing banner styles
 			.banner {

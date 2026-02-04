@@ -14,8 +14,10 @@
         "cs": "Customer Service"
     },
     "home": {
-        "header_captainflip": "Nominated for the Spiel des Jahres 2024 and for the \"As d'Or-Jeu de l'Année 2025\"!",
+        "header_captainflip": "Raise your flag and recruit your crew.",
+        "headerNomin_captainflip": "Nominated for the Spiel des Jahres 2024 and for the \"As d'Or-Jeu de l'Année 2025\"!",
         "header_zenith": "Your goal, unite the planets to gain control of the senate !",
+        "headerNomin_zenith": "Nominated for the As d'Or-Game of the Year 2026 in the initiated category and on the long list for Spiel des Jahres!",
         "button1": "See the game",
 		"zenith_expansion": "New booster available for Zenith!",
 		"CF_expansions": "Two expansions for more diverse gameplay"

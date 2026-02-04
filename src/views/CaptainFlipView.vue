@@ -138,12 +138,28 @@
                     <img src="../assets/images/CF/Boards/Boards_B_resized.png" alt="These are images of the different possible boards." class="img">
                 </div>
                 <div class="part">
-                    <img src="../assets/images/CF/Boards/Boards_D_resized.png" alt="These are images of the different possible boards." class="img">
+					<img src="../assets/images/CF/Boards/Boards_D_resized.png" alt="These are images of the different possible boards." class="img">
                     <img src="../assets/images/CF/Boards/Boards_C_resized.png" alt="These are images of the different possible boards." class="img">
                 </div>
             </div>
         </section>
-
+		
+		<section class="section section65 expansionSection">
+			<h1 class="title">{{$t('captainFlip.islaHeader')}}</h1>
+			
+			<div class="flexBoxContainer">
+				<img class="board" src="../assets/images/CF/isla/Isla_eclate.png" alt="All Isla Bomba expansion elements opened up">
+				
+				<div class="text">
+					<p class="p">{{$t('captainFlip.islaText1')}}</p>
+					<p class="p">{{$t('captainFlip.islaText2')}}</p>
+					<span class="downloadLink">
+						<RouterLink :to="Tr.i18nRoute({ name: 'press' })">{{ $t('captainFlip.islaDownload') }}</RouterLink>
+					</span>
+				</div>
+			</div>
+		</section>
+		
 		<section class="section section4" id="islaBoards">
             <div class="text">
                 <h1 class="title">{{ $t('captainFlip.boardsSectionExpansion') }}</h1>
@@ -169,21 +185,6 @@
 
         </section>
 
-		<section class="section section65 expansionSection">
-            <h1 class="title">{{$t('captainFlip.islaHeader')}}</h1>
-            
-            <div class="flexBoxContainer">
-				<img class="board" src="../assets/images/CF/isla/Isla_eclate.png" alt="All Isla Bomba expansion elements opened up">
-                
-				<div class="text">
-                    <p class="p">{{$t('captainFlip.islaText1')}}</p>
-                    <p class="p">{{$t('captainFlip.islaText2')}}</p>
-                    <span class="downloadLink">
-                        <RouterLink :to="Tr.i18nRoute({ name: 'press' })">{{ $t('captainFlip.islaDownload') }}</RouterLink>
-                    </span>
-                </div>
-            </div>
-        </section>
 
         <section class="section section7 expansionSection" id="kraken">
             <h1 class="title">{{$t('captainFlip.krakenHeader')}}</h1>

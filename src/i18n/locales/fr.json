@@ -14,11 +14,13 @@
         "cs": "SAV"
     },
     "home": {
-        "header_captainflip": "Nominé au Spiel des Jahres 2024 et à l'As d'Or-Jeu de l'Année 2025 !",
+        "header_captainflip": "Hissez votre pavillon et recrutez le meilleur équipage.",
+        "headerNomin_captainflip": "Nominé au Spiel des Jahres 2024 et à l'As d'Or-Jeu de l'Année 2025 !",
 		"header_zenith": "Votre objectif, fédérer les planètes pour gagner le contrôle du sénat !",
+		"headerNomin_zenith": "Nominé à l'As d'Or-Jeu de l'Année 2026 catégorie initié et dans la longue liste du Spiel des Jahres !",
         "button1": "Page du jeu",
 		"zenith_expansion": "Nouveau booster Zenith disponible !",
-		"CF_expansions": "Deux extensions disponibles pour un jeu plus diverse!"
+		"CF_expansions": "Deux extensions disponibles pour un jeu encore plus diversifié"
     },
     "about": {
         "header-p1": "Antoine Bauza et Thomas Provoost,",

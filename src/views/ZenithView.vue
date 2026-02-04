@@ -36,7 +36,7 @@
 		{
 			id: 'asdor',
 			name: "As d'Or 2026",
-			image: "/src/assets/images/Zenith/nominations/as_dor_big_2026.jpeg", 
+			image: "/src/assets/images/Zenith/nominations/as_dor_2026.png", 
 			link: "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
 		},
 		{
@@ -53,12 +53,19 @@
 
 	<section class="section1 header">
 		<img class="sun" src="../assets/images/Zenith/general/sun.png" alt="background image: stylized sun">
-		<div class="container">
+		<div class="notsun">
 			<img class="logo" src="../assets/images/Zenith/logo_white.png" alt="Zenith logo">
-			<h2 class="header1">{{ $t('zenith.section1.header1') }}</h2>
-			<h2 class="header2">{{ $t('zenith.section1.header2') }}</h2>
-			<p>{{ $t('zenith.section1.explanation1') }}</p>
-			<p>{{ $t('zenith.section1.explanation2') }}</p>
+			<div class="container">
+				<div class="text">
+					<h2 class="header1">{{ $t('zenith.section1.header1') }}</h2>
+					<h2 class="header2">{{ $t('zenith.section1.header2') }}</h2>
+					<p id="expl1">{{ $t('zenith.section1.explanation1') }}</p>
+					<p>{{ $t('zenith.section1.explanation2') }}</p>
+				</div>
+				<div class="nominations">
+					<img class="nominImg" v-for="nomin in nominations" :src="nomin.image" :href="nomin.link" :alt="`nomination badge for the ${nomin.name}`">
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -174,33 +181,65 @@ $total-animation-duration: $transition-duration * 6;
 	position: relative;
 	height: 70vh;
 	overflow: hidden;
-
-	.container {
+	
+	.notsun {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		text-align: center;
-		color: $plum;
-		display: flex;
-		gap: 20px;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		height: 100%;
 
 		.logo {
 			margin-block: 50px;
 			max-height: 90px;
+			width: fit-content;
+			
 		}
-		
-		h2 {
-			font-size: 1rem;
-			font-weight: bold;
-			margin-bottom: 20px;
+	
+		.container {
+			//position: absolute;
+			position: relative;
+			width: 80vw;
+			
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			//gap: 50px;
+			
+			.text {
+				text-align: center;
+				color: $plum;
+				display: flex;
+				gap: 20px;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				width: 50vw;
+				
+				
+				h2 {
+					font-size: 1rem;
+					font-weight: bold;
+					margin-bottom: 20px;
+					
+					&.header1 {
+						margin-bottom: -.7rem;
+					}
+				}
+			}
+			
+			
+			.nominations {
+				text-align: center;
 
-			&.header1 {
-				margin-bottom: -.7rem;
+				.nominImg {
+					width: 200px;
+					margin-left: 10px;
+				}
 			}
 		}
 	}
@@ -221,14 +260,37 @@ $total-animation-duration: $transition-duration * 6;
 			height: auto;
 		}
 	}
+
 }
 
 @media screen and (max-width: 768px) {
 	.section1 {
-		.container {
+		.notsun {
 			.logo {
 				max-height: auto;
 				max-width: 90vw;
+			}
+			
+			.container {
+				flex-direction: column;
+
+				.text {
+					width: 100%;
+
+					#expl1 {
+						display: none;
+					}
+				}
+
+				.nominations {
+					display: flex;
+					align-items: center;
+
+					.nominImg {
+						margin-left: 0;
+						width: 130px;
+					}
+				}
 			}
 		}
 	}
