@@ -5,13 +5,22 @@
     import { RouterLink } from 'vue-router'
     import Tr from "@/i18n/translation"
 
-    import { ref } from 'vue'
-
-    const locale = ref(Tr.currentLocale)
-
+    import { ref, onMounted } from 'vue'
+	
+	// load locale
+	const locale = ref(Tr.currentLocale)
+	// reload persistent locales
     const reload = () => {
-        locale.value = Tr.currentLocale
+		locale.value = Tr.currentLocale
     }
+	
+	// handles scrolling to the right location upon clicking smth like "/fr/captainflip#kraken"
+	onMounted(() => {
+		if (location.hash) { // checks if a hash is given (#kraken)
+			const el = document.querySelector(location.hash);
+			el?.scrollIntoView();
+		}
+	})
 
 	const nominations = [
 		{
@@ -135,7 +144,7 @@
             </div>
         </section>
 
-		<section class="section section4">
+		<section class="section section4" id="islaBoards">
             <div class="text">
                 <h1 class="title">{{ $t('captainFlip.boardsSectionExpansion') }}</h1>
             </div>
@@ -176,7 +185,7 @@
             </div>
         </section>
 
-        <section class="section section7 expansionSection">
+        <section class="section section7 expansionSection" id="kraken">
             <h1 class="title">{{$t('captainFlip.krakenHeader')}}</h1>
             
             <div class="flexBoxContainer">

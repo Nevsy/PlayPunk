@@ -1,111 +1,147 @@
 [
-  {
-    "id": "kraken",
-    "link": {
-      "en": "/en/captainflip/cf-downloads",
-      "fr": "/fr/captainflip/cf-downloads"
-    },
-    "text": {
-      "en": "In the jaws of the kraken available in shops!",
-      "fr": "Dans la gueule du kraken disponible dans votre boutique !"
-    },
-    "image": "/src/assets/images/home/CF_Boards_Goodies_Kraken.png",
-    "alt": {
-      "en": "Kraken board game artwork",
-      "fr": "Illustration du jeu Kraken"
-    },
-	"smaller-img": false,
-    "external": false
-  },
-  {
-    "id": "as_dor",
-    "link": {
-      "en": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee",
-      "fr": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
-    },
-    "text": {
-      "en": "Zenith is nominated for the \"As d'Or-Jeu de l'Année 2026\"",
-      "fr": "Zenith est nominé à l'As d'Or-Jeu de l'Année 2026"
-    },
-    "image": "/src/assets/images/Zenith/nominations/as_dor.png",
-    "alt": {
-      "en": "As d'Or nomination",
-      "fr": "Nomination au As d'Or"
-    },
-	"smaller_img": false,
-    "external": true
-  },
-  {
-    "id": "as_dor",
-    "link": {
-      "en": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee",
-      "fr": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
-    },
-    "text": {
-      "en": "Captain Flip was too in 2025!",
-      "fr": "Captain Flip l'était également en 2025!"
-    },
-    "image": "/src/assets/images/CF/nominations/AS-DOR2025.png",
-    "alt": {
-      "en": "As d'Or nomination",
-      "fr": "Nomination au As d'Or"
-    },
-	"smaller_img": false,
-    "external": true
-  },
-  {
-    "id": "spieldesjahres",
-    "link": {
-      "en": "https://www.spiel-des-jahres.de/spiele/captain-flip/",
-      "fr": "https://www.spiel-des-jahres.de/spiele/captain-flip/"
-    },
-    "text": {
-      "en": "We're nominated for the Spiel des Jahres 2024",
-      "fr": "Nous sommes nominés au Spiel des Jahres"
-    },
-    "image": "/src/assets/images/home/SpieldesJahres_nomination.png",
-    "alt": {
-      "en": "Spiel des Jahres nomination",
-      "fr": "Nomination au Spiel des Jahres"
-    },
-	"smaller_img": false,
-    "external": true
-  },
-  {
-    "id": "bga",
-    "link": {
-      "en": "https://en.boardgamearena.com/gamepanel?game=captainflip",
-      "fr": "https://fr.boardgamearena.com/gamepanel?game=captainflip"
-    },
-    "text": {
-      "en": "Find us on board game arena!",
-      "fr": "Retrouvez-nous sur Board Game Arena !"
-    },
-    "image": "/src/assets/images/home/bga.webp",
-    "alt": {
-      "en": "Board Game Arena logo",
-      "fr": "Logo de Board Game Arena"
-    },
-	"smaller_img": false,
-    "external": true
-  },
-  {
-    "id": "game-park",
-    "link": {
-      "en": "https://game-park.com/en/board-games/captain-flip",
-      "fr": "https://game-park.com/fr/board-games/captain-flip"
-    },
-    "text": {
-      "en": "You can also find us on Game Park",
-      "fr": "Retrouvez-nous également sur Game Park"
-    },
-    "image": "/src/assets/images/home/game-park-icon.svg",
-    "alt": {
-      "en": "Game Park logo",
-      "fr": "Logo de Game Park"
-    },
-	"smaller_img": true,
-    "external": true
-  }
+	{
+		"id": "isla",
+		"link": {
+			"en": "/en/captainflip#islaBoards",
+			"fr": "/fr/captainflip#islaBoards"
+		},
+		"text": {
+			"en": "Isla Bomba of the kraken available in shops!",
+			"fr": "Isla Bomba disponible dans votre boutique !"
+		},
+		"image": "/src/assets/images/CF/isla/isla_cover.png",
+		"alt": {
+			"en": "Isla Bomba cover art",
+			"fr": "Illustration de la pochette de Isla Bomba"
+		},
+		"smaller-img": false,
+		"external": false
+	},
+	{
+		"id": "kraken",
+		"link": {
+			"en": "/en/captainflip#kraken",
+			"fr": "/fr/captainflip#kraken"
+		},
+		"text": {
+			"en": "In the jaws of the kraken is out now",
+			"fr": "Dans la gueule du kraken est disponible"
+		},
+		"image": "/src/assets/images/home/CF_Boards_Goodies_Kraken.png",
+		"alt": {
+		"en": "Kraken board game artwork",
+		"fr": "Illustration du jeu Kraken"
+		},
+		"smaller-img": false,
+		"external": false
+	},
+	{
+		"id": "spielZenith",
+		"link": {
+			"en": "https://www.spiel-des-jahres.de/aktuelle-preistraeger-2025/",
+			"fr": "https://www.spiel-des-jahres.de/aktuelle-preistraeger-2025/"
+		},
+		"text": {
+			"en": "Zenith is in the Long List of the Kennerspiel des Jahres 2025",
+			"fr": "Zenith est dans la Long List du Kennerspiel des Jahres 2025"
+		},
+		"image": "/src/assets/images/Zenith/nominations/kennerspiel_2025.png",
+		"alt": {
+			"en": "Zenith KennerSpiel des Jahres nomination badge",
+			"fr": "Badge du KennerSpiel des Jahres"
+		},
+		"smaller_img": false,
+		"external": true
+	},
+	{
+		"id": "as_dor",
+		"link": {
+		"en": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee",
+		"fr": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
+		},
+		"text": {
+		"en": "Zenith is nominated for the \"As d'Or-Jeu de l'Année 2026\"",
+		"fr": "Zenith est nominé à l'As d'Or-Jeu de l'Année 2026"
+		},
+		"image": "/src/assets/images/Zenith/nominations/as_dor_big_2026.jpeg",
+		"alt": {
+		"en": "As d'Or nomination",
+		"fr": "Nomination au As d'Or"
+		},
+		"smaller_img": false,
+		"external": true
+	},
+	{
+		"id": "as_dor",
+		"link": {
+		"en": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee",
+		"fr": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
+		},
+		"text": {
+		"en": "Captain Flip was too in 2025!",
+		"fr": "Captain Flip l'était également en 2025!"
+		},
+		"image": "/src/assets/images/CF/nominations/AS-DOR2025.png",
+		"alt": {
+		"en": "As d'Or nomination",
+		"fr": "Nomination au As d'Or"
+		},
+		"smaller_img": false,
+		"external": true
+	},
+	{
+		"id": "spieldesjahres",
+		"link": {
+		"en": "https://www.spiel-des-jahres.de/spiele/captain-flip/",
+		"fr": "https://www.spiel-des-jahres.de/spiele/captain-flip/"
+		},
+		"text": {
+		"en": "We're nominated for the Spiel des Jahres 2024",
+		"fr": "Nous sommes nominés au Spiel des Jahres"
+		},
+		"image": "/src/assets/images/home/SpieldesJahres_nomination.png",
+		"alt": {
+		"en": "Spiel des Jahres nomination",
+		"fr": "Nomination au Spiel des Jahres"
+		},
+		"smaller_img": false,
+		"external": true
+	},
+	{
+		"id": "bga",
+		"link": {
+		"en": "https://en.boardgamearena.com/gamepanel?game=captainflip",
+		"fr": "https://fr.boardgamearena.com/gamepanel?game=captainflip"
+		},
+		"text": {
+		"en": "Find us on board game arena!",
+		"fr": "Retrouvez-nous sur Board Game Arena !"
+		},
+		"image": "/src/assets/images/home/bga.webp",
+		"alt": {
+		"en": "Board Game Arena logo",
+		"fr": "Logo de Board Game Arena"
+		},
+		"smaller_img": false,
+		"external": true
+	},
+	{
+		"id": "game-park",
+		"link": {
+		"en": "https://game-park.com/en/board-games/captain-flip",
+		"fr": "https://game-park.com/fr/board-games/captain-flip"
+		},
+		"text": {
+		"en": "You can also find us on Game Park",
+		"fr": "Retrouvez-nous également sur Game Park"
+		},
+		"image": "/src/assets/images/home/game-park-icon.svg",
+		"alt": {
+		"en": "Game Park logo",
+		"fr": "Logo de Game Park"
+		},
+		"smaller_img": true,
+		"external": true
+	}
 ]
 

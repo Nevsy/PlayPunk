@@ -47,13 +47,18 @@
         "boards": "Game Boards",
         "rules": "Rules",
         "images": "General Images",
-		"rulesKraken": "\"In the Jaws of the Kraken\" rules",
+
 		"rulesIsla": "\"Isla Bomba\" rules",
+		"CF_isla_info2": "5 min read",
+		
+		"rulesKraken": "\"In the Jaws of the Kraken\" rules",
 		"CF_kraken_info": "EN, FR, CZ, DE, ES, IT, PL, SK",
 		"CF_kraken_info2": "2 min read",
+		
 		"rulesFlipper": "\"Flipper\" rules",
 		"CF_flipper_info": "EN, FR",
 		"CF_flipper_info2": "1 min read",
+		
 		"ZE_info": "15 min read",
 		"ZE_helpsheet": "Helpsheet",
 		"ZE_helpsheet_info": "2 min read"
@@ -86,11 +91,11 @@
         "point3": "kinda just point 3",
 
         "boardsSection": "Different adventure plates to diversify your games",
-		"boardsSectionExpansion": "4 new Adventure boards and 5 new Treasure Maps for even more explosive games!",
+		"boardsSectionExpansion": "Expansion boards: Set sail to find Isla Bomba!",
         
         "downloadButton": "Download all rules here!",
 
-		"islaHeader": "Expansion: Set sail to find Isla Bomba!",
+		"islaHeader": "Expansion: Isla Bomba",
 		"islaText1": "Embark in your submarine, free your crew from prison, raid the observatory, and find the mythical island!",
 		"islaText2": "This expansion for Captain Flip adds 4 new Adventure boards and 5 new Treasure Maps for even more explosive games!",
         "islaDownload": "Download the rules!",

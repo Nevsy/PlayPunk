@@ -47,13 +47,18 @@
         "boards": "Plateaux de jeu",
         "rules": "Règles",
         "images": "Images générales",
-		"rulesKraken": "Règles \"Dans la gueule du Kraken\"",
+		
 		"rulesIsla": "Règles \"Isla Bomba\"",
+		"CF_isla_info2": "lu en 5 min",
+		
+		"rulesKraken": "Règles \"Dans la gueule du Kraken\"",
 		"CF_kraken_info": "en français, et beaucoup d'autres langues",
 		"CF_kraken_info2": "lu en 2 min",
+		
 		"rulesFlipper": "Règles \"Flipper\"",
 		"CF_flipper_info": "en français et en anglais",
 		"CF_flipper_info2": "lu en 1 min",
+		
 		"ZE_info": "lu en 15 min",
 		"ZE_helpsheet": "Fiche d'aide",
 		"ZE_helpsheet_info": "lu en 2 min"
@@ -84,9 +89,9 @@
         "subSection7": "1 Règle du jeu",
 
         "boardsSection": "Des plateaux de jeux différents pour diversifier vos parties",
-		"boardsSectionExpansion": "4 nouveaux plateaux Aventure et 5 nouvelles Cartes au Trésor pour des parties encore plus explosives !",
+		"boardsSectionExpansion": "Extension: Partez à la recherche d’Isla Bomba !",
 
-		"islaHeader": "Extension: Partez à la recherche d’Isla Bomba !",
+		"islaHeader": "Extension: Isla Bomba",
 		"islaText1": "Embarquez dans votre sous-marin, libérez vos compagnons de prison, fouillez l’observatoire et trouvez l’île mythique !",
 		"islaText2": "Cette extension pour Captain Flip ajoute 4 nouveaux plateaux Aventure et 5 nouvelles Cartes au Trésor pour des parties encore plus explosives !",
 		"islaDownload": "Téléchargez les règles !",

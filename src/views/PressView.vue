@@ -9,6 +9,7 @@
     const generalImages = [{name: "3D_contents", infoFileSize: "11,4MB", infoSize: "4463 x 2743 px"}, {name: "Boxtop_Cover", infoFileSize: "10MB", infoSize: "3072 x 3072 px"}, {name: "Packaging_Box_Left", infoFileSize: "11,6MB", infoSize: "3043 x 3306px"}, {name: "Packaging_Box_Right", infoFileSize: "11,6MB", infoSize: "3043 x 3306 px"}, {name: "Logo", infoFileSize: "7,11MB", infoSize: "3894 x 2716 px"}]
     const gameElements = ["Parrot", "Cannoner", "Capitain", "Cartograph", "Charpenter", "Cook", "Monkey", "Mousse", "Watch", "Coins_1", "Coins_3", "Coins_5", "Coins_10", "Map"]
     const dlLanguages = ["EN", "FR", "NL", "DE", "ES", "IT", "PL", "CZ", "SK"]
+	const islaLangs = ["EN", "FR", "DE", "NL", "SP", "IT"]
 	
 	// ZENITH
 	let boardImages_extra_ZE = [{name: "Diplo_Front", size: "2413 x 1443 px", fileSize: "3,4MB"}, {name: "MainBoard", size: "4367 x 2413 px", fileSize: "5.9MB"}]
@@ -46,19 +47,19 @@
 								{{ $t("press.rulesIsla") }}
                             </button>
                         </h2>
-                        <div class="accordion_content" :class="{active: contentActive_CF[6]}">
+                        <div v-for="lang in islaLangs" class="accordion_content" :class="{active: contentActive_CF[6]}">
 							<div class="download">
 								<div class="text">
 									<span class="docTitle">
 										CF_Isla_Bomba_Rules.pdf
                                     </span>
 									<span class="docTitle">
-										{{ $t("press.CF_kraken_info") }}
+										{{ lang }}
                                     </span>
-                                    <span class="info">5.1MB ● {{ $t("press.CF_kraken_info2") }}</span>
+                                    <span class="info">7KB ● {{ $t("press.CF_isla_info2") }}</span>
                                 </div>
 								
-                                <a class="dlLogo" href="/src/downloads/CF/Isla/CF_Isla_Bomba_Rules.pdf" download="CF_Isla_Bomba_Rules.pdf">⬇️</a>
+                                <a class="dlLogo" :href="`/src/downloads/RGB/CF_isla/CFIB_Rules_${lang}.pdf`" download="CF_Isla_Bomba_Rules.pdf">⬇️</a>
                             </div>
                         </div>
 					</div>
@@ -405,6 +406,7 @@
 
 				.download {
 					overflow: hidden;
+					text-align: left;
 				}
 			}
 

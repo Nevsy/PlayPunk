@@ -31,12 +31,19 @@
 		"/src/assets/images/Zenith/cards_extension/card_4.jpg"
 	]);
 
+	// MARK: fix as dor
 	const nominations = [
 		{
 			id: 'asdor',
 			name: "As d'Or 2026",
-			image: "/src/assets/images/Zenith/nominations/as_dor.png",
+			image: "/src/assets/images/Zenith/nominations/as_dor_big_2026.jpeg", 
 			link: "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
+		},
+		{
+			id: 'spiel',
+			name: "Long list Kennerspiel des Jahres 2026",
+			image: "/src/assets/images/Zenith/nominations/kennerspiel_2025.png",
+			link: "https://www.spiel-des-jahres.de/aktuelle-preistraeger-2025/"
 		}
 	]
 </script>
