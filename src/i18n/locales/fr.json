@@ -57,6 +57,10 @@
 		"CF_kraken_info": "en français, et beaucoup d'autres langues",
 		"CF_kraken_info2": "lu en 2 min",
 		
+		"rulesBottle": "Règles \"Bottle\"",
+		"CF_bottle_info": "en français",
+		"CF_bottle_info2": "lu en 1 min",
+
 		"rulesFlipper": "Règles \"Flipper\"",
 		"CF_flipper_info": "en français et en anglais",
 		"CF_flipper_info2": "lu en 1 min",
@@ -165,6 +169,10 @@
         "Nordics": "pays nordiques",
         "Ca": "Canada"
     },
+	"bottle": {
+		"title": "Le goodie \"Une bouteille à la mer\"",
+		"downloadButton": "Téléchargez les règles du booster ici"
+	},
 	"flipper": {
 		"title": "Le goodie Dauphin"
 	},

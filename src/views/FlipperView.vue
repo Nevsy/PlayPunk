@@ -29,35 +29,36 @@
 
     .container {
         width: 100vw;
-        height: auto;
+        height: calc(100vh - 52.5px - 77px);
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }
-    .section1 {
-        width: 100vw;
-        padding-block: 3vh;
-        @include center;
-        flex-direction: column;
-        font-size: 22px;
-
-        max-width: 700px;
-    }
-
-	.section2 {
-		width: 100vw;
-		max-width: 1400px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		img {
-			width: 90%;
-			height: auto;
-			border-radius: 5px;
+		
+		.section1 {
+			width: 100%;
+			max-width: 700px;
+			height: 10rem;
+			margin-block: .5rem 1rem;
+			@include center;
+			font-size: 1.5rem;
 		}
-	}
+	
+		.section2 {
+			width: 100vw;
+			height: fit-content;
+			max-width: 1400px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+	
+			img {
+				height: 90%;
+				border-radius: 5px;
+			}
+		}
+    }
 
 	@media screen and (max-width: 768px) {
 		.container {

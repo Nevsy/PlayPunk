@@ -9,11 +9,17 @@ import Zenith from "../views/ZenithView.vue"
 import CfDownloads from "../views/CfDownloadsView.vue"
 import Cs from "../views/CsView.vue"
 import Flipper from "../views/FlipperView.vue"
+import Bottle from "../views/BottleView.vue"
 import NotFoundView from "../views/NotFoundView.vue"
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.VITE_BASE_URL),
     routes: [
+		{
+			path: "/bottle",
+			redirect: "/fr/bottle",
+			beforeEnter: Tr.routeMiddleware
+		},
 		{
             path: "/flipper",
             redirect: "/en/flipper",
@@ -68,6 +74,11 @@ const router = createRouter({
 					path: "flipper",
 					name: "flipper",
 					component: Flipper
+				},
+				{
+					path: "bottle",
+					name: "bottle",
+					component: Bottle
 				},
                 {
                     path: ":catchAll(.*)*",

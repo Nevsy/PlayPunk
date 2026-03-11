@@ -57,6 +57,10 @@
 		"CF_kraken_info": "EN, FR, CZ, DE, ES, IT, PL, SK",
 		"CF_kraken_info2": "2 min read",
 		
+		"rulesBottle": "\"Flipper\" rules",
+		"CF_bottle_info": "only in french",
+		"CF_bottle_info2": "1 min read",
+		
 		"rulesFlipper": "\"Flipper\" rules",
 		"CF_flipper_info": "EN, FR",
 		"CF_flipper_info2": "1 min read",
@@ -169,6 +173,10 @@
         "Nordics": "Nordics",
         "Ca": "Canada"
     },
+	"bottle": {
+		"title": "The Bottle goodie",
+		"downloadButton": "Download booster rules here"
+	},
 	"flipper": {
 		"title": "The Dolphin goodie"
 	},

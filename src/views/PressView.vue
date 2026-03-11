@@ -20,7 +20,7 @@
 	const dlLanguages_ZE = ["EN", "FR", "DE"]
 	const HelpsheetLanguage_ZE = ["EN", "FR", "DE"]
 	
-	const contentActive_CF = ref([false, false, false, false, false, false, false]); // careful, isla uses last one
+	const contentActive_CF = ref([false, false, false, false, false, false, false, false]); // careful, bottle uses last one, isla next-to-last one
 	const contentActive_ZE = ref([false, false, false, false, false]);
 </script>
 
@@ -40,7 +40,29 @@
 					<h1>Captain Flip</h1>
 					<br>
 					<!-- MARK: NOT DONE -->
-					<!-- TODO: NOT DONE -->
+					<!-- TODO: WEIRD NUMS -->
+					 <div class="accordion_panel">
+						<h2>
+							<button class="accordion_trigger" @click="contentActive_CF[7] = !contentActive_CF[7]">
+								{{ $t("press.rulesBottle") }}
+                            </button>
+                        </h2>
+                        <div class="accordion_content" :class="{active: contentActive_CF[7]}">
+							<div class="download">
+								<div class="text">
+									<span class="docTitle">
+										CF_bottle_Rules.pdf
+                                    </span>
+									<span class="docTitle">
+										{{ $t("press.CF_bottle_info") }}
+                                    </span>
+                                    <span class="info">0.4MB ● {{ $t("press.CF_bottle_info2") }}</span>
+                                </div>
+								
+                                <a class="dlLogo" href="/src/downloads/RGB/CF_bottle_Rules.pdf" download="CF_bottle_Rules.pdf">⬇️</a>
+                            </div>
+                        </div>
+                    </div>
 					<div class="accordion_panel">
 						<h2>
 							<button class="accordion_trigger" @click="contentActive_CF[6] = !contentActive_CF[6]">
