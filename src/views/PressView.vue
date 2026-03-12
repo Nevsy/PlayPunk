@@ -200,7 +200,7 @@
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_CF[4]}">
-							<div class="download" style="width: 350px;" v-for="(image, index) in gameElements">
+							<div class="download" v-for="(image, index) in gameElements">
 								<img class="image" :src="`/src/downloads/Press/RGB/GameElements/${image}.png`"> <!-- alt="Image download preview" -->
                                 <div class="text">
 									<span class="docTitle">
@@ -251,7 +251,7 @@
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_ZE[4]}">
-							<div class="download" style="width: 350px;" v-for="(lang, index) in HelpsheetLanguage_ZE">
+							<div class="download" v-for="(lang, index) in HelpsheetLanguage_ZE">
 								<div class="text">
 									<span class="docTitle">
 										ZE_Helpsheet_{{ lang }}.pdf
@@ -321,8 +321,8 @@
                             </button>
                         </h2>
                         <div class="accordion_content" :class="{active: contentActive_ZE[3]}">
-							<div class="download" style="width: 350px;" v-for="(image, index) in gameElements_ZE">
-								<img class="image" :src="`/src/downloads/Press/RGB/Zenith/GameElements/${image}.jpg`"> <!-- alt="Image download preview" -->
+							<div class="download" v-for="(image, index) in gameElements_ZE">
+								<img class="image" :src="`/src/downloads/Press/RGB/Zenith/GameElements/${image}.jpg`" alt="Image download preview"> 
                                 <div class="text">
 									<span class="docTitle">
 										{{ image }}.jpg
@@ -398,6 +398,7 @@
 			&_panel {
 				padding: 1rem;
 				border: 1px solid;
+				width: 100%;
 				
 				&:nth-child(3) {
 					border-radius: 15px 15px 0 0;
@@ -405,43 +406,108 @@
 				&:last-child {
 					border-radius: 0 0 15px 15px ;
 				}
+				
 			}
-
+			
 			&_content {
 				display: grid;
 				//grid-template-rows: 0fr;
 				//opacity: 0;
 				max-height: 0;
+				// width: 100%;
 
-
+				> * {
+					min-width: 0;
+				}
+				
 				//transition: max-height 500ms;
-
+				
 				&.active {
 					//grid-template-rows: 1fr;
 					//opacity: 1;
 					max-height: 100%;
 				}
-
+				
 				&.active + h2 > &_trigger::before,  h2 > &_trigger::after {
 					transform: rotate(45deg);
 				}
 
 				.download {
+					box-sizing: border-box;
+					width: 100%;
+					// max-width: 400px;
+					max-width: 100%;
+
+					text-decoration: none;
+					color: inherit;
 					overflow: hidden;
 					text-align: left;
+
+					border-radius: 10px;
+
+					padding: 10px;
+					padding-left: 0;
+		
+					// margin-left: 20px;
+					margin-top: 10px;
+		
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					// gap: 20px;
+					
+					.docTitle {
+						word-break: break-word;
+					}
+					
+					.image {
+						margin-right: 5px;
+						height: 50px;
+						max-width: 100px;
+						//border-radius: 12px;
+					}
+
+					.text {
+						display: flex;
+						flex-direction: column;
+						
+						flex: 1 1 auto;
+						min-width: 0;
+						
+						.info {
+							min-width: 0;
+							font-size: .8rem;
+							color: $ultraLightPlum;
+							text-align: left;
+						}
+
+						.docTitle,
+						.info {
+							word-break: break-word;
+						}
+					}
+		
+					.dlLogo {
+						font-size: 1.5rem;
+						text-decoration: none;
+						cursor: pointer;
+		
+						margin-left: auto;
+						flex-shrink: 0;
+					}
 				}
 			}
-
+			
 			&_trigger {
 				background: transparent;
 				border: 0;
 				font: inherit;
 				color: inherit;
-
+				
 				width: 100%;
 				height: 100%;
-
-
+				
+				
 				&::before, &::after {
 					position: absolute;
 					right: 1em;
@@ -453,56 +519,16 @@
 					background: currentcolor;
 					transition: transform 500ms;
 				}
-
+				
 				&::after {
 					rotate: 90deg;
 					//translate: 0 -1.5em;
 				}
 			}
 		}
-
-		.download {
-			//border: solid 1px $lightPlum;
-			border-radius: 10px;
-			//width: minmax(fit-content, 400px); Doesn't work, nescessary?
-			//color: $white;
-			padding: 10px;
-
-			width: 400px;
-			margin-left: 20px;
-			margin-top: 10px;
-
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			gap: 20px;
-
-			.image {
-				height: 50px;
-				max-width: 100px;
-				//border-radius: 12px;
-			}
-
-			.text {
-				display: flex;
-				flex-direction: column;
-				
-				.info {
-					font-size: .8rem;
-					color: $ultraLightPlum;
-					text-align: left;
-				}
-			}
-
-			.dlLogo {
-				font-size: 1.5rem;
-				text-decoration: none;
-				cursor: pointer;
-
-				margin-left: auto;
-			}
+		
 		}
-	}
+
 
 	.dlAllContainer {
 		width: 100vw;
@@ -537,5 +563,35 @@
 		}
 
 		margin-bottom: -50px;
+	}
+
+	@media (max-width: 600px) {
+		.accordion_container {
+			margin: 20px !important;
+		}
+
+		.download {
+			// width: 100%;
+			// max-width: calc(100% - 100px);
+			margin-left: 0;
+			padding: 12px;
+
+			flex-wrap: wrap;
+			gap: 10px;
+			// box-sizing: border-box;
+			// width: 100%;
+			// // max-width: 400px;
+			// max-width: 100%;
+		}
+
+		.download .image {
+			height: 40px;
+			max-width: 80px;
+		}
+
+		.download .dlLogo {
+			font-size: 1.8rem;
+			flex-shrink: 0;
+		}
 	}
 </style>

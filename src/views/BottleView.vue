@@ -52,6 +52,9 @@
         max-width: 700px;
 
 		// would be more ideomatic with some 'button' component or at least mixin, ik ik
+		.dl_button {
+			padding-inline: 5px;
+		}
 		.dl_button > a {
             display: flex;
             align-items: center;
