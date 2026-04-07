@@ -36,7 +36,7 @@
 		{
 			id: 'asdor',
 			name: "As d'Or 2026",
-			image: "/src/assets/images/Zenith/nominations/as_dor_2026.png", 
+			image: "/src/assets/images/Zenith/nominations/as_dor_2026_won.png", 
 			link: "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
 		},
 		{
@@ -44,6 +44,12 @@
 			name: "Long list Kennerspiel des Jahres 2026",
 			image: "/src/assets/images/Zenith/nominations/kennerspiel_2025.png",
 			link: "https://www.spiel-des-jahres.de/aktuelle-preistraeger-2025/"
+		},
+		{
+			id: 'lys',
+			name: "Lys 2026 \"Initié\"",
+			image: "/src/assets/images/Zenith/nominations/Lys_Initie_Zenith.svg",
+			link: "https://www.salondujeumtl.ca/le-prix-des-lys#:~:text=Les%20Lys%20du%20jeu%20de,disponibles%20en%20fran%C3%A7ais%20au%20Qu%C3%A9bec.&text=GALA%20des%20LYS%20%3A%20Un%20Gala,gagnants%20pour%20chacune%20des%20cat%C3%A9gories%20."
 		}
 	]
 </script>
@@ -145,19 +151,19 @@
 	</section>
 
 	<section class="section section9">
-			<h1 class="title">{{ $t('captainFlip.nominations_title') }}</h1>
-			
-			<div class="nominations_container">
-				<a
-					class="nomination"
-					v-for="nomin in nominations"
-					:key="nomin.id"
-					:href="nomin.link" target="_blank" rel="noopener">
-						<h2>{{ nomin.name }}</h2>
-						<img v-if="nomin.image != ''" :src="nomin.image" alt="nomination display image">
-				</a>
-			</div>
-		</section>
+		<h1 class="title">{{ $t('captainFlip.nominations_title') }}</h1>
+		
+		<div class="nominations_container">
+			<a
+				class="nomination"
+				v-for="nomin in nominations"
+				:key="nomin.id"
+				:href="nomin.link" target="_blank" rel="noopener">
+					<h2>{{ nomin.name }}</h2>
+					<img v-if="nomin.image != ''" :src="nomin.image" alt="nomination display image">
+			</a>
+		</div>
+	</section>
 
 	<Footer />
 </template>
@@ -235,9 +241,10 @@ $total-animation-duration: $transition-duration * 6;
 			
 			.nominations {
 				text-align: center;
-
+				
 				.nominImg {
-					width: 200px;
+					height: 180px;
+					// max-height: 150px;
 					margin-left: 10px;
 				}
 			}
@@ -273,6 +280,7 @@ $total-animation-duration: $transition-duration * 6;
 			
 			.container {
 				flex-direction: column;
+				gap: 10px;
 
 				.text {
 					width: 100%;
@@ -288,7 +296,8 @@ $total-animation-duration: $transition-duration * 6;
 
 					.nominImg {
 						margin-left: 0;
-						width: 130px;
+						width: 90px;
+						height: auto;
 					}
 				}
 			}
@@ -734,6 +743,7 @@ $total-animation-duration: $transition-duration * 6;
 		.nomination {
 			color: $plum;
 			//text-decoration: none;
+			margin-right: 30px;
 			
 			img {
 				max-height: 300px;

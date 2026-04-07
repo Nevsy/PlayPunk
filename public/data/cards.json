@@ -60,13 +60,13 @@
 		"fr": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
 		},
 		"text": {
-		"en": "Zenith is nominated for the \"As d'Or-Jeu de l'Année 2026\"",
-		"fr": "Zenith est nominé à l'As d'Or-Jeu de l'Année 2026"
+		"en": "\"As d'Or-Jeu de l'Année\" 2026 initiated category. Nominated in the long list of the Spiel des Jahres!",
+		"fr": "As d'Or-Jeu de l'Année 2026 catégorie initié. Nommé dans la longue liste du Spiel des Jahres !"
 		},
-		"image": "/src/assets/images/Zenith/nominations/as_dor_2026.png",
+		"image": "/src/assets/images/Zenith/nominations/as_dor_2026_won.png",
 		"alt": {
-		"en": "As d'Or nomination",
-		"fr": "Nomination au As d'Or"
+		"en": "As d'Or 2026 \"Initié\" logo",
+		"fr": "Primé à As d'Or 2026 Initié"
 		},
 		"smaller_img": false,
 		"external": true
@@ -78,8 +78,8 @@
 		"fr": "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
 		},
 		"text": {
-		"en": "Captain Flip was too in 2025!",
-		"fr": "Captain Flip l'était également en 2025!"
+		"en": "Nominated to the \"As d'Or-Jeu de l'Année\" 2025.",
+		"fr": "Nommé dans l'As d'Or-Jeu de l'Année 2025."
 		},
 		"image": "/src/assets/images/CF/nominations/AS-DOR2025.png",
 		"alt": {

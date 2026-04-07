@@ -34,6 +34,12 @@
 			name: "As d'Or 2025",
 			image: "/src/assets/images/CF/nominations/AS-DOR2025.png",
 			link: "https://www.festivaldesjeux-cannes.com/fr/festival-label-as-d-or-jeu-de-l-annee"
+		},
+		{
+			id: 'lys',
+			name: "Lys 2025 \"Grand Public\"",
+			image: "/src/assets/images/CF/nominations/Lys_Grand_Public_CF.svg",
+			link: "https://www.salondujeumtl.ca/le-prix-des-lys#:~:text=Les%20Lys%20du%20jeu%20de,disponibles%20en%20fran%C3%A7ais%20au%20Qu%C3%A9bec.&text=GALA%20des%20LYS%20%3A%20Un%20Gala,gagnants%20pour%20chacune%20des%20cat%C3%A9gories%20."
 		}
 	]
 </script>
