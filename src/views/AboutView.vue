@@ -18,10 +18,10 @@
 			text = text.replace(regex2, `<span style="font-weight: 700">$&</div>`);
 		});
 		//Proposition
-		wordsToColor.forEach(word => {
-			const regex2 = new RegExp('\\b' + word + '\\b', 'gi');
-			text = text.replace(regex2, `<span style="color: #7f72b5">$&</div>`);
-		});
+		// wordsToColor.forEach(word => {
+		// 	const regex2 = new RegExp('\\b' + word + '\\b', 'gi');
+		// 	text = text.replace(regex2, `<span style="color: #7f72b5">$&</div>`);
+		// });
       	return text;
     }
 
@@ -36,8 +36,8 @@
     }
 
     // Words to style
-    const wordsToItalicize = ["Captain Flip", "Just One", "Time’s Up", "Concept", "Gregory Grard", "Mathieu Roussel", "Paolo Mori", "Remo Conzadori", "Paris est Ludique", "Hanabi", "Tokaido", "Takenoko", "Ghost stories", "Draftosaurus", "7 Wonders"];
-    const wordsToBolden = ["Captain Flip"];
+    const wordsToItalicize = ["Captain Flip", "Zenith", "Just One", "Time’s Up", "Concept", "Gregory Grard", "Mathieu Roussel", "Paolo Mori", "Remo Conzadori", "Paris est Ludique", "Hanabi", "Tokaido", "Takenoko", "Ghost stories", "Draftosaurus", "7 Wonders"];
+    const wordsToBolden = [];
 
     //proposition
     const names = ["Gregory Grard", "Mathieu Roussel", "Paolo Mori", "Remo Conzadori", "Paris est Ludique"]
@@ -53,6 +53,8 @@
     let inputText8= useI18n().t("about.p8")
     let inputText9= useI18n().t("about.p9")
     let inputText10= useI18n().t("about.p10")
+    let inputText11= useI18n().t("about.p11")
+    let inputText12= useI18n().t("about.p12")
 
     let outputText1 = stylizeWordsWithMarkers(styleWords(inputText1, wordsToItalicize))
     let outputText2 = stylizeWordsWithMarkers(styleWords(inputText2, wordsToItalicize))
@@ -64,6 +66,8 @@
     let outputText8 = stylizeWordsWithMarkers(styleWords(inputText8, wordsToItalicize))
     let outputText9 = stylizeWordsWithMarkers(styleWords(inputText9, wordsToItalicize))
     let outputText10 = stylizeWordsWithMarkers(styleWords(inputText10, wordsToItalicize))
+    let outputText11 = stylizeWordsWithMarkers(styleWords(inputText11, wordsToItalicize))
+    let outputText12 = stylizeWordsWithMarkers(styleWords(inputText12, wordsToItalicize))
     
 </script>
 
@@ -115,6 +119,8 @@
         <span v-html="outputText8"></span>
         <span v-html="outputText9"></span>
         <span v-html="outputText10"></span>
+        <span v-html="outputText11"></span>
+        <span v-html="outputText12"></span>
     </section>
 
     <!-- <button @click="refresh()" style="width: 100px;height: 20px;background-color: red;">hey</button> -->

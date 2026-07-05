@@ -8,8 +8,8 @@
     <div class="container">
         <section class="section section1">
             <h1>{{ $t("cs.title") }}</h1>
-            <span>Just bought one of our games and found it has a missing or damaged piece?</span>
-            <span>We advise you to contact our distributor Asmodee’s subsidiary in your country and fill in the form with your request.</span>
+            <span>{{$t("cs.span1")}}</span>
+            <span>{{$t("cs.span2")}}</span>
         </section>
         <section class="section section2">
             <div class="column">

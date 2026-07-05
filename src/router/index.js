@@ -13,63 +13,63 @@ import Bottle from "../views/BottleView.vue"
 import NotFoundView from "../views/NotFoundView.vue"
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.VITE_BASE_URL),
-    routes: [
+	history: createWebHistory(import.meta.env.VITE_BASE_URL),
+	routes: [
 		{
 			path: "/bottle",
 			redirect: "/fr/bottle",
 			beforeEnter: Tr.routeMiddleware
 		},
 		{
-            path: "/flipper",
-            redirect: "/en/flipper",
+			path: "/flipper",
+			redirect: "/en/flipper",
 			beforeEnter: Tr.routeMiddleware
-        },
+		},
 		{
-            path: "/:locale",
-            component: RouterView,
-            beforeEnter: Tr.routeMiddleware,
-            children: [
-                {
-                    path: "",
-                    name: "home",
-                    component: Home
-                },
-                {
-                    path: "catalogue",
-                    name: "catalogue",
-                    component: Catalogue
-                },
-                {
-                    path: "captainflip",
-                    name: "captainflip",
-                    component: CaptainFlip
-                },
-                {
-                    path: "captainflip/downloads",
-                    name: "cf-downloads",
-                    component: CfDownloads,
-                },
+			path: "/:locale",
+			component: RouterView,
+			beforeEnter: Tr.routeMiddleware,
+			children: [
 				{
-                    path: "zenith",
-                    name: "zenith",
-                    component: Zenith
-                },
-                {
-                    path: "about",
-                    name: "about",
-                    component: About
-                },
-                {
-                    path: "press",
-                    name: "press",
-                    component: Press
-                },
-                {
-                    path: "cs",
-                    name: "cs",
-                    component: Cs
-                },
+					path: "",
+					name: "home",
+					component: Home
+				},
+				{
+					path: "catalogue",
+					name: "catalogue",
+					component: Catalogue
+				},
+				{
+					path: "captainflip",
+					name: "captainflip",
+					component: CaptainFlip
+				},
+				{
+					path: "captainflip/downloads",
+					name: "cf-downloads",
+					component: CfDownloads,
+				},
+				{
+					path: "zenith",
+					name: "zenith",
+					component: Zenith
+				},
+				{
+					path: "about",
+					name: "about",
+					component: About
+				},
+				{
+					path: "press",
+					name: "press",
+					component: Press
+				},
+				{
+					path: "cs",
+					name: "cs",
+					component: Cs
+				},
 				{
 					path: "flipper",
 					name: "flipper",
@@ -80,19 +80,35 @@ const router = createRouter({
 					name: "bottle",
 					component: Bottle
 				},
-                {
-                    path: ":catchAll(.*)*",
-                    name: "Not found",
-                    component: NotFoundView
-                }
-            ],
-        },
-        {
-            path: "/",
-            component: RouterView,
-            beforeEnter: Tr.routeMiddleware
-        }
-    ]
+				{
+					path: ":catchAll(.*)*",
+					name: "Not found",
+					component: NotFoundView
+				}
+			],
+		},
+		{
+			path: "/",
+			component: RouterView,
+			beforeEnter: Tr.routeMiddleware
+		}
+	],
+	scrollBehavior(to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition
+		}
+
+		if (to.hash) {
+			return {
+				el: to.hash,
+				behavior: 'smooth'
+			}
+		}
+
+		return {
+			top: 0
+		}
+	}
 
 })
 

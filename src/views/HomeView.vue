@@ -240,40 +240,49 @@
 		max-width: 80vw;
 
 		margin-left: 10vw;
-		margin-top: 2vh;
+		margin-top: 0vh;
 		padding: 2rem;
-		padding-top: 1vh;
+		padding-top: 0vh;
 
 		.card {
 			flex: 1;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			justify-content: center;
 			gap: 1rem;
 			
 			.title {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				// justify-content: center;
 				justify-content: center;
-				gap: 0.5rem;
-				height: 27vh;
+				// gap: 0.5rem;
+				gap: 0.75rem;
+				// height: 27vh;
+				min-height: 24vh;
+				padding-block-start: 1rem;
 
 				a { // remove overflow on routerlink
-					overflow: hidden;
+					// overflow: hidden;
 				}
+				// .logo {
+				// 	max-width: 30vh;
+				// 	height: auto;
+				// 	object-fit: contain;
+				// 	// overflow: hidden;
+				// }
 				.logo {
-					max-width: 30vh;
+					max-width: min(26vh, 280px);
 					height: auto;
-					object-fit: contain;
-					overflow: hidden;
 				}
 
 				.titlePart2 {
-					font-size: 1.5rem;
+					font-size: 1.25rem;
 					font-weight: 400;
 					text-align: center;
-					overflow: hidden;
+					// overflow: hidden;
 					padding-bottom: 5px;
 
 					&.titleZenith {
@@ -285,9 +294,9 @@
 			.banner {
 				width: 90%;
 				max-width: 500px;
-				max-height: 400px;
-				height: 50vh;
-				overflow: hidden;
+				// max-height: 400px;
+				// height: 50vh;
+				height: clamp(260px, 42vh, 400px);
 				border-radius: 10px;
 				box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
 				
@@ -356,7 +365,7 @@
 			display: flex;
 			justify-content: center;
 			margin: 50px;
-			margin-top: 20px;
+			margin-top: 0px;
 
 			// Maintain the existing banner styles
 			.banner {
@@ -398,7 +407,6 @@
 				justify-content: center;
 				height: calc(fit-content + 20px);
 				padding: 20px;
-				overflow: hidden;
 				
 				.exp-img {
 					object-fit: contain;
@@ -427,7 +435,7 @@
 
 		.expansion-text {
 			position: absolute;
-			bottom: -45px;
+			bottom: -55px;
 			font-size: 1rem;
 			font-weight: 600;
 			color: $plum;

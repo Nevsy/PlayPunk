@@ -1,12 +1,30 @@
 [
 	{
+		"id": "ZE_booster",
+		"link": {
+			"en": "/en/zenith#ZEbooster",
+			"fr": "/fr/zenith#ZEbooster"
+		},
+		"text": {
+			"en": "Discover new strategies with our 10 fresh booster cards.",
+			"fr": "Découvrez de nouvelles stratégies avec ces 10 cartes de booster inédites."
+		},
+		"image": "/src/assets/images/home/zenith-expansion.png",
+		"alt": {
+			"en": "Zenith booster pack",
+			"fr": "Emballage du booster"
+		},
+		"smaller-img": false,
+		"external": false
+	},
+	{
 		"id": "isla",
 		"link": {
 			"en": "/en/captainflip#islaBoards",
 			"fr": "/fr/captainflip#islaBoards"
 		},
 		"text": {
-			"en": "Isla Bomba of the kraken available in shops!",
+			"en": "Isla Bomba available in shops!",
 			"fr": "Isla Bomba disponible dans votre boutique !"
 		},
 		"image": "/src/assets/images/CF/isla/isla_cover.png",
@@ -114,8 +132,8 @@
 		"fr": "https://fr.boardgamearena.com/gamepanel?game=captainflip"
 		},
 		"text": {
-		"en": "Find us on board game arena!",
-		"fr": "Retrouvez-nous sur Board Game Arena !"
+		"en": "Find both games on board game arena!",
+		"fr": "Retrouvez nos deux jeux sur Board Game Arena !"
 		},
 		"image": "/src/assets/images/home/bga.webp",
 		"alt": {
@@ -128,17 +146,17 @@
 	{
 		"id": "game-park",
 		"link": {
-		"en": "https://game-park.com/en/board-games/captain-flip",
-		"fr": "https://game-park.com/fr/board-games/captain-flip"
+			"en": "https://game-park.com/en/board-games/captain-flip",
+			"fr": "https://game-park.com/fr/board-games/captain-flip"
 		},
 		"text": {
-		"en": "You can also find us on Game Park",
-		"fr": "Retrouvez-nous également sur Game Park"
+			"en": "You can also find us on Game Park",
+			"fr": "Retrouvez-nous également sur Game Park"
 		},
 		"image": "/src/assets/images/home/game-park-icon.svg",
 		"alt": {
-		"en": "Game Park logo",
-		"fr": "Logo de Game Park"
+			"en": "Game Park logo",
+			"fr": "Logo de Game Park"
 		},
 		"smaller_img": true,
 		"external": true

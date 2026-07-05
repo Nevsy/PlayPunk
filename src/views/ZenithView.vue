@@ -75,6 +75,14 @@
 		</div>
 	</section>
 
+	<section  class="section section6 section_video">
+		<div class="text">
+			<h1 class="title">Trailer</h1>
+		</div>
+		<iframe v-if="locale == 'fr'" width="560" height="315" src="https://www.youtube.com/embed/xM_b2mMSljw?si=qF1QDD3Dw-os2kUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<iframe v-else width="560" height="315" src="https://www.youtube.com/embed/RQwyBgx5kBI?si=-VKivr8TMLr9wsBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</section>
+
 	<section class="section2 board">
 		<span class="goalGame">{{ $t('zenith.section2.goalGame') }}</span>
 		<img v-if="locale == 'fr'" src="../assets/images/Zenith/general/boxbottom_fr.png" alt="image of the board, set up">
@@ -98,44 +106,52 @@
 		<span class="title">{{ $t('zenith.section4.movingPlanets') }}</span>
 		<div class="container">
 			<div class="left">
-				<img class="board1" src="../assets/images/Zenith/board/board_1.png" alt="2 completely different technology boards, showing versatility">
-				<img class="board4" src="../assets/images/Zenith/board/board_4.png" alt="2 completely different technology boards, showing versatility">
+				<img class="board1 tech_left" src="../assets/images/Zenith/board/board_1.png" alt="2 completely different technology boards, showing versatility">
+				<img class="board4 tech_left" src="../assets/images/Zenith/board/board_4.png" alt="2 completely different technology boards, showing versatility">
 			</div>
 			<div class="mid">
-				<img class="board2" src="../assets/images/Zenith/board/board_2.png" alt="2 completely different technology boards, showing versatility">
-				<img class="board5" src="../assets/images/Zenith/board/board_5.png" alt="2 completely different technology boards, showing versatility">
+				<img class="board2 tech_center" src="../assets/images/Zenith/board/board_2.png" alt="2 completely different technology boards, showing versatility">
+				<img class="board5 tech_center" src="../assets/images/Zenith/board/board_5.png" alt="2 completely different technology boards, showing versatility">
 			</div>
 			<div class="right">
-				<img class="board3" src="../assets/images/Zenith/board/board_3.png" alt="2 completely different technology boards, showing versatility">
-				<img class="board6" src="../assets/images/Zenith/board/board_6.png" alt="2 completely different technology boards, showing versatility">
+				<img class="board3 tech_right" src="../assets/images/Zenith/board/board_3.png" alt="2 completely different technology boards, showing versatility">
+				<img class="board6 tech_right" src="../assets/images/Zenith/board/board_6.png" alt="2 completely different technology boards, showing versatility">
 			</div>
 		</div>
 	</section>
 
-	<!--<section class="section5 video">
-		<div class="left">
-			<span class="title">{{ $t('zenith.section5.videoTitle') }}</span>
-			<p class="paragraph">{{ $t('zenith.section5.videoExpanation') }}</p>
-		</div>
-		<iframe v-if="locale == 'fr'" width="560" height="315" src="https://www.youtube.com/embed/T0pS0G1qFvE?si=Ujcxw6pcATC3sjPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-	</section>-->
-
-	<section class="section6 content">
+	<section class="section5 content">
 		<span class="title">{{ $t('zenith.section6.content') }}</span>
 		<img src="../assets/images/Zenith/general/eclate.png" alt="image showing the game setup and contents">
-		<ul>
+		<!-- <ul>
 			
-		</ul>
+		</ul> -->
 	</section>
 
-	<section class="section7 extension">
+	<section v-if="locale == 'fr'" class="section section6 section_video">
+		<!-- <div class="text">
+			<h1 class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+			<span class="span">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, sed architecto in nobis itaque quod unde nesciunt tempore aperiam mollitia? Maxime minima repellat aliquid odit dolorum quod nesciunt, similique ducimus!</span>
+		</div> -->
+
+		<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/cKjOd1lekeY?si=pXjcD03ebrFrJ4Ix" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>		<!-- <iframe v-else width="560" height="315" src="https://www.youtube.com/embed/NTBDTN9mqtM?si=u7TSMUUTGqYB8US1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+	</section>
+
+	<section class="section7 extension" id="ZEbooster">
 		<span class="title">{{ $t('zenith.section7.title')}}</span>
 		<p class="subtitle">{{ $t('zenith.section7.subtitle') }}</p>
-		<span class="downloadLink">
-			<a href="/src/downloads/ZE_Booster_Rules.pdf" target="_blank" rel="noopener">
-				{{ $t('zenith.section7.downloadButton')}}
-			</a>
-		</span>
+		<div class="buttonContainer">
+			<span class="downloadLink">
+				<a href="/src/downloads/ZE_Booster_Rules.pdf" target="_blank" rel="noopener">
+					{{ $t('zenith.section7.downloadButton')}}
+				</a>
+			</span>
+			<span class="purchaseLink">
+				<a href="https://www.philibertnet.com/fr/playpunk/163454-zenith-secret-agents-5430003838303.html" target="_blank" rel="noopener">
+					{{ $t('zenith.section7.purchaseButton')}}
+				</a>
+			</span>
+		</div>
 		<div class="card-fan">
 			<div class="card" v-for="(img, index) in extensionImages" :key="index" :style="{ '--angle': `${(index - 1.5) * 15}deg` }">
 				<img :src="img" alt="Extension card" />
@@ -143,14 +159,23 @@
 		</div>
 	</section>
 
+	<section class="section8 section_BGA_PARK">
+		<span class="title">{{ $t("zenith.BGA_PARK_title") }}</span>
+		<div class="image_container">
+			<a v-if="locale == 'fr'"	href="https://fr.boardgamearena.com/gamepanel?game=zenith"><img class="image" src="../assets/images/home/bga.webp" alt="Board Game Arena logo"></a>
+			<a v-else					href="https://en.boardgamearena.com/gamepanel?game=zenith"><img class="image" src="../assets/images/home/bga.webp" alt="Board Game Arena logo"></a>
+			<a v-if="locale == 'fr'"	href="https://game-park.com/fr/board-games/zenith"><img class="image" src="../assets/images/home/game-park-icon.svg" alt="Game Park logo"></a>
+			<a v-else 					href="https://game-park.com/en/board-games/zenith"><img class="image" src="../assets/images/home/game-park-icon.svg" alt="Game Park logo"></a>
+		</div>
+	</section>
 
-	<section class="section8 rules">
+	<section class="section9 rules">
 		<span class="downloadLink">
-			<RouterLink :to="Tr.i18nRoute({ name: 'press' })">{{ $t('captainFlip.downloadButton') }}</RouterLink>
+			<RouterLink :to="Tr.i18nRoute({ name: 'press', hash: '#Zenith' })">{{ $t('captainFlip.downloadButton') }}</RouterLink>
 		</span>
 	</section>
 
-	<section class="section section9">
+	<section class="section section10">
 		<h1 class="title">{{ $t('captainFlip.nominations_title') }}</h1>
 		
 		<div class="nominations_container">
@@ -185,7 +210,7 @@ $total-animation-duration: $transition-duration * 6;
 
 .section1 {
 	position: relative;
-	height: 70vh;
+	height: 50vh;
 	overflow: hidden;
 	
 	.notsun {
@@ -272,6 +297,8 @@ $total-animation-duration: $transition-duration * 6;
 
 @media screen and (max-width: 768px) {
 	.section1 {
+		height: 70vh;
+
 		.notsun {
 			.logo {
 				max-height: auto;
@@ -453,61 +480,74 @@ $total-animation-duration: $transition-duration * 6;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	padding: 2rem;
-	height: 85vh;
+	padding: 3rem 2rem;
 
-	overflow: hidden;
+	overflow: visible;
 
 	.title {
 		font-size: 2rem;
 		font-weight: bold;
-		height: 7%;
+		margin-bottom: 2rem;
+		text-align: center;
 	}
-	
+
 	.container {
-		z-index: 10;
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
-		padding-top: 5vh;
-		width: 75%;
-		height: 100%;
-		gap: 10px;
+
+		// width: min(90vw, 1200px);
+		// width: min(90vw, 800px);
+		width: fit-content;
+
+		// Height of the boards
+		height: clamp(500px, 72vh, 820px);
+
 		position: relative;
-		overflow: hidden;
-		
-		> div {
-			height: 95%;
+
+		// The three images should visually touch
+		gap: 0;
+		overflow: visible;
+
+		.left, .right, .mid {
 			position: relative;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			overflow: hidden;
+			height: 90%;
+			
+			flex-shrink: 0;
+			display: block;
+			
+			overflow: visible;
 		}
 		
-		.left, .right {
-			width: 25%; // Slightly larger sections
+		// Widths proportional to the source images
+		.left,
+		.right {
+			aspect-ratio: 426 / 1171;
 		}
 		
 		.mid {
-			z-index: 100;
-			height: 120%;
-			width: 23%; // Slightly smaller middle section
+			aspect-ratio: 356 / 1171;;
+			z-index: 5;
 		}
-		
-		// Image base styles
+
 		img {
-			overflow: hidden;
 			position: absolute;
-			width: 90%;
-			height: auto;
+
+			height: 100%;
+			width: auto;
+
+			max-width: none;
+
 			opacity: 0;
+
+			object-fit: contain;
+
 			animation-duration: $total-animation-duration;
 			animation-timing-function: ease-in-out;
 			animation-iteration-count: infinite;
 		}
 
+		/* LEFT ANIMATIONS */
 		.left {
 			@include keyframes(left-img-1) {
 				0%, 16.66% { opacity: 1; }
@@ -578,42 +618,72 @@ $total-animation-duration: $transition-duration * 6;
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
 	.section4 {
-		height: 70vh;
 		.container {
-			width: 100vw;
+			height: clamp(280px, 50vh, 520px);
 		}
 	}
 }
 
-.section6 {
+.section5 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	padding: 0 2rem 2rem 2rem;
-
+	
 	.title {
 		font-size: 2rem;
 		font-weight: bold;
 		margin-bottom: 2rem;
 	}
-
+	
 	img {
 		max-width: 80%;
 		height: auto;
 	}
 }
-
 @media screen and (max-width: 1000px) {
-	.section6 {
+	.section5 {
 		img {
 			max-width: 140%;
 		}
 	}
 }
 
+.section_video {
+	display: flex;
+	flex-direction: column;
+	
+	margin-block-end: 50px;
+	
+	padding-inline: 10px;
+	margin-inline: 10px;
+	//margin-block: 50px;
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	// gap: 10px;
+	width: calc(100vw - 20px);
+	
+	color: $plum;
+	
+	.text {
+		max-width: 400px;
+		.title {
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.section_video {
+		display: none;
+	}
+}
 
 .section7 {
 	display: flex;
@@ -637,28 +707,33 @@ $total-animation-duration: $transition-duration * 6;
 		max-width: 600px;
 	}
 
-	.downloadLink {
-		margin-top: 0rem;
-		font-size: .8rem;
-
-		a {
-			display: flex;
-			align-items: center;
-			width: fit-content;
-			padding-inline: 16px;
-			padding-block: 10px;
-			cursor: pointer;
-			border-radius: 8px;
-			background-color: $plum;
-			font-size: larger;
-			text-decoration: none;
-			color: $white;
-			transition: all 0.3s;
-
-			&:hover {
-				box-shadow: inset 0px 0px 0px 2px $plum;
-				background-color: $white;
-				color: $plum;
+	.buttonContainer {
+		@include center;
+		gap: 20px;
+		
+		.downloadLink, .purchaseLink {
+			margin-top: 0rem;
+			font-size: .8rem;
+	
+			a {
+				display: flex;
+				align-items: center;
+				width: fit-content;
+				padding-inline: 16px;
+				padding-block: 10px;
+				cursor: pointer;
+				border-radius: 8px;
+				background-color: $plum;
+				font-size: larger;
+				text-decoration: none;
+				color: $white;
+				transition: all 0.3s;
+	
+				&:hover {
+					box-shadow: inset 0px 0px 0px 2px $plum;
+					background-color: $white;
+					color: $plum;
+				}
 			}
 		}
 	}
@@ -699,8 +774,73 @@ $total-animation-duration: $transition-duration * 6;
 	}
 }
 
+.section_BGA_PARK {
+	@include center;
+	flex-direction: column;
 
-.section8 {
+	padding: 4rem 1rem;
+
+	.title {
+		font-size: 2rem;
+		font-weight: bold;
+		margin-bottom: 2rem;
+		color: $plum;
+		text-align: center;
+	}
+
+	.image_container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		flex-wrap: wrap;
+		width: 100%;
+		
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 0 1 280px;
+			overflow: hidden;
+		}
+
+		.image {
+			width: 100%;
+			max-width: 280px;
+			height: auto;
+			max-height: 120px;
+			object-fit: contain;
+			transition: transform 0.2s ease;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		.image_container {
+			gap: 1.5rem;
+
+			a {
+				flex-basis: 220px;
+			}
+
+			.image {
+				max-width: 220px;
+				max-height: 90px;
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		.image_container {
+			flex-direction: column;
+		}
+	}
+}
+
+.section9 {
 	display: flex;
 	justify-content: center;
 	padding: 2rem;
@@ -729,7 +869,8 @@ $total-animation-duration: $transition-duration * 6;
 	}
 }
 
-.section9 {
+.section10 {
+	width: 100vw;
 	padding-inline-end: 10px;
 	margin-inline-end: 10px;
 	margin-block: 50px;
@@ -747,6 +888,22 @@ $total-animation-duration: $transition-duration * 6;
 			
 			img {
 				max-height: 300px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.section10 {
+		padding: 0;
+		margin: 0;
+		
+		.nominations_container{
+			flex-direction: column;
+			padding-inline: 10px;
+			gap: 10px;
+			.nomination{
+				margin: 0;
 			}
 		}
 	}

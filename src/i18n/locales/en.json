@@ -10,16 +10,16 @@
         "home": "Home",
         "about": "About us",
         "catalogue": "Our Games",
-        "press": "Press",
+        "press": "Resources",
         "cs": "Customer Service"
     },
     "home": {
         "header_captainflip": "Raise your flag and recruit your crew.",
         "headerNomin_captainflip": "Nominated for the Spiel des Jahres 2024 and for the \"As d'Or-Jeu de l'Année 2025\"!",
-        "header_zenith": "Your goal, unite the planets to gain control of the senate !",
+        "header_zenith": "Your goal, unite the planets to gain control of the senate!",
         "headerNomin_zenith": "As d'Or—Game of the Year 2026 (Initiated Category). Nominee for the long list of the Spiel des Jahres!",
         "button1": "See the game",
-		"zenith_expansion": "New booster available for Zenith!",
+		"zenith_expansion": "Booster available for Zenith!",
 		"CF_expansions": "Two expansions for more diverse gameplay"
     },
     "about": {
@@ -29,16 +29,21 @@
         "p1": "On one side, \\bThomas Provoost\\b, co-founder and co-manager of the prestigious Repos Production publishing company. He has been instrumental in the birth of such huge successes as Time's Up! (As d'Or 2006), Concept (As d'Or 2014) and Just One (Spiel des Jahres 2019).",
         "p2": "On the other side, \\bAntoine Bauza\\b, one of the leading authors of his generation, and designer of such hits as Hanabi (Spiel des Jahres 2013),Tokaido and Takenoko, as well as such acclaimed games as Ghost Stories and Draftosaurus.",
         "p3": "Together, they designed for one and published for the other 7 Wonders (Kenner spiel des Jahres 2011) and its sequels Duel and Architects (As d'Or 2022).",
-        "p4": "On the strength of their long collaboration, they decided to set up a new publishing company together, based on their solid experience and shared vision of the publishing profession. ",
-        "p5": "For them, \\iauthors\\i are the key creative players, and will be supported – \\i\\band challenged!\\b\\i - so that each game reaches its full potential.",
-        "p6": "\\bPlayPunk\\b's games will be polished down to the smallest detail: gamedesign, narrative, ergonomics, graphics, production, writing... ",
-        "p7": "To achieve this goal, PlayPunk will take the time to mature its games and will have a limited catalog.",
-        "p8": "Two games are currently being published. ",
-        "p9": "The first, Captain Flip by Paolo Mori and Remo Conzadori, is a devilishly clever family game for 2 to 5 players. It will hit stores in the March 2024.",
-        "p10": "The second is an expert game for 2 or 4 players, by Gregory Grard and Mathieu Roussel. It will be released at Spieltage Essen 2024.",
-        "t1": "PlayPunk is a publishing house created by two board game industry veterans, Antoine Bauza and Thomas Provoost.",
+        
+		"p4": "On the strength of their long collaboration, they decided to set up a new publishing company together in 2024, based on their solid experience and shared vision of the publishing profession.",
+        "p5": "For them, \\iauthors\\i are the key creative players, and will be supported – \\iand challenged!\\i - so that each game reaches its full potential.",
+        "p6": "\\bPlayPunk\\b therefore offers games that are polished down to the smallest detail: gamedesign, storytelling, ergonomics, graphics, production, writing... ",
+        "p7": "To achieve this goal, PlayPunk takes the time to mature its games and will have a limited catalog.",
+        
+        "p8": "Following the success of Captain Flip, Zenith, and their expansions, PlayPunk has no intention of stopping now! We continue to seek out high-quality games that will be carefully developed to stand the test of time.",
+        "p9": "The next release has been announced! In late 2026, you’ll discover \\bBack to Back\\b, created by Antonin Boccara (Zero to 100, Fiesta de Los Muertos, Focus, Vroom…). In this \\bsimple and clever cooperative party game\\b, you’ll try to get your teammates to guess a Mystery Word… but once it’s found, they’ll also have to be able to figure out at least one of your clues!",
+        "p10": "In 2027, a new expansion for \\bZenith\\b will also be released, featuring the addition of \\bCorporations\\b for asymmetric games and even more \\bpowerful “wild” cards!\\b!",
+        "p11": "Finally, get ready for a bike ride before the storm strikes ! In \\bTandem\\b, created by Gabriel Durnerin and Maxime Rambourg, you’ll \\bcooperate as animals on bicycles\\b rushing to dodge the rain. Communication, resource management, and mastering asymmetry and timing will be the keys to victory!",
+        "p12": "We’ll tell you more very soon!",
+        
+		"t1": "PlayPunk is a publishing house created by two board game industry veterans, Antoine Bauza and Thomas Provoost.",
         "t2": "A unique and precise vision!", 
-        "t3": "The future is coming !"
+        "t3": "The future is coming!"
     },
     "catalogue": {
         "header": "Here are all our boardgames"
@@ -47,7 +52,8 @@
         "header": "Downloads",
         "elements": "Game Elements",
         "boards": "Game Boards",
-        "rules": "Rules",
+        "CF_rules": "Captain Flip Rules",
+        "ZE_rules": "Zenith Rules",
         "images": "General Images",
 
 		"rulesIsla": "\"Isla Bomba\" rules",
@@ -57,7 +63,7 @@
 		"CF_kraken_info": "EN, FR, CZ, DE, ES, IT, PL, SK",
 		"CF_kraken_info2": "2 min read",
 		
-		"rulesBottle": "\"Flipper\" rules",
+		"rulesBottle": "\"Bottle\" rules",
 		"CF_bottle_info": "only in french",
 		"CF_bottle_info2": "1 min read",
 		
@@ -67,7 +73,9 @@
 		
 		"ZE_info": "15 min read",
 		"ZE_helpsheet": "Helpsheet",
-		"ZE_helpsheet_info": "2 min read"
+		"ZE_helpsheet_info": "2 min read",
+		"ZE_booster": "Booster pack",
+		"ZE_booster_info": "2 min read ● EN, FR, DE, ES"
     },
     "captainFlip": {
         "names": "A game by Paolo Mori and Remo Conzadori",
@@ -97,11 +105,11 @@
         "point3": "kinda just point 3",
 
         "boardsSection": "Different adventure plates to diversify your games",
-		"boardsSectionExpansion": "Expansion boards: Set sail to find Isla Bomba!",
+		"boardsSectionExpansion": "Expansion boards: Isla Bomba",
         
         "downloadButton": "Download all rules here!",
 
-		"islaHeader": "Expansion: Isla Bomba",
+		"islaHeader": "Expansion: Set sail to find Isla Bomba!",
 		"islaText1": "Embark in your submarine, free your crew from prison, raid the observatory, and find the mythical island!",
 		"islaText2": "This expansion for Captain Flip adds 4 new Adventure boards and 5 new Treasure Maps for even more explosive games!",
         "islaDownload": "Download the rules!",
@@ -114,13 +122,19 @@
         "krakenText5": "Discover and challenge also the Solo mode!",
         "krakenDownload": "Download the rules!",
 
+		"goodies_title": "Two extra tiles are available!",
+		"flipper_rules_btn": "View Flipper tile's rules",
+		"bottle_rules_btn": "View Bottle tile's rules",
+
+		"BGA_PARK_title": "Play Captain Flip on BGA or Game Park",
+
 		"nominations_title": "Our Nominations"
     },
 	"zenith": {
 		"section1": {
 			"header1": "Zenith is a strategy game, based on a tug-of-war mechanic.",
 			"header2": "For 2 players or 4 players in teams.",
-			"explanation1": "In the far-off future, the solar system is inhabited by 3 races: Humans, Robots, and Animods. Civilization runs off Of Zenithium, a clean and renewable energy source. but coexistence is a struggle. Your goal: unite the planets to gain control of the senate!",
+			"explanation1": "In the far-off future, the solar system is inhabited by 3 races: Humans, Robots, and Animods. Civilization runs off of Zenithium, a clean and renewable energy source but coexistence is a struggle. Your goal: unite the planets to gain control of the senate!",
 			"explanation2": "Use your Agents' skills to gain influence, develop solar technologies, and become the leader."
 		},
 		"section2": {
@@ -144,10 +158,12 @@
 			"contentDescription": "Zenith includes a variety of game pieces, including a modular game board, resource tokens, and the unique playing cards."
 		},
 		"section7": {
-			"title": "New booster available!",
+			"title": "A booster is available!",
 			"subtitle": "Discover new strategies with our 10 fresh booster cards.",
-			"downloadButton":"Download booster rules here"
-		}
+			"downloadButton":"Download booster rules here",
+			"purchaseButton":"Go to a seller's page"
+		},
+		"BGA_PARK_title": "Play Zenith on BGA or Game Park"
 	},
     "cfDownloads": {
         "header": "Here, you can download the gamerules of",
@@ -160,6 +176,8 @@
     },
     "cs": {
         "title": "Customer service",
+		"span1": "Just bought one of our games and found it has a missing or damaged piece?",
+		"span2": "We advise you to contact our distributor Asmodee’s subsidiary in your country and fill in the form with your request.",
 
         "Fr": "France",
         "Be": "Belgium",

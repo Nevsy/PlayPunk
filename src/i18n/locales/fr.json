@@ -10,7 +10,7 @@
         "home": "Accueil",
         "about": "À propos",
         "catalogue": "Nos Jeux",
-        "press": "Presse",
+        "press": "Resources",
         "cs": "SAV"
     },
     "home": {
@@ -19,7 +19,7 @@
 		"header_zenith": "Votre objectif, fédérer les planètes pour gagner le contrôle du sénat !",
 		"headerNomin_zenith": "As d'Or-Jeu de l'Année 2026 catégorie initié. Nommé dans la longue liste du Spiel des Jahres !",
         "button1": "Page du jeu",
-		"zenith_expansion": "Nouveau booster Zenith disponible !",
+		"zenith_expansion": "Booster Zenith disponible !",
 		"CF_expansions": "Deux extensions disponibles pour un jeu encore plus diversifié"
     },
     "about": {
@@ -29,14 +29,19 @@
         "p1": "D’un côté, \\bThomas Provoost\\b, cofondateur et cogérant de la prestigieuse maison d’édition Repos Production, il a œuvré à la naissance d’immenses succès comme Time’s Up ! (As d’Or 2006), Concept (As d’Or 2014) et Just One (Spiel des Jahres 2019).",
         "p2": "De l’autre, \\bAntoine Bauza\\b, auteur phare de sa génération, concepteur de plusieurs grands succès comme Hanabi (Spiel des Jahres 2013), Tokaido et Takenoko ainsi que d’autres jeux reconnus tels que Ghost Stories et Draftosaurus.",
         "p3": "Ensemble, ils ont conçu pour l’un et édité pour l’autre 7 Wonders (Kennerspiel des Jahres 2011) et ses suites Duel et Architects (As d’Or 2022).",
-        "p4": "Fort de leur longue collaboration, ils décident de monter ensemble une nouvelle maison d’édition basée sur leurs solides expériences et leur vision commune du métier d’éditeur.",
-        "p5": "Pour eux, \\iles auteurs\\i, pièces centrales de la création, seront accompagnés - \\b\\iet challengés !\\i\\b -  afin que chaque jeu atteigne le maximum de son potentiel.",
+        
+		"p4": "Forts de leur longue collaboration, ils décident de monter ensemble en 2024 une nouvelle maison d’édition basée sur leurs solides expériences et leur vision commune du métier d’éditeur.",
+        "p5": "Pour eux, \\iles auteurs\\i, pièces centrales de la création, doivent être accompagnés - \\b\\iet challengés !\\i\\b -  afin que chaque jeu atteigne le maximum de son potentiel.",
         "p6": "\\bPlayPunk\\b proposera donc des jeux ciselés et polis dans les moindres détails : gamedesign, narration, ergonomie, graphisme, production, rédaction…",
-        "p7": "Afin d’atteindre cet objectif, PlayPunk prendra le temps de maturer ses jeux et aura un catalogue restreint.",
-        "p8": "Deux jeux sont actuellement en cours d’édition.",
-        "p9": "Le premier, Captain Flip de Paolo Mori et Remo Conzadori, est un jeu familial et diablement malin pour 2 à 5 joueurs. Il arrivera dans les boutiques au premier trimestre 2024.",
-        "p10": "Le deuxième est un jeu initiés pour 2 ou 4 joueurs, de Gregory Grard et Mathieu Roussel. Il sortira lors du salon Spieltage Essen 2024. ",
-        "t1": "PlayPunk est une maison d’édition créée par deux vétérans de l’industrie du jeu de société Antoine Bauza et Thomas Provoost.",
+        "p7": "Afin d’atteindre cet objectif, PlayPunk prend le temps de maturer ses jeux et possède un catalogue restreint.",
+        
+		"p8": "Après le succès de Captain Flip, de Zenith, et de leurs extensions, PlayPunk ne compte pas s’arrêter en si bon chemin ! Nous continuons de rechercher des jeux de qualité qui seront développés avec soin pour tenter de s’inscrire dans la durée.",
+        "p9": "La prochaine sortie est annoncée ! Fin 2026, vous découvrirez \\bBack to Back\\b, créé par Antonin Boccara (\\iZéro à 100, Fiesta de Los Muertos, Focus, Vroom…\\i). Dans ce \\bjeu d’ambiance coopératif simple et malin\\b, vous chercherez à faire deviner un mot Mystère à vos coéquipières… mais une fois trouvé, elles devront également être capables de retrouver au moins l’un de vos indices !",
+        "p10": "En 2027, une nouvelle extension pour \\bZenith\\b verra également le jour, avec l’ajout de \\bCorporations\\b pour des parties asymétriques et de \\bcartes « joker »\\b encore plus puissantes !",
+		"p11": "Enfin, préparez-vous pour une promenade en vélo avant que l’orage n’éclate ! Dans \\bTandem\\b, créé par Gabriel Durnerin et Maxime Rambourg, vous \\bcoopérez en incarnant des animaux à bicyclette\\b pressés de passer entre les gouttes. Communication, gestion de ressources, mais aussi maitrise de l’asymétrie et du timing seront les clés de la victoire !",
+		"p12": "On vous en dit plus très bientôt !",
+        
+		"t1": "PlayPunk est une maison d’édition créée par deux vétérans de l’industrie du jeu de société Antoine Bauza et Thomas Provoost.",
         "t2": "Une vision unique et précise !", 
         "t3": "The future is coming !"
     },
@@ -47,7 +52,8 @@
         "header": "Téléchargements",
         "elements": "Élements du jeu",
         "boards": "Plateaux de jeu",
-        "rules": "Règles",
+        "CF_rules": "Règles Captain Flip",
+        "ZE_rules": "Règles Zenith",
         "images": "Images générales",
 		
 		"rulesIsla": "Règles \"Isla Bomba\"",
@@ -67,12 +73,14 @@
 		
 		"ZE_info": "lu en 15 min",
 		"ZE_helpsheet": "Fiche d'aide",
-		"ZE_helpsheet_info": "lu en 2 min"
+		"ZE_helpsheet_info": "lu en 2 min",
+		"ZE_booster": "Cartes Booster",
+		"ZE_booster_info": "lu en 2 min"
     },
     "captainFlip" : {
-        "names": "Un jeu de Paolo Mori and Remo Conzadori",
+        "names": "Un jeu de Paolo Mori et Remo Conzadori",
         "TitleH3": "Ohé Captain!",
-        "SubTitle": "Hissez votre pavillon et recrutez votre équipage pour gagner un maximum de pièces sonnantes et trébuchantes !",
+        "SubTitle": "Hissez votre pavillon et recrutez votre équipage pour gagner un maximum de pièces sonnantes et trébuchantes!",
         
         "section2": {
             "H1": "But du jeu",
@@ -95,9 +103,9 @@
         "subSection7": "1 Règle du jeu",
 
         "boardsSection": "Des plateaux de jeux différents pour diversifier vos parties",
-		"boardsSectionExpansion": "Extension: Partez à la recherche d’Isla Bomba !",
+		"boardsSectionExpansion": "Extension: Isla Bomba",
 
-		"islaHeader": "Extension: Isla Bomba",
+		"islaHeader": "Extension: Partez à la recherche d’Isla Bomba !",
 		"islaText1": "Embarquez dans votre sous-marin, libérez vos compagnons de prison, fouillez l’observatoire et trouvez l’île mythique !",
 		"islaText2": "Cette extension pour Captain Flip ajoute 4 nouveaux plateaux Aventure et 5 nouvelles Cartes au Trésor pour des parties encore plus explosives !",
 		"islaDownload": "Téléchargez les règles !",
@@ -105,17 +113,23 @@
         "krakenHeader": "Extension: Dans la Gueule du Kraken",
         "krakenText1": "Hoy, Capitaine !",
         "krakenText2": "Reprenez la barre dans cette mini-extension pour Captain Flip, nommé au Spiel des Jahres 2024 !",
-        "krakenText3": "Le Kraken n’en n’a pas fini avec vous et compte bien faire de vous son repas. Réunissez votre équipage pour vous en sortir avec plus de trésors que les autres joueurs.",
+        "krakenText3": "Le Kraken n’en a pas fini avec vous et compte bien faire de vous son repas. Réunissez votre équipage pour vous en sortir avec plus de trésors que les autres joueurs.",
         "krakenText4": "Ce plateau propose de nombreux choix tactiques pour les pirates vétérans et débutants.",
         "krakenText5": "Découvrez également le challenge du mode Solo !",
         "krakenDownload": "Téléchargez les règles !",
+
+		"goodies_title": "Deux tuiles extra sont disponibles !",
+		"flipper_rules_btn": "Règles tuile Flipper",
+		"bottle_rules_btn": "Règles tuile 'Bouille à la mer'",
+
+		"BGA_PARK_title": "Jouez à Captain Flip sur BGA ou Game Park",
 
 		"nominations_title": "Nos Nominations"
     },
 	"zenith": {
 		"section1": {
-			"header1": "Zenith est un jeu de stratégie, basé sur un mécanisme de tir à la corde.",
-			"header2": "pour 2 joueurs ou 4 joueurs en équipe",
+			"header1": "Zenith est un jeu de stratégie, basé sur un mécanisme de tir à la corde",
+			"header2": "pour 2 joueurs ou 4 joueurs en équipe.",
 			"explanation1": "Dans un futur lointain, le système solaire est habité par 3 peuples : les Humains, les Robots et les Animods. La civilisation bénéficie du Zenithium, une énergie propre et renouvelable, mais peine à s’organiser. Votre objectif, fédérer les planètes pour gagner le contrôle du sénat !",
 			"explanation2": "Utilisez les compétences de vos Agents pour gagner de l'influence, développer des technologies solaires et devenir le leader."
 		},
@@ -140,10 +154,12 @@
             "contentDescription": "Zenith comprend une variété de pièces de jeu, notamment un plateau de jeu modulaire, des jetons de ressources et les cartes de jeu uniques."
         },
 		"section7": {
-			"title": "Nouveau booster disponible!",
+			"title": "un booster est disponible!",
 			"subtitle": "Découvrez de nouvelles stratégies avec ces 10 cartes de booster inédites.",
-			"downloadButton":"Téléchargez les règles du booster ici"
-		}
+			"downloadButton":"Téléchargez les règles du booster ici",
+			"purchaseButton":"Aller vers une page de vendeur"
+		},
+		"BGA_PARK_title": "Jouez à Zenith sur BGA ou Game Park"
 	},
     "cfDownloads": {
         "header": "Ici, vous pouvez télécharger les règles de",
@@ -156,6 +172,8 @@
     },
     "cs": {
         "title": "Service après-vente",
+		"span1": "Vous venez d'acheter l'un de nos jeux et vous constatez qu'il manque une pièce ou qu'une pièce est endommagée ?",
+		"span2": "Nous vous conseillons de contacter la filiale de notre distributeur Asmodee dans votre pays et de remplir le formulaire en précisant votre demande.",
 
         "Fr": "France",
         "Be": "Belgique",
@@ -166,7 +184,7 @@
         "Uk": "Royaume-Uni",
         "Pl": "Pologne",
         "RoCz": "Roumanie & République tchèque",
-        "Nordics": "pays nordiques",
+        "Nordics": "Pays nordiques",
         "Ca": "Canada"
     },
 	"bottle": {
