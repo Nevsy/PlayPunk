@@ -210,6 +210,7 @@ $total-animation-duration: $transition-duration * 6;
 
 .section1 {
 	position: relative;
+	// height: auto;
 	height: 50vh;
 	overflow: hidden;
 	
@@ -292,13 +293,22 @@ $total-animation-duration: $transition-duration * 6;
 			height: auto;
 		}
 	}
+}
 
+@media screen and (max-width: 1500px) {
+	.section1 {
+		height: 70vh;
+	}
+}
+
+@media screen and ((max-height: 900px) and (min-width: 1500px)) {
+	.section1 {
+		height: 70vh;
+	}
 }
 
 @media screen and (max-width: 768px) {
 	.section1 {
-		height: 70vh;
-
 		.notsun {
 			.logo {
 				max-height: auto;

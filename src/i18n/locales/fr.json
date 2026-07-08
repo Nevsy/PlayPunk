@@ -10,7 +10,7 @@
         "home": "Accueil",
         "about": "À propos",
         "catalogue": "Nos Jeux",
-        "press": "Resources",
+        "press": "Ressources",
         "cs": "SAV"
     },
     "home": {
@@ -74,7 +74,7 @@
 		"ZE_info": "lu en 15 min",
 		"ZE_helpsheet": "Fiche d'aide",
 		"ZE_helpsheet_info": "lu en 2 min",
-		"ZE_booster": "Cartes Booster",
+		"ZE_booster": "Règles \"Secret Agents\"",
 		"ZE_booster_info": "lu en 2 min"
     },
     "captainFlip" : {
